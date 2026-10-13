@@ -66,7 +66,7 @@ export function AboutWhyUs() {
                 <StarIcon key={i} />
               ))}
             </div>
-            <blockquote className="mt-5 text-body-xxl font-medium text-white">“{featured.quote}”</blockquote>
+            <blockquote className="mt-5 text-body-xl font-medium text-white">“{featured.quote}”</blockquote>
             <p className="mt-5 text-sm text-white/55">
               {featured.name}, {featured.from} · {featured.trip}
             </p>
