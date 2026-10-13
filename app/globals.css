@@ -36,11 +36,11 @@
   --text-h4: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
   --text-h4--line-height: 1.2;
   --text-h4--letter-spacing: -0.015em;
-  --text-body-xxl: clamp(1.0625rem, 0.98rem + 0.3vw, 1.25rem);
+  --text-body-xxl: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   --text-body-xxl--line-height: 1.35;
-  --text-body-xl: clamp(1rem, 0.96rem + 0.15vw, 1.125rem);
+  --text-body-xl: clamp(0.9375rem, 0.9rem + 0.1vw, 1rem);
   --text-body-xl--line-height: 1.45;
-  --text-body-lg: 1rem;
+  --text-body-lg: 0.9375rem;
   --text-body-lg--line-height: 1.55;
   --text-label: 0.75rem;
   --text-label--line-height: 1;
@@ -74,6 +74,7 @@
   }
   body {
     font-family: var(--font-sans);
+    font-size: 0.9375rem; /* 15px base for body copy; rem-based type tokens are unaffected */
     font-feature-settings: "ss01", "cv11";
     text-rendering: optimizeLegibility;
   }
