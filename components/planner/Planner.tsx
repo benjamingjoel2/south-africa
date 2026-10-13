@@ -169,7 +169,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
             <p className="label text-ochre-400">
               Step {step + 1} of {steps.length}
             </p>
-            <h2 className={cn("mt-3 font-semibold", variant === "modal" ? "text-h3" : "text-h3 md:text-[2.25rem] md:leading-[1.1] md:tracking-[-0.03em]")}>
+            <h2 className={cn("mt-3 font-semibold", variant === "modal" ? "text-h3" : "text-h3 md:text-[2rem] md:leading-[1.1] md:tracking-[-0.03em]")}>
               {current.title}
             </h2>
             <p className="mt-2 text-white/60">{current.intro}</p>
