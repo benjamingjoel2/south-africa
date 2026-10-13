@@ -20,7 +20,7 @@ export const tours: Tour[] = [
     slug: "classic-south-africa",
     title: "Classic South Africa",
     subtitle: "Cape Town, the Winelands and a private Kruger safari",
-    nights: 12,
+    nights: 11,
     regions: ["western-cape", "kruger"],
     destinationSlugs: ["cape-town", "cape-winelands", "sabi-sand-greater-kruger"],
     budget: "premium",
