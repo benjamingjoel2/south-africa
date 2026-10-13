@@ -8,166 +8,111 @@ import { images } from "@/data/images";
 import { getTour } from "@/data/tours";
 import { ButtonLink, Arrow } from "@/components/ui/Button";
 import { SplitReveal } from "@/components/motion/SplitReveal";
-import { Marquee } from "@/components/motion/Marquee";
 import { Price } from "@/components/ui/Price";
-import { ChatIcon, CompassIcon, ShieldIcon, StarIcon } from "@/components/ui/Icons";
 
-const regions = [
-  "Cape Town",
-  "Cape Winelands",
-  "Hermanus",
-  "Garden Route",
-  "Kruger & private reserves",
-  "Panorama Route",
-  "Drakensberg",
-  "Zulu coast",
-  "Johannesburg & Soweto",
-  "Addo",
-  "Kalahari",
-];
+const trust = ["One dedicated specialist", "24/7 WhatsApp support", "Vetted guides & lodges", "8 regions covered"];
 
-const trust = [
-  { Icon: CompassIcon, text: "One dedicated specialist" },
-  { Icon: ChatIcon, text: "24/7 WhatsApp support" },
-  { Icon: ShieldIcon, text: "Vetted guides & lodges" },
-];
-
+/** Light, minimal hero: sand background, dark headline, wide rounded photo with a featured-journey card. */
 export function Hero() {
-  const ref = useRef<HTMLElement>(null);
+  const photoRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const bgY = useTransform(scrollYProgress, [0, 1], reduce ? ["0%", "0%"] : ["0%", "18%"]);
-  const bgScale = useTransform(scrollYProgress, [0, 1], reduce ? [1, 1] : [1.06, 1.16]);
-  const contentY = useTransform(scrollYProgress, [0, 1], reduce ? ["0%", "0%"] : ["0%", "-18%"]);
-  const fade = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const { scrollYProgress } = useScroll({ target: photoRef, offset: ["start end", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], reduce ? ["0%", "0%"] : ["-6%", "6%"]);
   const featured = getTour("classic-south-africa")!;
 
   return (
-    <section ref={ref} className="relative flex min-h-[100svh] flex-col overflow-hidden" aria-label="Introduction">
-      {/* Photo with parallax */}
-      <motion.div style={{ y: bgY, scale: bgScale }} className="absolute inset-0">
-        <Image
-          src={images.heroCapeTown}
-          alt="Cape Town with Table Mountain rising behind the city"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </motion.div>
-      {/* Tonal gradients: darker on the left for legibility, fade into the page at the bottom */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate/85 via-slate/45 to-slate/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-slate via-transparent to-black/40" />
-
-      <motion.div
-        style={{ y: contentY, opacity: fade }}
-        className="container-x relative grid flex-1 items-center gap-12 pb-12 pt-32 lg:grid-cols-12 lg:pt-28"
-      >
-        {/* Copy + actions, grouped */}
-        <div className="lg:col-span-7">
-          <p
-            className="anim-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-medium text-white/85 backdrop-blur"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <span className="text-ochre-400" aria-hidden="true">+</span>
-            Tailor-made South Africa · since 2012
-          </p>
-
-          <SplitReveal
-            as="h1"
-            immediate
-            delay={0.2}
-            lines={["Start at the Cape.", "Go beyond."]}
-            className="mt-6 text-display font-semibold"
-          />
-
-          <p className="anim-fade-up mt-6 max-w-lg text-body-xxl text-white/80" style={{ animationDelay: "0.5s" }}>
-            Private journeys from Cape Town to the Winelands, the Garden Route and Kruger&apos;s private reserves,
-            planned by one local specialist from your first message to the day you fly home.
-          </p>
-
-          <div className="anim-fade-up mt-8 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "0.65s" }}>
-            <ButtonLink href="/plan-your-trip" size="lg" icon>
-              Start planning
-            </ButtonLink>
-            <ButtonLink href="/tours" size="lg" variant="secondary" className="bg-white/5 backdrop-blur">
-              Explore tours
-            </ButtonLink>
+    <section className="theme-light pb-16 pt-28 md:pb-20 md:pt-32" aria-label="Introduction">
+      <div className="container-x">
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-end lg:gap-12">
+          <div className="lg:col-span-7">
+            <p className="anim-fade-up label text-ochre-700" style={{ animationDelay: "0.05s" }}>
+              Tailor-made South Africa · since 2012
+            </p>
+            <SplitReveal
+              as="h1"
+              immediate
+              delay={0.15}
+              lines={["Start at the Cape.", "Go beyond."]}
+              className="mt-5 text-display font-semibold text-ink"
+            />
           </div>
 
-          <ul
-            className="anim-fade-up mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/75"
-            style={{ animationDelay: "0.8s" }}
-            aria-label="Why travel with us"
-          >
-            {trust.map(({ Icon, text }) => (
-              <li key={text} className="flex items-center gap-2">
-                <Icon className="text-ochre-400" />
-                {text}
-              </li>
-            ))}
-          </ul>
+          <div className="anim-fade-up lg:col-span-5" style={{ animationDelay: "0.4s" }}>
+            <p className="max-w-md text-body-xl text-ink/75">
+              Private, tailor-made journeys from Cape Town to the Winelands, the Garden Route and Kruger&apos;s private
+              reserves, planned by one local specialist from your first message to the day you fly home.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <ButtonLink href="/plan-your-trip" size="lg" icon>
+                Start planning
+              </ButtonLink>
+              <ButtonLink
+                href="/tours"
+                size="lg"
+                variant="secondary"
+                className="border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-white"
+              >
+                Explore tours
+              </ButtonLink>
+            </div>
+          </div>
         </div>
 
-        {/* Featured journey card (desktop) */}
-        <div className="anim-fade-up relative hidden lg:col-span-5 lg:flex lg:justify-end" style={{ animationDelay: "0.9s" }}>
-          <div
-            className="absolute -left-2 top-6 z-10 flex items-center gap-3 rounded-2xl border border-white/15 bg-slate/70 py-2.5 pl-2.5 pr-4 shadow-2xl backdrop-blur-xl xl:-left-6"
-            aria-hidden="true"
-          >
-            <span className="flex size-9 items-center justify-center rounded-full bg-teal text-xs font-semibold">CC</span>
-            <span className="text-xs leading-tight">
-              <span className="block font-semibold text-white">Your specialist replies</span>
-              <span className="text-white/60">within one working day</span>
-            </span>
-          </div>
+        <div
+          ref={photoRef}
+          className="anim-fade-up relative mt-10 aspect-[4/3] max-w-full overflow-hidden rounded-[1.75rem] sm:aspect-[16/9] md:mt-14 lg:aspect-[21/9]"
+          style={{ animationDelay: "0.55s" }}
+        >
+          <motion.div style={{ y: imgY }} className="absolute inset-[-7%_0]">
+            <Image
+              src={images.heroCapeTown}
+              alt="Aerial view of Cape Town with Table Mountain behind the city"
+              fill
+              priority
+              sizes="(min-width: 1440px) 1344px, 100vw"
+              className="object-cover object-[center_55%]"
+            />
+          </motion.div>
 
-          <article className="group relative mt-14 w-full max-w-sm rounded-[1.5rem] border border-white/15 bg-slate/55 p-3 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.7)] backdrop-blur-xl">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image
-                src={images.sabiSand}
-                alt=""
-                fill
-                sizes="384px"
-                className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-105"
-              />
-              <span className="absolute left-3 top-3 rounded-full bg-slate/75 px-3 py-1 text-xs font-medium backdrop-blur">
-                Featured journey
-              </span>
-            </div>
-            <div className="px-2 pb-2 pt-4">
-              <p className="flex items-center gap-1.5 text-xs text-white/60">
-                <StarIcon className="size-3.5 text-ochre-400" />
-                {featured.nights + 1} days · Cape Town · Winelands · Sabi Sand
+          <span className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-sand/90 px-3.5 py-2 text-xs font-medium text-ink backdrop-blur md:bottom-5 md:left-5 md:text-sm">
+            <span className="size-2 rounded-full bg-ochre" aria-hidden="true" />
+            Cape Town, Western Cape
+          </span>
+
+          <article className="group absolute bottom-5 right-5 hidden w-[19rem] rounded-2xl bg-sand/95 p-4 text-ink shadow-[0_20px_50px_-20px_rgb(0_0_0/0.45)] backdrop-blur md:block">
+            <p className="label text-ink/60">Featured journey</p>
+            <h2 className="mt-2 text-h4 font-semibold">
+              <Link href={`/tours/${featured.slug}`} className="after:absolute after:inset-0 after:rounded-2xl">
+                {featured.title}
+              </Link>
+            </h2>
+            <div className="mt-1.5 flex items-end justify-between gap-3">
+              <p className="text-sm text-ink/70">
+                {featured.nights + 1} days · Cape Town, Winelands, Sabi Sand
+                <br />
+                From <Price usd={featured.priceFromUsd} className="font-semibold text-ink" /> pp
               </p>
-              <h2 className="mt-2 text-h4 font-semibold">
-                <Link href={`/tours/${featured.slug}`} className="after:absolute after:inset-0 after:rounded-[1.5rem]">
-                  {featured.title}
-                </Link>
-              </h2>
-              <div className="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
-                <p className="text-sm text-white/60">
-                  From <Price usd={featured.priceFromUsd} className="text-base font-semibold text-white" /> pp
-                </p>
-                <span className="group/btn flex size-9 items-center justify-center rounded-full bg-ochre transition-colors group-hover:bg-ochre-700">
-                  <Arrow />
-                </span>
-              </div>
+              <span className="group/btn flex size-9 shrink-0 items-center justify-center rounded-full bg-ochre text-white transition-colors group-hover:bg-ochre-700">
+                <Arrow />
+              </span>
             </div>
           </article>
         </div>
-      </motion.div>
 
-      {/* Regions strip */}
-      <div className="relative border-t border-white/10 bg-black/25 backdrop-blur-md">
-        <Marquee duration={45} className="py-4">
-          {regions.map((r) => (
-            <span key={r} className="flex items-center gap-5 whitespace-nowrap text-sm text-white/70">
-              {r}
-              <span className="text-ochre-400" aria-hidden="true">+</span>
-            </span>
+        <ul
+          className="anim-fade-up mt-6 flex flex-wrap gap-x-7 gap-y-2 text-sm text-ink/70"
+          style={{ animationDelay: "0.7s" }}
+          aria-label="Why travel with us"
+        >
+          {trust.map((t) => (
+            <li key={t} className="flex items-center gap-1.5">
+              <span className="text-ochre-700" aria-hidden="true">
+                +
+              </span>
+              {t}
+            </li>
           ))}
-        </Marquee>
+        </ul>
       </div>
     </section>
   );

@@ -5,7 +5,16 @@ import { currencies, currencyCodes } from "@/config/site";
 import { useCurrency } from "@/lib/currency";
 import { cn } from "@/lib/utils";
 
-export function CurrencySwitcher({ className, align = "right" }: { className?: string; align?: "left" | "right" }) {
+export function CurrencySwitcher({
+  className,
+  align = "right",
+  tone = "light",
+}: {
+  className?: string;
+  align?: "left" | "right";
+  /** "dark" = dark text, for use over light backgrounds */
+  tone?: "light" | "dark";
+}) {
   const { currency, setCurrency } = useCurrency();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -34,10 +43,15 @@ export function CurrencySwitcher({ className, align = "right" }: { className?: s
         aria-controls={listId}
         aria-label={`Currency: ${currencies[currency].label}. Change currency`}
         onClick={() => setOpen((o) => !o)}
-        className="flex h-10 items-center gap-1.5 rounded-full border border-white/15 px-3.5 text-sm font-medium text-white/80 transition-colors hover:border-white/40 hover:text-white"
+        className={cn(
+          "flex h-10 items-center gap-1.5 rounded-full border px-3.5 text-sm font-medium transition-colors",
+          tone === "dark"
+            ? "border-ink/20 text-ink/80 hover:border-ink/40 hover:text-ink"
+            : "border-white/15 text-white/80 hover:border-white/40 hover:text-white",
+        )}
         suppressHydrationWarning
       >
-        <span className="text-ochre-400" aria-hidden="true">{currencies[currency].symbol}</span>
+        <span className={tone === "dark" ? "text-ochre-700" : "text-ochre-400"} aria-hidden="true">{currencies[currency].symbol}</span>
         <span suppressHydrationWarning>{currency}</span>
         <svg viewBox="0 0 12 12" className={cn("size-3 transition-transform", open && "rotate-180")} aria-hidden="true">
           <path d="m3 4.5 3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.4" />

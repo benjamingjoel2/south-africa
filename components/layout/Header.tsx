@@ -22,6 +22,9 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // The homepage hero is light (sand), so the bar uses dark text until the page scrolls.
+  const onLight = pathname === "/" && !scrolled && !open;
+
   // Close the mobile menu on navigation.
   const [lastPath, setLastPath] = useState(pathname);
   if (pathname !== lastPath) {
@@ -42,11 +45,13 @@ export function Header() {
         "fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-500",
         scrolled || open
           ? "border-b border-white/10 bg-slate/85 backdrop-blur-xl"
-          : "border-b border-transparent bg-gradient-to-b from-black/40 to-transparent",
+          : onLight
+            ? "border-b border-transparent bg-transparent"
+            : "border-b border-transparent bg-gradient-to-b from-black/40 to-transparent",
       )}
     >
       <div className="container-x flex h-[4.5rem] items-center justify-between gap-6 lg:h-20">
-        <Logo />
+        <Logo tone={onLight ? "dark" : "light"} />
 
         <nav aria-label="Main" className="hidden lg:block">
           <ul className="flex items-center gap-7">
@@ -59,7 +64,13 @@ export function Header() {
                     aria-current={active ? "page" : undefined}
                     className={cn(
                       "group flex items-center gap-1.5 text-[0.875rem] font-medium transition-colors",
-                      active ? "text-white" : "text-white/55 hover:text-white",
+                      onLight
+                        ? active
+                          ? "text-ink"
+                          : "text-ink/65 hover:text-ink"
+                        : active
+                          ? "text-white"
+                          : "text-white/55 hover:text-white",
                     )}
                   >
                     <span
@@ -80,13 +91,16 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2.5">
-          <CurrencySwitcher className="hidden sm:block" />
+          <CurrencySwitcher className="hidden sm:block" tone={onLight ? "dark" : "light"} />
           <ButtonLink href="/plan-your-trip" size="sm" className="hidden md:inline-flex" icon>
             Start planning
           </ButtonLink>
           <button
             type="button"
-            className="relative flex size-10 items-center justify-center rounded-full border border-white/15 lg:hidden"
+            className={cn(
+              "relative flex size-10 items-center justify-center rounded-full border lg:hidden",
+              onLight ? "border-ink/20" : "border-white/15",
+            )}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -94,13 +108,15 @@ export function Header() {
           >
             <span
               className={cn(
-                "absolute h-px w-4 bg-white transition-transform duration-300",
+                "absolute h-px w-4 transition-transform duration-300",
+                onLight ? "bg-ink" : "bg-white",
                 open ? "rotate-45" : "-translate-y-[3px]",
               )}
             />
             <span
               className={cn(
-                "absolute h-px w-4 bg-white transition-transform duration-300",
+                "absolute h-px w-4 transition-transform duration-300",
+                onLight ? "bg-ink" : "bg-white",
                 open ? "-rotate-45" : "translate-y-[3px]",
               )}
             />
