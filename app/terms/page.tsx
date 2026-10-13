@@ -1,6 +1,6 @@
 import { site } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
-import { LegalPage } from "@/components/sections/LegalPage";
+import { LegalPage } from "@/components/detail/LegalPage";
 
 export const metadata = buildMetadata({ title: "Terms & Conditions", path: "/terms", description: `Booking terms and conditions for ${site.name}.` });
 

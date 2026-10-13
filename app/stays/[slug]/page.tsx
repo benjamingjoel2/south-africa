@@ -1,18 +1,17 @@
-import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { stays, getStay } from "@/data/stays";
 import { destinations } from "@/data/destinations";
 import { tours } from "@/data/tours";
 import { buildMetadata, JsonLd } from "@/lib/seo";
-import { DetailIntro } from "@/components/detail/DetailIntro";
-import { DetailLayout, DetailSection } from "@/components/detail/DetailLayout";
-import { InfoCard } from "@/components/detail/InfoCard";
-import { RelatedTours } from "@/components/sections/RelatedTours";
-import { StaysRow } from "@/components/sections/StaysRow";
-import { FinalCta } from "@/components/sections/FinalCta";
-import { PlusChip } from "@/components/ui/PlusChip";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { ButtonLink } from "@/components/ui/Button";
+import { Eyebrow } from "@/components/ui/Type";
 import { Price } from "@/components/ui/Price";
-import { BedIcon, CheckIcon, PinIcon, UsersIcon } from "@/components/ui/Icons";
+import { MoreTours } from "@/components/detail/MoreTours";
+import { LodgesBand } from "@/components/sections/LodgesBand";
+import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
 export const dynamicParams = false;
 export const generateStaticParams = () => stays.map((s) => ({ slug: s.slug }));
@@ -31,91 +30,64 @@ export default async function StayPage({ params }: PageProps<"/stays/[slug]">) {
   const dest = destinations.find((d) => d.slug === s.destinationSlug);
   const related = tours.filter((t) => t.staySlugs.includes(s.slug));
   const others = stays.filter((x) => x.slug !== s.slug).slice(0, 4);
+  const gallery = [s.image, ...s.gallery];
 
   return (
     <>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "LodgingBusiness",
-          name: s.name,
-          description: s.summary,
-          image: s.image,
-          address: { "@type": "PostalAddress", addressLocality: s.location, addressCountry: "ZA" },
-        }}
-      />
-      <DetailIntro
-        crumbs={[
-          { name: "Stays", path: "/stays" },
-          { name: s.name, path: `/stays/${s.slug}` },
-        ]}
-        eyebrow={
-          <>
-            <PlusChip>{s.type}</PlusChip>
-            <PlusChip>{s.location}</PlusChip>
-          </>
-        }
-        title={s.name}
-        subtitle={s.summary}
-        images={[s.image, ...s.gallery]}
-        imageAlt={s.name}
-      />
-      <DetailLayout
-        sections={[
-          { id: "about", label: "About" },
-          { id: "features", label: "Features" },
-          { id: "location", label: "Location" },
-        ]}
-        sidebar={
-          <InfoCard
-            headline={
-              <>
-                <p className="text-sm text-white/50">From</p>
-                <p className="text-h2 font-semibold"><Price usd={s.priceFromUsdPerNight} /></p>
-                <p className="text-sm text-white/60">per person · night, sharing</p>
-              </>
-            }
-            rows={[
-              { icon: <PinIcon />, label: "Location", value: s.location },
-              { icon: <BedIcon />, label: "Rooms", value: `${s.roomCount}` },
-              { icon: <UsersIcon />, label: "Good for", value: s.goodFor.join(", ") },
-            ]}
-            cta="Include this stay"
-            whatsappMessage={`Hi Cape Compass, I'd love to stay at ${s.name}.`}
-            note="Placeholder property for illustration. Rates vary by season and room type."
-          />
-        }
-      >
-        <DetailSection id="about" title="About the stay">
-          <div className="space-y-5 text-body-lg text-white/75">
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "LodgingBusiness", name: s.name, description: s.summary, image: s.image, address: { "@type": "PostalAddress", addressLocality: s.location, addressCountry: "ZA" } }} />
+      <section className="container-x pt-10 lg:pt-14" aria-label={s.name}>
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8">
+            <Breadcrumbs items={[{ name: "Stays", path: "/stays" }, { name: `${s.type} · ${s.location}`, path: `/stays/${s.slug}` }]} />
+            <h1 className="mt-5 text-h1">{s.name}</h1>
+          </div>
+          <div className="flex flex-col items-start gap-4 lg:col-span-4 lg:items-end">
+            <p className="text-sm text-charcoal-700">
+              From <Price usd={s.priceFromUsdPerNight} className="font-medium text-charcoal-800" /> per person · night
+            </p>
+            <ButtonLink href="/plan-your-trip" arrow>Enquire now</ButtonLink>
+          </div>
+        </div>
+        <div className="mt-10 grid gap-2 md:grid-cols-3 md:grid-rows-2">
+          <div className="relative aspect-[4/3] bg-ivory-200 md:col-span-2 md:row-span-2 md:aspect-auto md:min-h-[26rem]">
+            <Image src={gallery[0]} alt={s.name} fill priority sizes="(min-width: 768px) 66vw, 100vw" className="object-cover" />
+          </div>
+          {gallery.slice(1, 3).map((g, i) => (
+            <div key={g + i} className="relative hidden aspect-[4/3] bg-ivory-200 md:block md:aspect-auto">
+              <Image src={g} alt="" fill sizes="33vw" className="object-cover" />
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 grid gap-10 border-b border-ivory-200 pb-14 lg:grid-cols-12">
+          <div className="space-y-5 text-lead text-charcoal-700 lg:col-span-8">
             {s.description.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
-        </DetailSection>
-        <DetailSection id="features" title="Features">
-          <ul className="grid gap-3 sm:grid-cols-2">
-            {s.features.map((f) => (
-              <li key={f} className="flex gap-3 rounded-2xl border border-white/10 p-4 text-white/85">
-                <CheckIcon className="mt-0.5 text-ochre-400" /> {f}
-              </li>
-            ))}
-          </ul>
-        </DetailSection>
-        <DetailSection id="location" title="Location">
-          <p className="text-body-lg text-white/75">
-            {s.location}
+          <dl className="space-y-2 border-l border-ivory-200 pl-5 text-[0.9375rem] lg:col-span-4">
+            <div className="flex gap-2"><dt className="text-charcoal-700">Type ·</dt><dd>{s.type}</dd></div>
+            <div className="flex gap-2"><dt className="text-charcoal-700">Rooms ·</dt><dd>{s.roomCount}</dd></div>
+            <div className="flex gap-2"><dt className="text-charcoal-700">Good for ·</dt><dd>{s.goodFor.join(", ")}</dd></div>
             {dest && (
-              <>
-                {" "}· in <Link href={`/destinations/${dest.slug}`} className="text-ochre-400 underline underline-offset-2">{dest.name}</Link>. {dest.summary}
-              </>
+              <div className="flex gap-2"><dt className="text-charcoal-700">Region ·</dt><dd><Link href={`/destinations/${dest.slug}`} className="underline underline-offset-4">{dest.name}</Link></dd></div>
             )}
-          </p>
-        </DetailSection>
-      </DetailLayout>
-      <RelatedTours tours={related} title={["Tours with", "this stay"]} />
-      <StaysRow list={others} label="More stays" title={["You may", "also like"]} />
-      <FinalCta />
+          </dl>
+        </div>
+      </section>
+
+      <section className="container-x section-y" aria-label="Features">
+        <Eyebrow>Features</Eyebrow>
+        <ul className="mt-4 grid gap-px border border-ivory-200 bg-ivory-200 sm:grid-cols-2 lg:grid-cols-3">
+          {s.features.map((f) => (
+            <li key={f} className="bg-ivory-50 px-5 py-4 text-[0.9375rem]">{f}</li>
+          ))}
+        </ul>
+        <p className="mt-6 text-sm text-stone-400">Placeholder property for illustration. Rates vary by season and room type.</p>
+      </section>
+
+      <MoreTours tours={related} eyebrow="Itineraries" lead="Tours with" accent="this stay" />
+      <LodgesBand list={others} lead="More places to" accent="stay" />
+      <SpecialistCta />
     </>
   );
 }

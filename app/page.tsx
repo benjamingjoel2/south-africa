@@ -1,36 +1,30 @@
 import { Hero } from "@/components/sections/Hero";
-import { TrustRow } from "@/components/sections/TrustRow";
-import { AboutWhyUs } from "@/components/sections/AboutWhyUs";
-import { FeaturedTours } from "@/components/sections/FeaturedTours";
-import { BuildYourTrip } from "@/components/sections/BuildYourTrip";
-import { DestinationsGrid } from "@/components/sections/DestinationsGrid";
-import { ExperiencesGrid } from "@/components/sections/ExperiencesGrid";
-import { StaysRow } from "@/components/sections/StaysRow";
-import { Testimonials } from "@/components/sections/Testimonials";
+import { TrustGrid } from "@/components/sections/TrustGrid";
+import { PopularDestinations } from "@/components/sections/PopularDestinations";
+import { ExperienceGrid } from "@/components/sections/ExperienceGrid";
+import { Itineraries } from "@/components/sections/Itineraries";
+import { LodgesBand } from "@/components/sections/LodgesBand";
+import { WhyUs } from "@/components/sections/WhyUs";
 import { GuideSignup } from "@/components/sections/GuideSignup";
-import { FinalCta } from "@/components/sections/FinalCta";
+import { BespokeLine, SpecialistCta } from "@/components/sections/SpecialistCta";
 import { buildMetadata } from "@/lib/seo";
 import { images } from "@/data/images";
 
-export const metadata = buildMetadata({
-  path: "/",
-  image: images.heroCapeTown,
-});
+export const metadata = buildMetadata({ path: "/", image: images.heroCapeTown });
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustRow />
-      <AboutWhyUs />
-      <FeaturedTours />
-      <BuildYourTrip />
-      <DestinationsGrid />
-      <ExperiencesGrid />
-      <StaysRow />
-      <Testimonials />
+      <TrustGrid />
+      <PopularDestinations />
+      <ExperienceGrid />
+      <Itineraries />
+      <LodgesBand />
+      <WhyUs />
       <GuideSignup />
-      <FinalCta />
+      <SpecialistCta />
+      <BespokeLine />
     </>
   );
 }

@@ -2,152 +2,258 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { site } from "@/config/site";
+import { destinations } from "@/data/destinations";
+import { experiences } from "@/data/experiences";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/ui/Logo";
-import { ButtonLink } from "@/components/ui/Button";
+import { ArrowRight, ButtonLink } from "@/components/ui/Button";
+import { ChevronDown } from "@/components/ui/Icons";
 import { CurrencySwitcher } from "./CurrencySwitcher";
+
+type MenuKey = "destinations" | "experiences" | "about";
+type Column = { title: string; links: { label: string; href: string }[] };
+type Menu = { columns: Column[]; all: { label: string; href: string } };
+
+function buildMenus(): Record<MenuKey, Menu> {
+  const dest = (slugs: string[]) =>
+    slugs.map((s) => destinations.find((d) => d.slug === s)!).map((d) => ({ label: d.name, href: `/destinations/${d.slug}` }));
+  const byRegion = (ids: string[]) =>
+    destinations.filter((d) => ids.includes(d.region)).map((d) => ({ label: d.shortName ?? d.name, href: `/destinations/${d.slug}` }));
+  const exp = (cats: string[]) =>
+    experiences.filter((e) => cats.includes(e.category)).map((e) => ({ label: e.title, href: `/experiences/${e.slug}` }));
+  return {
+    destinations: {
+      columns: [
+        { title: "Top destinations", links: dest(["cape-town", "sabi-sand-greater-kruger", "kruger-national-park", "cape-winelands", "garden-route", "drakensberg"]) },
+        { title: "Cape & coast", links: byRegion(["western-cape", "garden-route", "eastern-cape"]) },
+        { title: "Safari & beyond", links: byRegion(["kruger", "mpumalanga", "kwazulu-natal", "gauteng", "northern-cape"]) },
+      ],
+      all: { label: "View all destinations", href: "/destinations" },
+    },
+    experiences: {
+      columns: [
+        { title: "Safari & wildlife", links: exp(["Safari", "Coast & ocean"]) },
+        { title: "Culture, food & wine", links: exp(["Food & wine", "Culture & history"]) },
+        { title: "Adventure & occasions", links: exp(["Adventure", "Special occasions"]) },
+      ],
+      all: { label: "View all experiences", href: "/experiences" },
+    },
+    about: {
+      columns: [
+        {
+          title: "The company",
+          links: [
+            { label: "Why travel with us", href: "/about" },
+            { label: "Our story", href: "/about#story" },
+            { label: "Meet the team", href: "/about#team" },
+          ],
+        },
+        {
+          title: "From our guests",
+          links: [
+            { label: "Testimonials", href: "/testimonials" },
+            { label: "Journal", href: "/blog" },
+          ],
+        },
+        {
+          title: "Practical",
+          links: [
+            { label: "Plan your trip", href: "/plan-your-trip" },
+            { label: "Where to stay", href: "/stays" },
+            { label: "FAQ", href: "/faq" },
+            { label: "Contact us", href: "/contact" },
+          ],
+        },
+      ],
+      all: { label: "About Cape Compass", href: "/about" },
+    },
+  };
+}
+
+const menus = buildMenus();
 
 export function Header() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<MenuKey | null>(null);
+  const [mobile, setMobile] = useState(false);
+  const closeTimer = useRef<number | null>(null);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Close the mobile menu on navigation.
+  // Close everything on navigation.
   const [lastPath, setLastPath] = useState(pathname);
   if (pathname !== lastPath) {
     setLastPath(pathname);
-    setOpen(false);
+    setOpen(null);
+    setMobile(false);
   }
 
   useEffect(() => {
-    document.documentElement.style.overflow = open ? "hidden" : "";
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.documentElement.style.overflow = mobile ? "hidden" : "";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(null);
+        setMobile(false);
+      }
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+  }, [mobile]);
+
+  const show = (key: MenuKey) => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    setOpen(key);
+  };
+  const hide = () => {
+    closeTimer.current = window.setTimeout(() => setOpen(null), 120);
+  };
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-500",
-        scrolled || open
-          ? "border-b border-white/10 bg-slate/85 backdrop-blur-xl"
-          : "border-b border-transparent bg-gradient-to-b from-black/40 to-transparent",
-      )}
-    >
-      <div className="container-x flex h-[4.5rem] items-center justify-between gap-6 lg:h-20">
+    <header className="sticky top-0 z-40 border-b border-ivory-200 bg-ivory-50" onMouseLeave={hide} onMouseEnter={() => closeTimer.current && window.clearTimeout(closeTimer.current)}>
+      <div className="container-x flex h-[4.25rem] items-center justify-between gap-6 lg:h-20">
         <Logo />
 
         <nav aria-label="Main" className="hidden lg:block">
-          <ul className="flex items-center gap-7">
+          <ul className="flex items-center gap-8">
             {site.nav.map((item) => {
               const active = pathname === item.href || pathname.startsWith(item.href + "/");
+              const cls = cn(
+                "flex h-20 items-center gap-1.5 text-eyebrow font-medium uppercase tracking-eyebrow transition-colors",
+                active || open === item.menu ? "text-charcoal-800" : "text-charcoal-700 hover:text-charcoal-800",
+              );
               return (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    aria-current={active ? "page" : undefined}
-                    className={cn(
-                      "group flex items-center gap-1.5 text-[0.875rem] font-medium transition-colors",
-                      active ? "text-white" : "text-white/55 hover:text-white",
-                    )}
-                  >
-                    <span
-                      aria-hidden="true"
-                      className={cn(
-                        "text-ochre-400 transition-transform duration-300 group-hover:rotate-90",
-                        !active && "opacity-70",
-                      )}
+                <li key={item.href} onMouseEnter={() => (item.menu ? show(item.menu) : setOpen(null))}>
+                  {item.menu ? (
+                    <button
+                      type="button"
+                      className={cls}
+                      aria-expanded={open === item.menu}
+                      aria-controls={`menu-${item.menu}`}
+                      onClick={() => setOpen(open === item.menu ? null : item.menu!)}
                     >
-                      +
-                    </span>
-                    {item.label}
-                  </Link>
+                      {item.label}
+                      <ChevronDown className={cn("transition-transform", open === item.menu && "rotate-180")} />
+                    </button>
+                  ) : (
+                    <Link href={item.href} className={cls} aria-current={active ? "page" : undefined}>
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               );
             })}
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2.5">
-          <CurrencySwitcher className="hidden sm:block" />
-          <ButtonLink href="/plan-your-trip" size="sm" className="hidden md:inline-flex" icon>
+        <div className="flex items-center gap-3">
+          <ButtonLink href="/plan-your-trip" className="hidden md:inline-flex">
             Start planning
           </ButtonLink>
           <button
             type="button"
-            className="relative flex size-10 items-center justify-center rounded-full border border-white/15 lg:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
+            className="relative flex size-10 items-center justify-center lg:hidden"
+            aria-label={mobile ? "Close menu" : "Open menu"}
+            aria-expanded={mobile}
             aria-controls="mobile-menu"
-            onClick={() => setOpen((o) => !o)}
+            onClick={() => setMobile((m) => !m)}
           >
-            <span
-              className={cn(
-                "absolute h-px w-4 bg-white transition-transform duration-300",
-                open ? "rotate-45" : "-translate-y-[3px]",
-              )}
-            />
-            <span
-              className={cn(
-                "absolute h-px w-4 bg-white transition-transform duration-300",
-                open ? "-rotate-45" : "translate-y-[3px]",
-              )}
-            />
+            <span className={cn("absolute h-px w-5 bg-charcoal-800 transition-transform duration-300", mobile ? "rotate-45" : "-translate-y-[4px]")} />
+            <span className={cn("absolute h-px w-5 bg-charcoal-800 transition-transform duration-300", mobile ? "-rotate-45" : "translate-y-[4px]")} />
           </button>
         </div>
       </div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            id="mobile-menu"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "calc(100dvh - 4.5rem)" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-y-auto bg-slate lg:hidden"
-          >
-            <nav aria-label="Mobile" className="container-x flex min-h-full flex-col pb-10 pt-6">
-              <ul className="border-t border-white/10">
-                {site.nav.map((item, i) => (
-                  <motion.li
-                    key={item.href}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.08 + i * 0.05, duration: 0.5 }}
-                    className="border-b border-white/10"
-                  >
-                    <Link href={item.href} className="flex items-center justify-between py-4 text-h3 font-medium">
-                      {item.label}
-                      <span aria-hidden="true" className="text-ochre-400">+</span>
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-              <div className="mt-auto flex flex-col gap-4 pt-10">
-                <div className="flex items-center justify-between">
-                  <span className="label text-white/50">Currency</span>
-                  <CurrencySwitcher />
-                </div>
-                <ButtonLink href="/plan-your-trip" size="lg" fullWidth icon>
-                  Start planning
-                </ButtonLink>
+      {/* Mega menu */}
+      {open && (
+        <div
+          id={`menu-${open}`}
+          className="absolute inset-x-0 top-full hidden border-b border-ivory-200 bg-ivory-50 shadow-[0_24px_40px_-30px_rgb(25_24_19/0.35)] lg:block"
+          onMouseEnter={() => show(open)}
+        >
+          <div className="container-x grid grid-cols-3 gap-10 py-10">
+            {menus[open].columns.map((col) => (
+              <div key={col.title}>
+                <p className="eyebrow text-brass-600">{col.title}</p>
+                <ul className="mt-5 space-y-3">
+                  {col.links.map((l) => (
+                    <li key={l.href}>
+                      <Link href={l.href} className="text-[0.9375rem] text-charcoal-800 transition-colors hover:text-brass-600">
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <div className="col-span-3 pt-2">
+              <Link href={menus[open].all.href} className="group/btn inline-flex items-center gap-2 text-eyebrow font-medium uppercase tracking-eyebrow text-brass-600 hover:text-charcoal-800">
+                {menus[open].all.label} <ArrowRight />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mobile drawer */}
+      {mobile && (
+        <div id="mobile-menu" className="fixed inset-x-0 bottom-0 top-[4.25rem] z-40 overflow-y-auto bg-ivory-50 lg:hidden">
+          <nav aria-label="Mobile" className="container-x pb-10 pt-2">
+            <ul className="divide-y divide-ivory-200 border-b border-ivory-200">
+              {site.nav.map((item) =>
+                item.menu ? (
+                  <li key={item.href}>
+                    <details className="group">
+                      <summary className="flex cursor-pointer list-none items-center justify-between py-4 font-display text-h4 [&::-webkit-details-marker]:hidden">
+                        {item.label}
+                        <ChevronDown className="size-3.5 transition-transform group-open:rotate-180" />
+                      </summary>
+                      <div className="grid gap-6 pb-5 sm:grid-cols-3">
+                        {menus[item.menu].columns.map((col) => (
+                          <div key={col.title}>
+                            <p className="eyebrow text-brass-600">{col.title}</p>
+                            <ul className="mt-3 space-y-2.5">
+                              {col.links.map((l) => (
+                                <li key={l.href}>
+                                  <Link href={l.href} className="text-[0.9375rem] text-charcoal-700">
+                                    {l.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                        <Link href={menus[item.menu].all.href} className="text-eyebrow font-medium uppercase tracking-eyebrow text-brass-600">
+                          {menus[item.menu].all.label} →
+                        </Link>
+                      </div>
+                    </details>
+                  </li>
+                ) : (
+                  <li key={item.href}>
+                    <Link href={item.href} className="flex items-center justify-between py-4 font-display text-h4">
+                      {item.label}
+                    </Link>
+                  </li>
+                ),
+              )}
+              {site.topBar.links.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="block py-3.5 text-[0.9375rem] text-charcoal-700">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 flex items-center justify-between">
+              <span className="eyebrow">Currency</span>
+              <CurrencySwitcher tone="dark" />
+            </div>
+            <ButtonLink href="/plan-your-trip" size="lg" fullWidth arrow className="mt-6">
+              Start planning
+            </ButtonLink>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
