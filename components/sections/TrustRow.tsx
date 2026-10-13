@@ -38,7 +38,7 @@ export function TrustRow() {
                 <span className="label text-white/50">{title}</span>
                 <Icon className="size-5 text-ochre-400 transition-transform duration-500 group-hover:rotate-12" />
               </motion.div>
-              <motion.p variants={partVariants} className="mt-10 text-[clamp(3rem,2rem+3vw,4.5rem)] font-semibold leading-none tracking-[-0.05em]">
+              <motion.p variants={partVariants} className="mt-10 text-[clamp(2.5rem,1.8rem+2vw,3.5rem)] font-semibold leading-none tracking-[-0.05em]">
                 {stat}
               </motion.p>
               <motion.p variants={partVariants} className="mt-4 max-w-xs text-white/60">

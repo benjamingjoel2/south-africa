@@ -95,7 +95,7 @@ export function Footer() {
         <div className="container-x relative">
           <p
             aria-hidden="true"
-            className="select-none whitespace-nowrap text-[clamp(3rem,13.5vw,13rem)] font-semibold leading-[0.8] tracking-[-0.06em] text-white/[0.06]"
+            className="select-none whitespace-nowrap text-[clamp(3rem,13.5vw,11rem)] font-semibold leading-[0.8] tracking-[-0.06em] text-white/[0.06]"
           >
             Cape Compass
           </p>
