@@ -1,15 +1,13 @@
 import { tours } from "@/data/tours";
 import { images } from "@/data/images";
 import { buildMetadata } from "@/lib/seo";
-import { PageHero } from "@/components/sections/PageHero";
-import { TourFilters } from "@/components/sections/TourFilters";
-import { BuildYourTrip } from "@/components/sections/BuildYourTrip";
-import { FinalCta } from "@/components/sections/FinalCta";
+import { SplitHero } from "@/components/detail/SplitHero";
+import { TourFilters } from "@/components/detail/TourFilters";
+import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
 export const metadata = buildMetadata({
-  title: "South Africa Tours & Sample Itineraries",
-  description:
-    "Tailor-made South Africa tour ideas: Cape Town and the Winelands, Kruger private-reserve safaris, Garden Route self-drives, honeymoons and family trips. Prices from, per person.",
+  title: "South Africa Tours & Itineraries",
+  description: "Tailor-made South Africa itineraries: Cape Town and the Winelands, Kruger private-reserve safaris, Garden Route self-drives, honeymoons and family trips.",
   path: "/tours",
   image: images.sabiSand,
 });
@@ -17,17 +15,19 @@ export const metadata = buildMetadata({
 export default function ToursPage() {
   return (
     <>
-      <PageHero
-        label="Sample tours"
-        title={["Itineraries to", "start the conversation"]}
-        description="Filter by region, length and budget. Each one is a starting point that your specialist will reshape around your dates, interests and pace."
+      <SplitHero
         crumbs={[{ name: "Tours", path: "/tours" }]}
+        title="Tours"
+        subtitle="Tailor-made journeys across South Africa."
+        text="From the Cape to the bush, these itineraries are starting points designed by specialists who travel them. Filter by region, length and budget, then let us reshape one around you."
+        cta={{ label: "Explore tours", href: "#tours" }}
+        image={images.sabiSand}
+        imageAlt="Leopard resting in a tree in the Sabi Sand"
       />
-      <div className="container-x section-y">
+      <div id="tours" className="container-x scroll-mt-24 border-t border-ivory-200 section-y">
         <TourFilters tours={tours} />
       </div>
-      <BuildYourTrip />
-      <FinalCta />
+      <SpecialistCta />
     </>
   );
 }

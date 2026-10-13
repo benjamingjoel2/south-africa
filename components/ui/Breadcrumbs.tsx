@@ -1,24 +1,22 @@
 import Link from "next/link";
 import { JsonLd, breadcrumbLd } from "@/lib/seo";
+import { cn } from "@/lib/utils";
 
-export function Breadcrumbs({ items }: { items: { name: string; path: string }[] }) {
+/** Eyebrow-style trail, e.g. "TOURS · CLASSIC SOUTH AFRICA". */
+export function Breadcrumbs({ items, className }: { items: { name: string; path: string }[]; className?: string }) {
   const all = [{ name: "Home", path: "/" }, ...items];
   return (
     <>
       <JsonLd data={breadcrumbLd(all)} />
-      <nav aria-label="Breadcrumb">
-        <ol className="flex flex-wrap items-center gap-2 text-sm text-white/50">
-          {all.map((it, i) => (
+      <nav aria-label="Breadcrumb" className={cn("eyebrow", className)}>
+        <ol className="flex flex-wrap items-center gap-2">
+          {items.map((it, i) => (
             <li key={it.path} className="flex items-center gap-2">
-              {i > 0 && <span aria-hidden="true" className="text-ochre-400">+</span>}
-              {i < all.length - 1 ? (
-                <Link href={it.path} className="transition-colors hover:text-white">
-                  {it.name}
-                </Link>
+              {i > 0 && <span aria-hidden="true">·</span>}
+              {i < items.length - 1 ? (
+                <Link href={it.path} className="hover:text-charcoal-800">{it.name}</Link>
               ) : (
-                <span aria-current="page" className="text-white/80">
-                  {it.name}
-                </span>
+                <span aria-current="page">{it.name}</span>
               )}
             </li>
           ))}

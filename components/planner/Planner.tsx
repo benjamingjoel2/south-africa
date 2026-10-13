@@ -6,19 +6,19 @@ import { useRef, useState } from "react";
 import type { z } from "zod";
 import { plannerRoutes, budgetTiers } from "@/data/planner";
 import { stepSchemas } from "@/lib/planner-schema";
-import { whatsappHref } from "@/config/site";
+import { site, whatsappHref } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/Button";
+import { Button, ButtonLink } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
 import { usePlannerStore, type PlannerState } from "./usePlannerStore";
 import { StepBudget, StepContact, StepWhen, StepWhere, StepWho } from "./steps";
 
 const steps = [
-  { key: "when", label: "When", title: "When are you travelling?", intro: "Approximate is perfectly fine. Seasons shape the best route." },
-  { key: "where", label: "Where", title: "Where would you like to go?", intro: "Pick the closest fit. We'll tailor every detail later." },
-  { key: "budget", label: "Budget", title: "What's your budget?", intro: "This helps us suggest the right stays from the start." },
-  { key: "who", label: "Who", title: "Who's coming along?", intro: "Tell us about your group and any extras you'd like." },
-  { key: "contact", label: "Contact", title: "How can we reach you?", intro: "Your specialist will reply within one working day." },
+  { key: "when", label: "When", title: "When would you like to travel?", intro: "Approximate is perfectly fine. Seasons shape the best route." },
+  { key: "where", label: "Where", title: "Where would you like to go?", intro: "Pick the closest fit. We tailor every detail later." },
+  { key: "budget", label: "Budget", title: "What level of comfort suits you?", intro: "This helps us suggest the right stays from the start." },
+  { key: "who", label: "Who", title: "Who is coming along?", intro: "Tell us about your party and any extras you'd like help with." },
+  { key: "contact", label: "Contact", title: "How can we reach you?", intro: "Your specialist replies within one working day." },
 ] as const;
 
 type Errors = Record<string, string>;
@@ -34,10 +34,7 @@ function toErrors(error: z.ZodError): Errors {
 
 function sectionForValidation(state: PlannerState, i: number) {
   const key = steps[i].key;
-  if (key === "who") {
-    const who = state.who;
-    return { ...who, childAges: who.childAges.filter((a): a is number => a !== null) };
-  }
+  if (key === "who") return { ...state.who, childAges: state.who.childAges.filter((a): a is number => a !== null) };
   return state[key];
 }
 
@@ -56,7 +53,6 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
     const result = stepSchemas[i].safeParse(sectionForValidation(state, i));
     if (!result.success) {
       setErrors(toErrors(result.error));
-      // Move focus to the first invalid field for keyboard/screen-reader users.
       requestAnimationFrame(() => {
         const el = topRef.current?.querySelector<HTMLElement>("[aria-invalid='true'], [role='alert']");
         el?.focus?.();
@@ -75,12 +71,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
     requestAnimationFrame(() => topRef.current?.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" }));
   }
 
-  function next() {
-    if (validate(step)) goTo(step + 1);
-  }
-
   async function submit() {
-    // Re-validate every step in case stored data was edited.
     for (let i = 0; i < steps.length; i++) {
       if (!validate(i)) {
         if (i !== step) goTo(i);
@@ -89,18 +80,8 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
     }
     setStatus("submitting");
     try {
-      const payload = {
-        when: state.when,
-        where: state.where,
-        budget: state.budget,
-        who: sectionForValidation(state, 3),
-        contact: state.contact,
-      };
-      const res = await fetch("/api/plan", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const payload = { when: state.when, where: state.where, budget: state.budget, who: sectionForValidation(state, 3), contact: state.contact };
+      const res = await fetch("/api/plan", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       if (!res.ok) throw new Error(String(res.status));
       setSubmitted({ name: state.contact.name.split(" ")[0], email: state.contact.email });
       setStatus("done");
@@ -110,77 +91,56 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
     }
   }
 
-  if (status === "done" && submitted) {
-    return <Confirmation name={submitted.name} email={submitted.email} variant={variant} onClose={onClose} />;
-  }
+  if (status === "done" && submitted) return <Confirmation name={submitted.name} email={submitted.email} variant={variant} onClose={onClose} />;
 
   const routeTitle = plannerRoutes.find((r) => r.id === state.where.route)?.title;
   const tierTitle = budgetTiers.find((t) => t.id === state.budget.tier)?.title;
 
   return (
     <div ref={topRef} className="scroll-mt-28">
-      {/* Progress indicator */}
       <nav aria-label="Planner progress">
-        <ol className="grid grid-cols-5 gap-2">
-          {steps.map((s, i) => {
-            const done = i < step;
-            const active = i === step;
-            return (
-              <li key={s.key}>
-                <button
-                  type="button"
-                  onClick={() => (i < step ? goTo(i) : undefined)}
-                  disabled={i > step}
-                  aria-current={active ? "step" : undefined}
-                  className="group w-full text-left disabled:cursor-default"
-                >
-                  <span className="block h-1 overflow-hidden rounded-full bg-white/10">
-                    <motion.span
-                      className={cn("block h-full rounded-full", active ? "bg-protea" : "bg-ochre")}
-                      initial={false}
-                      animate={{ width: done || active ? "100%" : "0%" }}
-                      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                    />
-                  </span>
-                  <span className={cn("mt-2.5 flex items-center gap-1.5 text-xs font-medium sm:text-sm", active ? "text-white" : done ? "text-white/70 group-hover:text-white" : "text-white/55")}>
-                    {done ? <CheckIcon className="size-3.5 text-ochre-400" /> : <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>}
-                    <span className="hidden sm:inline">{s.label}</span>
-                  </span>
-                </button>
-              </li>
-            );
-          })}
+        <p className="eyebrow">
+          Step {step + 1} of {steps.length} · {current.label}
+        </p>
+        <ol className="mt-3 grid grid-cols-5 gap-1.5">
+          {steps.map((s, i) => (
+            <li key={s.key}>
+              <button
+                type="button"
+                onClick={() => (i < step ? goTo(i) : undefined)}
+                disabled={i > step}
+                aria-current={i === step ? "step" : undefined}
+                aria-label={`${s.label}${i < step ? " (completed, go back)" : ""}`}
+                className="block h-[3px] w-full bg-ivory-200 disabled:cursor-default"
+              >
+                <motion.span className="block h-full bg-brass-500" initial={false} animate={{ width: i <= step ? "100%" : "0%" }} transition={{ duration: 0.4 }} />
+              </button>
+            </li>
+          ))}
         </ol>
       </nav>
-      <p className="sr-only" aria-live="polite">
-        Step {step + 1} of {steps.length}: {current.label}
-      </p>
 
-      <div className="mt-10 min-h-[22rem]">
+      <div className="mt-10">
         <AnimatePresence mode="wait" custom={direction} initial={false}>
           <motion.div
             key={current.key}
             custom={direction}
-            initial={reduce ? false : { opacity: 0, x: 24 * direction }}
+            initial={reduce ? false : { opacity: 0, x: 16 * direction }}
             animate={{ opacity: 1, x: 0 }}
-            exit={reduce ? undefined : { opacity: 0, x: -24 * direction }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            exit={reduce ? undefined : { opacity: 0, x: -16 * direction }}
+            transition={{ duration: 0.3 }}
           >
-            <p className="label text-ochre-400">
-              Step {step + 1} of {steps.length}
-            </p>
-            <h2 className={cn("mt-3 font-semibold", variant === "modal" ? "text-h3" : "text-h3 md:text-[2rem] md:leading-[1.1] md:tracking-[-0.03em]")}>
-              {current.title}
-            </h2>
-            <p className="mt-2 text-white/60">{current.intro}</p>
+            <h2 className={cn(variant === "modal" ? "text-h3" : "text-h2")}>{current.title}</h2>
+            <p className="mt-2 text-charcoal-700">{current.intro}</p>
 
             <form
               className="mt-8"
               noValidate
               onSubmit={(e) => {
                 e.preventDefault();
-                if (step < steps.length - 1) next();
-                else submit();
+                if (step < steps.length - 1) {
+                  if (validate(step)) goTo(step + 1);
+                } else submit();
               }}
             >
               {hydrated ? (
@@ -204,35 +164,34 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
                   )}
                 </>
               ) : (
-                <div className="h-64 animate-pulse rounded-2xl bg-white/5" aria-hidden="true" />
+                <div className="h-64 animate-pulse bg-ivory-100" aria-hidden="true" />
               )}
 
               {status === "error" && (
-                <p role="alert" className="mt-6 rounded-2xl border border-protea/40 bg-protea/10 p-4 text-sm">
+                <p role="alert" className="mt-6 border-l-2 border-brass-500 bg-ivory-100 px-4 py-3 text-sm">
                   Sorry, something went wrong sending your request. Please try again, or{" "}
-                  <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="underline">
-                    message us on WhatsApp
-                  </a>
-                  .
+                  <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="underline">message us on WhatsApp</a>.
                 </p>
               )}
 
-              <div className="mt-10 flex items-center justify-between gap-4 border-t border-white/10 pt-6">
+              <div className="mt-10 flex items-center justify-between gap-4 border-t border-ivory-200 pt-6">
                 {step > 0 ? (
-                  <Button variant="ghost" onClick={() => goTo(step - 1)}>
-                    ← Back
-                  </Button>
+                  <Button variant="link" onClick={() => goTo(step - 1)}>← Back</Button>
                 ) : (
-                  <span className="text-sm text-white/55">Progress saves automatically</span>
+                  <span className="text-sm text-stone-400">Progress saves automatically</span>
                 )}
-                <Button type="submit" size="lg" icon disabled={status === "submitting"}>
-                  {step < steps.length - 1 ? "Continue" : status === "submitting" ? "Sending…" : "Send my trip request"}
+                <Button type="submit" size="lg" arrow disabled={status === "submitting"}>
+                  {step < steps.length - 1 ? "Next" : status === "submitting" ? "Sending…" : "Send my request"}
                 </Button>
               </div>
             </form>
           </motion.div>
         </AnimatePresence>
       </div>
+      <p className="mt-8 text-sm text-charcoal-700">
+        Prefer email? Write to{" "}
+        <a href={`mailto:${site.contact.email}`} className="text-charcoal-800 underline underline-offset-2">{site.contact.email}</a> instead.
+      </p>
     </div>
   );
 }
@@ -241,13 +200,11 @@ function Summary({ items }: { items: (string | false | undefined)[] }) {
   const list = items.filter(Boolean) as string[];
   if (!list.length) return null;
   return (
-    <div className="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-      <p className="label text-white/55">Your trip so far</p>
-      <ul className="mt-3 flex flex-wrap gap-2">
+    <div className="mb-8 border border-ivory-200 bg-bone p-4">
+      <p className="eyebrow">Your trip so far</p>
+      <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm text-charcoal-700">
         {list.map((t) => (
-          <li key={t} className="rounded-full bg-white/[0.06] px-3 py-1.5 text-sm">
-            {t}
-          </li>
+          <li key={t}>{t}</li>
         ))}
       </ul>
     </div>
@@ -256,49 +213,34 @@ function Summary({ items }: { items: (string | false | undefined)[] }) {
 
 function Confirmation({ name, email, variant, onClose }: { name: string; email: string; variant: "page" | "modal"; onClose?: () => void }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="py-6 text-center" role="status">
-      <motion.span
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.1 }}
-        className="mx-auto flex size-20 items-center justify-center rounded-full bg-ochre"
-      >
-        <CheckIcon className="size-9" />
-      </motion.span>
-      <h2 className="mt-8 text-h2 font-semibold">Thank you{name ? `, ${name}` : ""}!</h2>
-      <p className="mx-auto mt-4 max-w-lg text-body-lg text-white/70">
-        Your trip request is with us. A dedicated Cape Compass specialist will be in touch within one working day. We&apos;ll reply to{" "}
-        <span className="text-white">{email}</span> and your preferred contact methods.
+    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="py-4" role="status">
+      <span className="flex size-12 items-center justify-center rounded-full bg-forest-700 text-white">
+        <CheckIcon className="size-5" />
+      </span>
+      <p className="eyebrow mt-6 text-brass-600">Request received</p>
+      <h2 className="mt-2 text-h2">Thank you{name ? `, ${name}` : ""}.</h2>
+      <p className="mt-4 max-w-lg text-lead text-charcoal-700">
+        Your trip request is with us. A dedicated Cape Compass specialist will be in touch within one working day. We&rsquo;ll reply to <span className="text-charcoal-800">{email}</span> and your preferred contact methods.
       </p>
-      <ol className="mx-auto mt-10 grid max-w-2xl gap-3 text-left sm:grid-cols-3">
+      <ol className="mt-8 grid max-w-2xl gap-px border border-ivory-200 bg-ivory-200 sm:grid-cols-3">
         {["We review your answers", "Your specialist gets in touch", "You receive a tailored proposal"].map((s, i) => (
-          <li key={s} className="rounded-2xl border border-white/10 p-4">
-            <span className="text-sm font-semibold text-ochre-400">{String(i + 1).padStart(2, "0")}</span>
-            <p className="mt-2 text-sm text-white/80">{s}</p>
+          <li key={s} className="bg-ivory-50 p-4">
+            <span className="eyebrow">0{i + 1}</span>
+            <p className="mt-1.5 text-sm">{s}</p>
           </li>
         ))}
       </ol>
-      <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         {variant === "modal" && onClose ? (
-          <Button onClick={onClose} variant="secondary">
-            Continue browsing
-          </Button>
+          <Button onClick={onClose} variant="outline-dark">Continue browsing</Button>
         ) : (
-          <Link
-            href="/tours"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/20 px-6 font-medium transition-colors hover:bg-white hover:text-slate"
-          >
+          <Link href="/tours" className="inline-flex h-11 items-center justify-center border border-charcoal-800 px-6 text-eyebrow font-medium uppercase tracking-eyebrow hover:bg-charcoal-800 hover:text-white">
             Browse sample tours
           </Link>
         )}
-        <a
-          href={whatsappHref("Hi Cape Compass, I've just sent a trip request via your website.")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex h-12 items-center justify-center rounded-full bg-[#25D366] px-6 font-medium text-white"
-        >
+        <ButtonLink href={whatsappHref("Hi Cape Compass, I've just sent a trip request via your website.")} external>
           Chat on WhatsApp
-        </a>
+        </ButtonLink>
       </div>
     </motion.div>
   );

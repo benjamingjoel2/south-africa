@@ -1,6 +1,6 @@
 import { site } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
-import { LegalPage } from "@/components/sections/LegalPage";
+import { LegalPage } from "@/components/detail/LegalPage";
 
 export const metadata = buildMetadata({ title: "Privacy Policy", path: "/privacy", description: `How ${site.name} collects, uses and protects your personal information.` });
 
@@ -10,8 +10,8 @@ export default function PrivacyPage() {
       <p>This policy explains how {site.name} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) collects and uses personal information when you use this website or plan a trip with us.</p>
       <h2>Information we collect</h2>
       <ul>
-        <li>Details you give us in the trip planner, contact form or newsletter signup: name, email, phone number, travel dates, party size, children&apos;s ages and preferences.</li>
-        <li>Information needed to book your trip, such as passport details, dietary or medical requirements, shared only with the suppliers who need it.</li>
+        <li>Details you give us in the trip planner, contact form or guide signup: name, email, phone number, travel dates, party size, children&apos;s ages and preferences.</li>
+        <li>Information needed to book your trip, such as passport details and dietary or medical requirements, shared only with the suppliers who need it.</li>
         <li>Basic analytics and cookie data about how the site is used, if you consent.</li>
       </ul>
       <h2>How we use it</h2>
