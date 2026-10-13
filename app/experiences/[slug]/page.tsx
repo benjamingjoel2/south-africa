@@ -64,7 +64,7 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
                 </>
               ) : (
                 <>
-                  <p className="label text-white/45">Add to your trip</p>
+                  <p className="label text-white/55">Add to your trip</p>
                   <p className="mt-3 text-h4 font-semibold">Included in tailor-made itineraries</p>
                 </>
               )
@@ -89,7 +89,7 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
             {e.includes.map((x) => (
               <li key={x} className="flex gap-3 rounded-2xl border border-white/10 p-4 text-white/85">
-                <CheckIcon className="mt-0.5 text-ochre" /> {x}
+                <CheckIcon className="mt-0.5 text-ochre-400" /> {x}
               </li>
             ))}
           </ul>
@@ -106,7 +106,7 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
                     <span className="block font-semibold">{d.name}</span>
                     <span className="text-sm text-white/55">{d.tagline}</span>
                   </span>
-                  <span className="text-ochre transition-transform group-hover:rotate-90" aria-hidden="true">+</span>
+                  <span className="text-ochre-400 transition-transform group-hover:rotate-90" aria-hidden="true">+</span>
                 </Link>
               </li>
             ))}
@@ -116,7 +116,7 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
           <ul className="space-y-4">
             {e.goodToKnow.map((t) => (
               <li key={t} className="flex gap-4 text-white/75">
-                <span className="text-ochre" aria-hidden="true">+</span> {t}
+                <span className="text-ochre-400" aria-hidden="true">+</span> {t}
               </li>
             ))}
           </ul>

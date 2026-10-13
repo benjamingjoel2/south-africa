@@ -24,7 +24,7 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
         active ? "border-ochre bg-ochre text-white" : "border-white/15 text-white/70 hover:border-white/40 hover:text-white",
       )}
     >
-      <span aria-hidden="true" className={active ? "text-white" : "text-ochre"}>+</span>
+      <span aria-hidden="true" className={active ? "text-white" : "text-ochre-400"}>+</span>
       {children}
     </button>
   );
@@ -52,7 +52,7 @@ export function TourFilters({ tours }: { tours: Tour[] }) {
     <div>
       <div className="space-y-5 rounded-card border border-white/10 bg-surface/60 p-5 md:p-6" role="group" aria-label="Filter tours">
         <div className="flex flex-col gap-3 md:flex-row md:items-center">
-          <p className="w-24 shrink-0 label text-white/45">Region</p>
+          <p className="w-24 shrink-0 label text-white/55">Region</p>
           <div className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 md:flex-wrap">
             <Chip active={region === "all"} onClick={() => setRegion("all")}>All</Chip>
             {usedRegions.map((r) => (
@@ -63,7 +63,7 @@ export function TourFilters({ tours }: { tours: Tour[] }) {
           </div>
         </div>
         <div className="flex flex-col gap-3 md:flex-row md:items-center">
-          <p className="w-24 shrink-0 label text-white/45">Duration</p>
+          <p className="w-24 shrink-0 label text-white/55">Duration</p>
           <div className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 md:flex-wrap">
             <Chip active={duration === "all"} onClick={() => setDuration("all")}>Any length</Chip>
             {durations.map((d) => (
@@ -74,7 +74,7 @@ export function TourFilters({ tours }: { tours: Tour[] }) {
           </div>
         </div>
         <div className="flex flex-col gap-3 md:flex-row md:items-center">
-          <p className="w-24 shrink-0 label text-white/45">Budget</p>
+          <p className="w-24 shrink-0 label text-white/55">Budget</p>
           <div className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 md:flex-wrap">
             <Chip active={budget === "all"} onClick={() => setBudget("all")}>Any budget</Chip>
             {(Object.keys(budgetLabels) as BudgetTier[]).map((b) => (

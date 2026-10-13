@@ -17,7 +17,7 @@ export function buildMetadata({
   const desc = description ?? site.description;
   const ogImage = image ? `${image}${image.includes("?") ? "&" : "?"}w=1200&h=630&fit=crop&q=80` : undefined;
   return {
-    title,
+    ...(title ? { title } : {}),
     description: desc,
     alternates: { canonical: path },
     openGraph: {

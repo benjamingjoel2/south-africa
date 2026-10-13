@@ -8,7 +8,7 @@ export function FieldLabel({ htmlFor, children, optional }: { htmlFor?: string; 
   return (
     <label htmlFor={htmlFor} className="mb-2 block text-sm font-medium text-white/70">
       {children}
-      {optional && <span className="ml-1.5 font-normal text-white/40">(optional)</span>}
+      {optional && <span className="ml-1.5 font-normal text-white/55">(optional)</span>}
     </label>
   );
 }
@@ -17,7 +17,7 @@ export function Legend({ children, optional }: { children: React.ReactNode; opti
   return (
     <legend className="mb-3 text-sm font-medium text-white/70">
       {children}
-      {optional && <span className="ml-1.5 font-normal text-white/40">(optional)</span>}
+      {optional && <span className="ml-1.5 font-normal text-white/55">(optional)</span>}
     </legend>
   );
 }

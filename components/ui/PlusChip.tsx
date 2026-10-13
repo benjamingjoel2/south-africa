@@ -18,7 +18,7 @@ export function PlusChip({
         className,
       )}
     >
-      <span aria-hidden="true" className="text-ochre">
+      <span aria-hidden="true" className="text-ochre-400">
         +
       </span>
       {children}
@@ -28,7 +28,7 @@ export function PlusChip({
 
 export function Plus({ className }: { className?: string }) {
   return (
-    <span aria-hidden="true" className={cn("text-ochre", className)}>
+    <span aria-hidden="true" className={cn("text-ochre-400", className)}>
       +
     </span>
   );

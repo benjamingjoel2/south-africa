@@ -7,8 +7,6 @@ import { images } from "@/data/images";
 import { ButtonLink } from "@/components/ui/Button";
 import { SplitReveal } from "@/components/motion/SplitReveal";
 
-const EASE = [0.16, 1, 0.3, 1] as const;
-
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
@@ -36,14 +34,9 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
 
       <motion.div style={{ y: contentY, opacity: fade }} className="container-x relative w-full pb-14 pt-36 md:pb-20">
-        <motion.p
-          initial={{ opacity: 0, y: -12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
-          className="label flex items-center gap-2 text-white/75"
-        >
-          <span className="text-ochre" aria-hidden="true">+</span> Tailor-made South Africa
-        </motion.p>
+        <p className="anim-fade-up label flex items-center gap-2 text-white/75" style={{ animationDelay: "0.1s" }}>
+          <span className="text-ochre-400" aria-hidden="true">+</span> Tailor-made South Africa
+        </p>
 
         <SplitReveal
           as="h1"
@@ -54,43 +47,31 @@ export function Hero() {
         />
 
         <div className="mt-10 grid gap-8 md:grid-cols-12 md:items-end">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.7, ease: EASE }}
-            className="max-w-xl text-body-xxl text-white/80 md:col-span-7"
-          >
+          <p className="anim-fade-up max-w-xl text-body-xxl text-white/80 md:col-span-7" style={{ animationDelay: "0.5s" }}>
             Private, tailor-made journeys from Cape Town to the Winelands, the Garden Route and Kruger&apos;s private reserves, planned by one dedicated local specialist from your first message to the day you fly home.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.85, ease: EASE }}
-            className="flex flex-col gap-3 sm:flex-row md:col-span-5 md:justify-end"
-          >
+          </p>
+          <div className="anim-fade-up flex flex-col gap-3 sm:flex-row md:col-span-5 md:justify-end" style={{ animationDelay: "0.65s" }}>
             <ButtonLink href="/plan-your-trip" size="lg" icon>
               Start planning
             </ButtonLink>
             <ButtonLink href="/tours" size="lg" variant="secondary">
               Explore tours
             </ButtonLink>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.ul
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.1 }}
-          className="mt-14 hidden flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-sm text-white/60 md:flex"
+        <ul
+          style={{ animationDelay: "0.9s" }}
+          className="anim-fade-up mt-14 hidden flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-sm text-white/60 md:flex"
           aria-label="Regions we cover"
         >
           {["Cape Town", "Winelands", "Garden Route", "Kruger & private reserves", "Drakensberg", "Zulu coast", "Johannesburg"].map((r) => (
             <li key={r} className="flex items-center gap-2">
-              <span className="text-ochre" aria-hidden="true">+</span>
+              <span className="text-ochre-400" aria-hidden="true">+</span>
               {r}
             </li>
           ))}
-        </motion.ul>
+        </ul>
       </motion.div>
     </section>
   );

@@ -55,7 +55,7 @@ export function CookieBanner() {
             <button
               type="button"
               onClick={() => decide("accepted")}
-              className="h-10 rounded-full bg-ochre px-5 text-sm font-medium text-white transition-colors hover:bg-ochre-400"
+              className="h-10 rounded-full bg-ochre px-5 text-sm font-medium text-white transition-colors hover:bg-ochre-700"
             >
               Accept
             </button>

@@ -57,7 +57,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
           <Breadcrumbs items={[{ name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.slug}` }]} />
           <header className="mx-auto mt-12 max-w-3xl">
             <p className="text-sm text-white/50">
-              <span className="text-ochre">{post.category}</span> · <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime}
+              <span className="text-ochre-400">{post.category}</span> · <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime}
             </p>
             <h1 className="mt-4 text-h1 font-semibold text-balance">{post.title}</h1>
             <p className="mt-6 text-body-xl text-white/65">{post.excerpt}</p>
@@ -67,7 +67,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
           </div>
           <div className="prose-cc mx-auto mt-14 max-w-3xl pb-20">
             <MDXRemote source={post.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
-            <p className="!mt-14 border-t border-white/10 pt-6 text-sm text-white/45">By {post.author}</p>
+            <p className="!mt-14 border-t border-white/10 pt-6 text-sm text-white/55">By {post.author}</p>
           </div>
         </div>
       </article>

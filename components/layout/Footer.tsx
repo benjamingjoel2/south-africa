@@ -56,7 +56,7 @@ export function Footer() {
           <div className="grid gap-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-3">
             {site.footerNav.map((group) => (
               <nav key={group.title} aria-label={group.title}>
-                <p className="label text-white/40">{group.title}</p>
+                <p className="label text-white/55">{group.title}</p>
                 <ul className="mt-5 space-y-2">
                   {group.links.map((l) => (
                     <li key={l.href}>
@@ -64,7 +64,7 @@ export function Footer() {
                         href={l.href}
                         className="group inline-flex items-center gap-2 text-h4 font-medium text-white transition-colors hover:text-ochre-400"
                       >
-                        <span aria-hidden="true" className="text-ochre transition-transform group-hover:rotate-90">+</span>
+                        <span aria-hidden="true" className="text-ochre-400 transition-transform group-hover:rotate-90">+</span>
                         {l.label}
                       </Link>
                     </li>
@@ -73,7 +73,7 @@ export function Footer() {
               </nav>
             ))}
             <div>
-              <p className="label text-white/40">Follow</p>
+              <p className="label text-white/55">Follow</p>
               <ul className="mt-5 space-y-2">
                 {site.social.map((s) => (
                   <li key={s.label}>

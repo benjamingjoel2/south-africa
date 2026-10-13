@@ -61,7 +61,7 @@ export function AboutWhyUs() {
             <span className="absolute right-5 top-5 rounded-full bg-protea/15 px-2.5 py-1 text-[0.6875rem] font-semibold uppercase tracking-wider text-protea">
               Placeholder testimonial
             </span>
-            <div className="flex gap-0.5 text-ochre" aria-label="5 out of 5 stars">
+            <div className="flex gap-0.5 text-ochre-400" role="img" aria-label="5 out of 5 stars">
               {Array.from({ length: 5 }).map((_, i) => (
                 <StarIcon key={i} />
               ))}
@@ -80,7 +80,7 @@ export function AboutWhyUs() {
               {["Association logo", "Partner logo", "Award logo"].map((l) => (
                 <li
                   key={l}
-                  className="rounded-lg border border-dashed border-white/20 px-3 py-2 text-xs uppercase tracking-wider text-white/40"
+                  className="rounded-lg border border-dashed border-white/20 px-3 py-2 text-xs uppercase tracking-wider text-white/55"
                 >
                   {l}
                 </li>

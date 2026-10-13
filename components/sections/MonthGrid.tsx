@@ -18,7 +18,7 @@ export function MonthGrid({ ratings, note }: { ratings: Record<MonthKey, MonthRa
           return (
             <li key={m} className={cn("flex flex-col items-center gap-1 rounded-xl border px-1 py-3 text-center", styles[r])}>
               <span className="text-sm font-semibold">{m}</span>
-              <span className="text-[0.6875rem] uppercase tracking-wider opacity-80">{labels[r]}</span>
+              <span className="text-[0.6875rem] uppercase tracking-wider">{labels[r]}</span>
             </li>
           );
         })}
@@ -32,10 +32,10 @@ export function MonthGrid({ ratings, note }: { ratings: Record<MonthKey, MonthRa
       <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm text-white/65">
         <p className="font-semibold text-white">Remember: seasons are reversed from the northern hemisphere.</p>
         <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-          <li><span className="text-ochre">+</span> Cape Town&apos;s winter rains fall June–August</li>
-          <li><span className="text-ochre">+</span> Kruger&apos;s dry season (May–Sep) is peak game viewing</li>
-          <li><span className="text-ochre">+</span> Summer rains Nov–Mar in the north and east</li>
-          <li><span className="text-ochre">+</span> Whale season on the Cape coast: June–November</li>
+          <li><span className="text-ochre-400">+</span> Cape Town&apos;s winter rains fall June–August</li>
+          <li><span className="text-ochre-400">+</span> Kruger&apos;s dry season (May–Sep) is peak game viewing</li>
+          <li><span className="text-ochre-400">+</span> Summer rains Nov–Mar in the north and east</li>
+          <li><span className="text-ochre-400">+</span> Whale season on the Cape coast: June–November</li>
         </ul>
       </div>
     </div>

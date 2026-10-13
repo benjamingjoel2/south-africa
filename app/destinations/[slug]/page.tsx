@@ -91,7 +91,7 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
           <InfoCard
             headline={
               <>
-                <p className="label text-white/45">Plan {d.shortName ?? d.name}</p>
+                <p className="label text-white/55">Plan {d.shortName ?? d.name}</p>
                 <p className="mt-3 text-h4 font-semibold">{d.tagline}</p>
               </>
             }
@@ -121,7 +121,7 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
           <ul className="grid gap-3 sm:grid-cols-2">
             {d.highlights.map((h) => (
               <li key={h} className="flex gap-3 rounded-2xl border border-white/10 p-4">
-                <CheckIcon className="mt-0.5 text-ochre" />
+                <CheckIcon className="mt-0.5 text-ochre-400" />
                 <span className="text-white/85">{h}</span>
               </li>
             ))}
@@ -132,7 +132,7 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
           <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
             {d.thingsToDo.map((t, i) => (
               <div key={t.title} className="border-t border-white/10 pt-5">
-                <p className="text-sm font-semibold text-ochre">{String(i + 1).padStart(2, "0")}</p>
+                <p className="text-sm font-semibold text-ochre-400">{String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-2 text-h4 font-semibold">{t.title}</h3>
                 <p className="mt-2 text-white/65">{t.text}</p>
               </div>
@@ -154,7 +154,7 @@ export default async function DestinationPage({ params }: PageProps<"/destinatio
           <ul className="space-y-4">
             {d.tips.map((t, i) => (
               <li key={i} className="flex gap-4 text-white/75">
-                <span className="text-ochre" aria-hidden="true">+</span>
+                <span className="text-ochre-400" aria-hidden="true">+</span>
                 {t}
               </li>
             ))}

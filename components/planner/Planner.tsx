@@ -142,8 +142,8 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
                       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                     />
                   </span>
-                  <span className={cn("mt-2.5 flex items-center gap-1.5 text-xs font-medium sm:text-sm", active ? "text-white" : done ? "text-white/70 group-hover:text-white" : "text-white/35")}>
-                    {done ? <CheckIcon className="size-3.5 text-ochre" /> : <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>}
+                  <span className={cn("mt-2.5 flex items-center gap-1.5 text-xs font-medium sm:text-sm", active ? "text-white" : done ? "text-white/70 group-hover:text-white" : "text-white/55")}>
+                    {done ? <CheckIcon className="size-3.5 text-ochre-400" /> : <span className="tabular-nums">{String(i + 1).padStart(2, "0")}</span>}
                     <span className="hidden sm:inline">{s.label}</span>
                   </span>
                 </button>
@@ -166,7 +166,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
             exit={reduce ? undefined : { opacity: 0, x: -24 * direction }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="label text-ochre">
+            <p className="label text-ochre-400">
               Step {step + 1} of {steps.length}
             </p>
             <h2 className={cn("mt-3 font-semibold", variant === "modal" ? "text-h3" : "text-h3 md:text-[2.75rem] md:leading-[1.05] md:tracking-[-0.03em]")}>
@@ -223,7 +223,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
                     ← Back
                   </Button>
                 ) : (
-                  <span className="text-sm text-white/40">Progress saves automatically</span>
+                  <span className="text-sm text-white/55">Progress saves automatically</span>
                 )}
                 <Button type="submit" size="lg" icon disabled={status === "submitting"}>
                   {step < steps.length - 1 ? "Continue" : status === "submitting" ? "Sending…" : "Send my trip request"}
@@ -242,7 +242,7 @@ function Summary({ items }: { items: (string | false | undefined)[] }) {
   if (!list.length) return null;
   return (
     <div className="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-      <p className="label text-white/45">Your trip so far</p>
+      <p className="label text-white/55">Your trip so far</p>
       <ul className="mt-3 flex flex-wrap gap-2">
         {list.map((t) => (
           <li key={t} className="rounded-full bg-white/[0.06] px-3 py-1.5 text-sm">
@@ -273,7 +273,7 @@ function Confirmation({ name, email, variant, onClose }: { name: string; email: 
       <ol className="mx-auto mt-10 grid max-w-2xl gap-3 text-left sm:grid-cols-3">
         {["We review your answers", "Your specialist gets in touch", "You receive a tailored proposal"].map((s, i) => (
           <li key={s} className="rounded-2xl border border-white/10 p-4">
-            <span className="text-sm font-semibold text-ochre">{String(i + 1).padStart(2, "0")}</span>
+            <span className="text-sm font-semibold text-ochre-400">{String(i + 1).padStart(2, "0")}</span>
             <p className="mt-2 text-sm text-white/80">{s}</p>
           </li>
         ))}

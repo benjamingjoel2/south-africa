@@ -111,7 +111,7 @@ export function GuideSignup() {
                       {error}
                     </p>
                   ) : (
-                    <p id="guide-note" className="mt-3 text-sm text-ink/50">
+                    <p id="guide-note" className="mt-3 text-sm text-ink/65">
                       We respect your inbox. Unsubscribe anytime.
                     </p>
                   )}

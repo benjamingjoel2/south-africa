@@ -29,7 +29,7 @@ export function StayCard({ stay, className }: { stay: Stay; className?: string }
       </motion.div>
       <div className="flex flex-1 flex-col px-2 pb-2 pt-4">
         <motion.p variants={partVariants} className="flex items-center gap-1.5 text-sm text-white/55">
-          <PinIcon className="text-ochre" /> {stay.location}
+          <PinIcon className="text-ochre-400" /> {stay.location}
         </motion.p>
         <motion.h3 variants={partVariants} className="mt-2 text-h4 font-semibold">
           <Link href={`/stays/${stay.slug}`} className="after:absolute after:inset-0 after:rounded-card">
@@ -45,7 +45,7 @@ export function StayCard({ stay, className }: { stay: Stay; className?: string }
           </span>
           <span className="text-white/60">
             From <Price usd={stay.priceFromUsdPerNight} className="font-semibold text-white" />
-            <span className="text-white/45"> per person · night</span>
+            <span className="text-white/55"> per person · night</span>
           </span>
         </motion.div>
       </div>

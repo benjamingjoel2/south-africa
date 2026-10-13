@@ -36,7 +36,7 @@ export function TourCard({ tour, className, priority }: { tour: Tour; className?
 
       <div className="flex flex-1 flex-col px-2 pb-2 pt-5">
         <motion.p variants={partVariants} className="flex items-center gap-1.5 text-sm text-white/55">
-          <PinIcon className="text-ochre" />
+          <PinIcon className="text-ochre-400" />
           {tour.regions.map(regionName).join(" · ")}
         </motion.p>
 
@@ -47,7 +47,7 @@ export function TourCard({ tour, className, priority }: { tour: Tour; className?
         </motion.h3>
 
         <motion.p variants={partVariants} className="mt-3 flex items-start gap-1.5 text-sm text-white/55">
-          <TagIcon className="mt-0.5 text-ochre" />
+          <TagIcon className="mt-0.5 text-ochre-400" />
           {tour.inclusionsLine}
         </motion.p>
 
@@ -68,7 +68,7 @@ export function TourCard({ tour, className, priority }: { tour: Tour; className?
                 <Price usd={tour.priceFromUsd} />
                 <span className="ml-1 text-sm font-normal text-white/50">per person</span>
               </p>
-              <p className="mt-1 text-xs text-white/45">
+              <p className="mt-1 text-xs text-white/55">
                 ≈ <Price usd={tour.priceFromUsd * 2} /> for two · international flights excluded
               </p>
             </div>

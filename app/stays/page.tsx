@@ -29,7 +29,7 @@ export default function StaysPage() {
             <StayCard key={s.slug} stay={s} />
           ))}
         </Stagger>
-        <p className="mt-10 text-sm text-white/45">Property names and details shown are placeholders for illustration.</p>
+        <p className="mt-10 text-sm text-white/55">Property names and details shown are placeholders for illustration.</p>
       </div>
       <FinalCta />
     </>

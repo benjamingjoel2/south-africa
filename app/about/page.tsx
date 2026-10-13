@@ -73,7 +73,7 @@ export default function AboutPage() {
           <Stagger className="mt-14 grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v, i) => (
               <StaggerItem key={v.title} className="border-b border-r border-white/10 p-6 md:p-8">
-                <p className="text-sm font-semibold text-ochre">{String(i + 1).padStart(2, "0")}</p>
+                <p className="text-sm font-semibold text-ochre-400">{String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-6 text-h4 font-semibold">{v.title}</h3>
                 <p className="mt-3 text-white/60">{v.text}</p>
               </StaggerItem>
@@ -95,13 +95,13 @@ export default function AboutPage() {
                 <div className="flex aspect-square items-center justify-center rounded-tile bg-[linear-gradient(135deg,var(--color-teal),var(--color-slate))]">
                   <span className="text-xs uppercase tracking-widest text-white/50">Photo placeholder</span>
                 </div>
-                <p className="mt-5 label text-ochre">{p.region}</p>
+                <p className="mt-5 label text-ochre-400">{p.region}</p>
                 <h3 className="mt-2 text-h4 font-semibold">{p.name}</h3>
                 <p className="text-sm text-white/55">{p.role}</p>
                 <p className="mt-4 flex-1 text-white/65">{p.bio}</p>
                 <dl className="mt-5 grid grid-cols-2 gap-3 border-t border-white/10 pt-4 text-sm">
-                  <div><dt className="text-white/45">Countries travelled</dt><dd className="font-semibold">{p.countries}</dd></div>
-                  <div><dt className="text-white/45">Trips planned</dt><dd className="font-semibold">{p.trips}</dd></div>
+                  <div><dt className="text-white/55">Countries travelled</dt><dd className="font-semibold">{p.countries}</dd></div>
+                  <div><dt className="text-white/55">Trips planned</dt><dd className="font-semibold">{p.trips}</dd></div>
                 </dl>
               </StaggerItem>
             ))}

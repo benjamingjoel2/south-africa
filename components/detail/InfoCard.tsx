@@ -25,12 +25,11 @@ export function InfoCard({
       <div>{headline}</div>
       <dl className="mt-6 space-y-4 border-t border-white/10 pt-6">
         {rows.map((r) => (
-          <div key={r.label} className="flex items-start gap-3 text-sm">
-            {r.icon && <span className="mt-0.5 text-ochre">{r.icon}</span>}
-            <dt className="sr-only">{r.label}</dt>
-            <dd>
-              <span className="block text-white/45">{r.label}</span>
-              <span className="mt-0.5 block text-white">{r.value}</span>
+          <div key={r.label} className="grid grid-cols-[auto_1fr] gap-x-3 text-sm">
+            <dt className="col-start-2 text-white/55">{r.label}</dt>
+            <dd className="contents">
+              {r.icon && <span className="row-start-1 row-span-2 mt-0.5 text-ochre-400" aria-hidden="true">{r.icon}</span>}
+              <span className="col-start-2 mt-0.5 block text-white">{r.value}</span>
             </dd>
           </div>
         ))}
@@ -48,7 +47,7 @@ export function InfoCard({
           <WhatsAppIcon className="size-5" /> Ask on WhatsApp
         </a>
       </div>
-      {note && <p className="mt-5 text-xs leading-relaxed text-white/45">{note}</p>}
+      {note && <p className="mt-5 text-xs leading-relaxed text-white/55">{note}</p>}
     </div>
   );
 }
