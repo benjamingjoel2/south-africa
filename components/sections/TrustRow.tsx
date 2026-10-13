@@ -36,7 +36,7 @@ export function TrustRow() {
             >
               <motion.div variants={partVariants} className="flex items-center justify-between">
                 <span className="label text-white/50">{title}</span>
-                <Icon className="size-5 text-ochre transition-transform duration-500 group-hover:rotate-12" />
+                <Icon className="size-5 text-ochre-400 transition-transform duration-500 group-hover:rotate-12" />
               </motion.div>
               <motion.p variants={partVariants} className="mt-10 text-[clamp(3rem,2rem+3vw,4.5rem)] font-semibold leading-none tracking-[-0.05em]">
                 {stat}

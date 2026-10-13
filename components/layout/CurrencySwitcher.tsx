@@ -37,7 +37,7 @@ export function CurrencySwitcher({ className, align = "right" }: { className?: s
         className="flex h-10 items-center gap-1.5 rounded-full border border-white/15 px-3.5 text-sm font-medium text-white/80 transition-colors hover:border-white/40 hover:text-white"
         suppressHydrationWarning
       >
-        <span className="text-ochre" aria-hidden="true">{currencies[currency].symbol}</span>
+        <span className="text-ochre-400" aria-hidden="true">{currencies[currency].symbol}</span>
         <span suppressHydrationWarning>{currency}</span>
         <svg viewBox="0 0 12 12" className={cn("size-3 transition-transform", open && "rotate-180")} aria-hidden="true">
           <path d="m3 4.5 3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.4" />
@@ -67,10 +67,10 @@ export function CurrencySwitcher({ className, align = "right" }: { className?: s
                 )}
               >
                 <span>
-                  <span className="mr-2 inline-block w-6 text-ochre">{currencies[code].symbol}</span>
+                  <span className="mr-2 inline-block w-6 text-ochre-400">{currencies[code].symbol}</span>
                   {currencies[code].label}
                 </span>
-                <span className="text-xs text-white/40">{code}</span>
+                <span className="text-xs text-white/55">{code}</span>
               </button>
             </li>
           ))}

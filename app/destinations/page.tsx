@@ -36,7 +36,7 @@ export default function DestinationsPage() {
               <h2 id={`r-${region.id}`} className="text-h4 font-semibold">
                 {region.name}
               </h2>
-              <span className="text-sm text-white/45">
+              <span className="text-sm text-white/55">
                 {items.length} {items.length === 1 ? "destination" : "destinations"}
               </span>
             </div>

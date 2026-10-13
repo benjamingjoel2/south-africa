@@ -26,6 +26,29 @@ export function SplitReveal({
   const reduce = useReducedMotion();
   const Tag = as;
   let index = 0;
+
+  // Above-the-fold headings animate with CSS so they're visible without waiting for hydration.
+  if (immediate) {
+    let i = 0;
+    return (
+      <Tag className={cn(className)} aria-label={lines.join(" ")}>
+        <span aria-hidden="true" className="block">
+          {lines.map((line, li) => (
+            <span key={li} className="block">
+              {line.split(" ").map((word, wi, arr) => (
+                <span key={wi} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
+                  <span className="anim-word inline-block" style={{ animationDelay: `${delay + i++ * 0.06}s` }}>
+                    {word}
+                    {wi < arr.length - 1 ? "\u00A0" : ""}
+                  </span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </span>
+      </Tag>
+    );
+  }
   const trigger = immediate
     ? { animate: "show" as const }
     : { whileInView: "show" as const, viewport: { once: true, amount: 0.5 } };

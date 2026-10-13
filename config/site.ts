@@ -69,8 +69,8 @@ export const site = {
     slate: "#1C2124",
     surface: "#252B2F",
     teal: "#0F5257",
-    ochre: "#C8693A",
-    protea: "#E07A8F",
+    ochre: "#B35A2E",
+    protea: "#EC8FA2",
     sand: "#F4EEE4",
   },
 } as const;

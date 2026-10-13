@@ -25,7 +25,7 @@ export function ExperienceCard({ experience, index, className }: { experience: E
       </motion.div>
       <motion.div variants={partVariants} className="flex items-start justify-between gap-4 pt-5">
         <div>
-          {typeof index === "number" && <p className="text-xs font-medium text-ochre">{String(index + 1).padStart(2, "0")}</p>}
+          {typeof index === "number" && <p className="text-xs font-medium text-ochre-400">{String(index + 1).padStart(2, "0")}</p>}
           <h3 className="mt-1 text-h4 font-semibold">
             <Link href={`/experiences/${experience.slug}`} className="after:absolute after:inset-0">
               {experience.title}

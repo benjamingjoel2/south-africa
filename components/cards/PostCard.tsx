@@ -17,7 +17,7 @@ export function PostCard({ post, coverUrl, large, className }: { post: Post; cov
         />
         <span className="absolute left-4 top-4 rounded-full bg-slate/75 px-3 py-1.5 text-xs font-medium backdrop-blur">{post.category}</span>
       </div>
-      <p className="mt-5 text-sm text-white/45">
+      <p className="mt-5 text-sm text-white/55">
         <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime}
       </p>
       <h3 className={cn("mt-2 font-semibold transition-colors group-hover:text-ochre-400", large ? "text-h3" : "text-h4")}>

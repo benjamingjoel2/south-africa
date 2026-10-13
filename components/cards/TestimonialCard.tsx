@@ -17,7 +17,7 @@ export function TestimonialCard({ t, className }: { t: Testimonial; className?: 
           Placeholder
         </span>
       )}
-      <div className="flex gap-0.5 text-ochre" aria-label={`${t.rating} out of 5 stars`}>
+      <div className="flex gap-0.5 text-ochre-400" role="img" aria-label={`${t.rating} out of 5 stars`}>
         {Array.from({ length: t.rating }).map((_, i) => (
           <StarIcon key={i} />
         ))}

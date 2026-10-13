@@ -10,10 +10,10 @@
   --color-surface-2: #2e353a;
   --color-teal: #0f5257; /* deep ocean teal */
   --color-teal-300: #5fa8a8;
-  --color-ochre: #c8693a; /* Karoo ochre / terracotta (primary CTA) */
-  --color-ochre-400: #d97f4f;
+  --color-ochre: #b35a2e; /* Karoo ochre / terracotta (primary CTA; 4.7:1 with white) */
+  --color-ochre-400: #e08a5c; /* ochre for text on dark backgrounds */
   --color-ochre-700: #9c4c25;
-  --color-protea: #e07a8f; /* protea pink — sparing accent */
+  --color-protea: #ec8fa2; /* protea pink — sparing accent */
   --color-sand: #f4eee4; /* sand off-white */
   --color-sand-200: #e8dfd0;
   --color-ink: #1c2124;
@@ -228,4 +228,30 @@ html.lenis body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* CSS-only entrance animations for above-the-fold content (play before hydration → better LCP) */
+@keyframes word-up {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anim-word {
+  animation: word-up 1s var(--ease-out-expo) both;
+}
+.anim-fade-up {
+  animation: fade-up 0.9s var(--ease-out-expo) both;
 }

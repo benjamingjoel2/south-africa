@@ -43,7 +43,7 @@ export function DetailLayout({
                   aria-current={active === s.id ? "true" : undefined}
                   className={cn(
                     "relative block whitespace-nowrap py-4 text-[0.9375rem] font-medium transition-colors",
-                    active === s.id ? "text-white" : "text-white/45 hover:text-white",
+                    active === s.id ? "text-white" : "text-white/60 hover:text-white",
                   )}
                 >
                   {s.label}

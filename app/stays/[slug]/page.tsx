@@ -97,7 +97,7 @@ export default async function StayPage({ params }: PageProps<"/stays/[slug]">) {
           <ul className="grid gap-3 sm:grid-cols-2">
             {s.features.map((f) => (
               <li key={f} className="flex gap-3 rounded-2xl border border-white/10 p-4 text-white/85">
-                <CheckIcon className="mt-0.5 text-ochre" /> {f}
+                <CheckIcon className="mt-0.5 text-ochre-400" /> {f}
               </li>
             ))}
           </ul>

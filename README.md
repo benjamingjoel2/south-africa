@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cape Compass
 
-## Getting Started
+Marketing site for **Cape Compass**, a company selling tailor-made South Africa trips with one dedicated local specialist.
 
-First, run the development server:
+Built with Next.js (App Router) · TypeScript · Tailwind CSS v4 · Framer Motion · MDX.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build (all content pages are statically generated)
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| What | Where |
+|---|---|
+| Brand name, contact details, WhatsApp number, nav, socials, currencies + FX rates | `config/site.ts` |
+| Colour, type and spacing tokens | `app/globals.css` (`@theme`) |
+| Destinations, experiences, tours, stays, testimonials, FAQs, planner options | `data/*.ts` (typed in `data/types.ts`) |
+| All image URLs (Unsplash placeholders) | `data/images.ts` |
+| Blog posts (MDX + frontmatter) | `content/blog/*.mdx` |
+| API routes (log payloads; TODO email/CRM) | `app/api/{plan,contact,newsletter}/route.ts` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Pages are generated from the data files, so moving to a headless CMS later means replacing the `data/*.ts` imports with fetches that return the same types.
 
-## Learn More
+### Prices and currencies
 
-To learn more about Next.js, take a look at the following resources:
+All prices in `/data` are stored in **USD**. The currency switcher (USD, EUR, GBP, CAD, ZAR) converts them with the static rates in `config/site.ts` and remembers the visitor's choice. Wire up live FX rates before launch (see the TODO in that file).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Trip planner
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`/plan-your-trip` is a 5-step form with zod validation (`lib/planner-schema.ts`). Progress is saved in `localStorage`. Links to it from inside the site open it as a modal (an intercepting route in `app/@modal`); visiting it directly shows the full page. Submissions POST to `/api/plan`, which validates and logs the payload. Add your email or CRM integration where the `TODO` is.
 
-## Deploy on Vercel
+## Before launch: placeholders to replace
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] `config/site.ts`: `[EMAIL]`, `[NUMBER]` (WhatsApp, digits only), phone, address, social URLs, `NEXT_PUBLIC_SITE_URL`
+- [ ] **Testimonials** (`data/testimonials.ts`): all placeholders; they're labelled "Placeholder" on the site
+- [ ] **Team** (`app/about/page.tsx`): placeholder names, bios and photos
+- [ ] **Stays** (`data/stays.ts`): property names are fictional; replace with real partner properties and approved imagery
+- [ ] **Marketing figures**: "150+ vetted guides", "2,400+ trips", "4.9/5", the founding year, and the association/partner logo slots
+- [ ] **FAQs** marked `verify: true` (visas, children's documents, health): **verify against official government sources** (South Africa's Department of Home Affairs and travellers' own governments)
+- [ ] **Legal pages** (`/privacy`, `/terms`): placeholder text; get legal review (POPIA / GDPR)
+- [ ] **Images** (`data/images.ts`): Unsplash placeholders. A few are generic stand-ins (walkingSafari, robbenIsland, soweto, roadTrip, tableMountainHike)
+- [ ] **FX rates**: live rates
+- [ ] **Email/CRM**: integrations in `app/api/*`
+- [ ] **Map**: replace the route map placeholder on tour pages with an interactive map (e.g. Mapbox)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploying
+
+The project deploys to Vercel with zero config. Set `NEXT_PUBLIC_SITE_URL` to the production domain so canonical URLs, the sitemap and OG tags are correct.

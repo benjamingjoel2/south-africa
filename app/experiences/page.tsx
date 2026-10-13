@@ -31,7 +31,7 @@ export default function ExperiencesPage() {
             <section key={c} aria-labelledby={`c-${c}`}>
               <div className="flex items-baseline justify-between border-b border-white/10 pb-4">
                 <h2 id={`c-${c}`} className="text-h4 font-semibold">{c}</h2>
-                <span className="text-sm text-white/45">{items.length}</span>
+                <span className="text-sm text-white/55">{items.length}</span>
               </div>
               <Stagger className="mt-8 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3" amount={0.05}>
                 {items.map((e) => (

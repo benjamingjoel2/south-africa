@@ -93,7 +93,7 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
                   <Price usd={t.priceFromUsd} />
                 </p>
                 <p className="text-sm text-white/60">per person sharing</p>
-                <p className="mt-2 text-xs text-white/45">
+                <p className="mt-2 text-xs text-white/55">
                   ≈ <Price usd={t.priceFromUsd * 2} /> for two · international flights excluded
                 </p>
               </>
@@ -120,7 +120,7 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {t.highlights.map((h) => (
               <li key={h} className="flex gap-3 rounded-2xl border border-white/10 p-4">
-                <CheckIcon className="mt-0.5 text-ochre" />
+                <CheckIcon className="mt-0.5 text-ochre-400" />
                 <span className="text-white/85">{h}</span>
               </li>
             ))}
@@ -131,13 +131,13 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
           <ol className="relative">
             {t.itinerary.map((d, i) => (
               <li key={d.day} className="relative grid gap-2 pb-10 pl-10 last:pb-0 md:grid-cols-[8rem_1fr] md:gap-8 md:pl-0">
-                <span className="absolute left-0 top-1 flex size-6 items-center justify-center rounded-full border border-ochre text-[0.6875rem] font-semibold text-ochre md:hidden">
+                <span className="absolute left-0 top-1 flex size-6 items-center justify-center rounded-full border border-ochre text-[0.6875rem] font-semibold text-ochre-400 md:hidden">
                   {i + 1}
                 </span>
                 {i < t.itinerary.length - 1 && (
                   <span aria-hidden="true" className="absolute left-[0.6875rem] top-8 h-[calc(100%-1.5rem)] border-l border-white/15 md:hidden" />
                 )}
-                <p className="label pt-1.5 text-ochre">{d.day}</p>
+                <p className="label pt-1.5 text-ochre-400">{d.day}</p>
                 <div className="md:border-l md:border-white/10 md:pl-8">
                   <h3 className="text-h4 font-semibold">{d.title}</h3>
                   <p className="mt-2 text-white/70">{d.description}</p>

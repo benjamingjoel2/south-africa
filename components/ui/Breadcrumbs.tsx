@@ -10,7 +10,7 @@ export function Breadcrumbs({ items }: { items: { name: string; path: string }[]
         <ol className="flex flex-wrap items-center gap-2 text-sm text-white/50">
           {all.map((it, i) => (
             <li key={it.path} className="flex items-center gap-2">
-              {i > 0 && <span aria-hidden="true" className="text-ochre">+</span>}
+              {i > 0 && <span aria-hidden="true" className="text-ochre-400">+</span>}
               {i < all.length - 1 ? (
                 <Link href={it.path} className="transition-colors hover:text-white">
                   {it.name}

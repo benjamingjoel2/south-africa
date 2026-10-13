@@ -42,19 +42,19 @@ export default function ContactPage() {
           <ul className="mt-10 grid gap-3 sm:grid-cols-3">
             <li>
               <a href={`mailto:${site.contact.email}`} className="block rounded-2xl border border-white/10 p-5 transition-colors hover:border-ochre">
-                <span className="label text-white/45">Email</span>
+                <span className="label text-white/55">Email</span>
                 <span className="mt-2 block break-all font-medium">{site.contact.email}</span>
               </a>
             </li>
             <li>
               <a href={site.contact.phoneHref} className="block rounded-2xl border border-white/10 p-5 transition-colors hover:border-ochre">
-                <span className="label text-white/45">Phone</span>
+                <span className="label text-white/55">Phone</span>
                 <span className="mt-2 block font-medium">{site.contact.phone}</span>
               </a>
             </li>
             <li>
               <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="block rounded-2xl border border-white/10 p-5 transition-colors hover:border-[#25D366]">
-                <span className="label flex items-center gap-1.5 text-white/45"><WhatsAppIcon className="size-3.5" /> WhatsApp</span>
+                <span className="label flex items-center gap-1.5 text-white/55"><WhatsAppIcon className="size-3.5" /> WhatsApp</span>
                 <span className="mt-2 block font-medium">+{site.contact.whatsappNumber}</span>
               </a>
             </li>

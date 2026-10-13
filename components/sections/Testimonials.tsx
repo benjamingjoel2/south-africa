@@ -19,7 +19,7 @@ export function Testimonials() {
           }
           action={
             <ButtonLink href="/testimonials" variant="secondary" icon>
-              Read more
+              Read guest stories
             </ButtonLink>
           }
         />

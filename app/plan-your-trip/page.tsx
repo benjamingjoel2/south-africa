@@ -28,13 +28,13 @@ export default function PlanYourTripPage() {
           </div>
           <ul className="mt-8 space-y-4 text-sm text-white/70">
             <li className="flex gap-3">
-              <CompassIcon className="size-5 text-ochre" /> One dedicated specialist from start to finish
+              <CompassIcon className="size-5 text-ochre-400" /> One dedicated specialist from start to finish
             </li>
             <li className="flex gap-3">
-              <ShieldIcon className="size-5 text-ochre" /> Vetted guides, lodges and transfers
+              <ShieldIcon className="size-5 text-ochre-400" /> Vetted guides, lodges and transfers
             </li>
             <li className="flex gap-3">
-              <ChatIcon className="size-5 text-ochre" /> Prefer to chat?{" "}
+              <ChatIcon className="size-5 text-ochre-400" /> Prefer to chat?{" "}
               <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="text-white underline underline-offset-2">
                 WhatsApp us
               </a>{" "}

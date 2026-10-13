@@ -47,7 +47,7 @@ export function DestinationCard({
           <p className="mt-1 text-sm text-white/65">
             {destination.tagline}
             {typeof tourCount === "number" && tourCount > 0 && (
-              <span className="text-white/45"> / {tourCount} sample {tourCount === 1 ? "tour" : "tours"}</span>
+              <span className="text-white/55"> / {tourCount} sample {tourCount === 1 ? "tour" : "tours"}</span>
             )}
           </p>
           <p className="mt-4 max-h-0 overflow-hidden text-sm text-white/75 opacity-0 transition-all duration-500 group-hover:max-h-24 group-hover:opacity-100 group-focus-within:max-h-24 group-focus-within:opacity-100">

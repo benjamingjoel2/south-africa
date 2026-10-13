@@ -65,7 +65,7 @@ export function Header() {
                     <span
                       aria-hidden="true"
                       className={cn(
-                        "text-ochre transition-transform duration-300 group-hover:rotate-90",
+                        "text-ochre-400 transition-transform duration-300 group-hover:rotate-90",
                         !active && "opacity-70",
                       )}
                     >
@@ -130,7 +130,7 @@ export function Header() {
                   >
                     <Link href={item.href} className="flex items-center justify-between py-4 text-h3 font-medium">
                       {item.label}
-                      <span aria-hidden="true" className="text-ochre">+</span>
+                      <span aria-hidden="true" className="text-ochre-400">+</span>
                     </Link>
                   </motion.li>
                 ))}
