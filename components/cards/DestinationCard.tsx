@@ -9,7 +9,7 @@ export function DestinationCard({ destination: d, tourCount, className, priority
   return (
     <article className={cn("group relative", className)}>
       <div className="relative aspect-[4/5] overflow-hidden bg-ivory-200">
-        <Image src={d.image} alt="" fill priority={priority} sizes="(min-width: 1024px) 24vw, (min-width: 640px) 45vw, 90vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+        <Image src={d.image} alt={`${d.name}, South Africa`} fill priority={priority} sizes="(min-width: 1024px) 24vw, (min-width: 640px) 45vw, 90vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
       </div>
       <p className="eyebrow mt-5">{regionName(d.region)}</p>
       <h3 className="mt-2 text-h3">

@@ -20,7 +20,7 @@ export function DayRow({ day, index, image }: { day: ItineraryDay; index: number
       </div>
       {image && (
         <div className={cn("relative aspect-[4/3] overflow-hidden bg-ivory-200", flip && "lg:order-1")}>
-          <Image src={image} alt="" fill sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover" />
+          <Image src={image} alt={`${day.day}: ${day.title}`} fill sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover" />
         </div>
       )}
     </div>

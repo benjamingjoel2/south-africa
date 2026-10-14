@@ -1,7 +1,8 @@
+import { site } from "@/config/site";
 import { destinations } from "@/data/destinations";
 import { regions } from "@/data/tours";
 import { images } from "@/data/images";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, JsonLd } from "@/lib/seo";
 import { SplitHero } from "@/components/detail/SplitHero";
 import { DestinationCard } from "@/components/cards/DestinationCard";
 import { tourCountFor } from "@/components/sections/PopularDestinations";
@@ -9,7 +10,7 @@ import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
 export const metadata = buildMetadata({
   title: "South Africa Destinations",
-  description: "Explore South Africa's best destinations, from Cape Town, the Winelands and the Garden Route to Kruger's private reserves, the Drakensberg, the KwaZulu-Natal coast and the Kalahari.",
+  description: "South Africa's best destinations: Cape Town, the Winelands, the Garden Route, Kruger's private reserves, the Drakensberg, the KwaZulu-Natal coast and the Kalahari.",
   path: "/destinations",
   image: images.capeTown,
 });
@@ -18,6 +19,7 @@ export default function DestinationsPage() {
   const grouped = regions.map((r) => ({ region: r, items: destinations.filter((d) => d.region === r.id) })).filter((g) => g.items.length);
   return (
     <>
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: destinations.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, url: `${site.url}/destinations/${x.slug}` })) }} />
       <SplitHero
         crumbs={[{ name: "Destinations", path: "/destinations" }]}
         title="Destinations"

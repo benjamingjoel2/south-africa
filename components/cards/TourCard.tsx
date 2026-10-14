@@ -10,7 +10,7 @@ export function TourCard({ tour: t, className, priority, compact }: { tour: Tour
   return (
     <article className={cn("group flex flex-col", className)}>
       <Link href={`/tours/${t.slug}`} className="relative block aspect-[3/2] overflow-hidden bg-ivory-200" tabIndex={-1} aria-hidden="true">
-        <Image src={t.image} alt="" fill priority={priority} sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+        <Image src={t.image} alt={t.title} fill priority={priority} sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
       </Link>
       <p className="eyebrow mt-6">
         {t.featured && <span>Most requested · </span>}

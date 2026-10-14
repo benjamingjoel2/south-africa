@@ -93,7 +93,7 @@ export function ImageChoice({ name, checked, onChange, title, text, image }: { n
     >
       <input type="radio" name={name} checked={checked} onChange={onChange} className="sr-only" />
       <div className="relative aspect-[4/3] bg-ivory-200">
-        <Image src={image} alt="" fill sizes="(min-width: 768px) 22vw, 45vw" className="object-cover" />
+        <Image src={image} alt={title} fill sizes="(min-width: 768px) 22vw, 45vw" className="object-cover" />
         <span aria-hidden="true" className={cn("absolute right-2 top-2 flex size-6 items-center justify-center border bg-ivory-50 text-forest-700", checked ? "border-forest-700" : "border-ivory-200")}>
           {checked && <CheckIcon className="size-3.5" />}
         </span>

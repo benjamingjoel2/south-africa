@@ -8,7 +8,7 @@ import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
 export const metadata = buildMetadata({
   title: "South Africa Experiences",
-  description: "Big Five game drives, walking safaris, Table Mountain, Boulders Beach penguins, Winelands tastings, whale watching, Robben Island, Soweto, Drakensberg hiking and more.",
+  description: "Big Five game drives, walking safaris, Table Mountain, Boulders Beach penguins, Winelands tastings, whale watching, Robben Island and more, tailored to you.",
   path: "/experiences",
   image: images.krugerGameDrive,
 });

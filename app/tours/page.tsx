@@ -1,6 +1,7 @@
+import { site } from "@/config/site";
 import { tours } from "@/data/tours";
 import { images } from "@/data/images";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, JsonLd } from "@/lib/seo";
 import { SplitHero } from "@/components/detail/SplitHero";
 import { TourFilters } from "@/components/detail/TourFilters";
 import { SpecialistCta } from "@/components/sections/SpecialistCta";
@@ -15,6 +16,7 @@ export const metadata = buildMetadata({
 export default function ToursPage() {
   return (
     <>
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: tours.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.title, url: `${site.url}/tours/${x.slug}` })) }} />
       <SplitHero
         crumbs={[{ name: "Tours", path: "/tours" }]}
         title="Tours"

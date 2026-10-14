@@ -6,7 +6,7 @@ export const site = {
   shortName: "Cape Compass",
   tagline: "Tailor-made South Africa, from the Cape and beyond",
   description:
-    "Tailor-made South Africa trips planned by one dedicated local specialist, from Cape Town and the Winelands to Kruger's private reserves, the Garden Route and the Drakensberg.",
+    "Tailor-made South Africa trips planned by one dedicated local specialist: Cape Town, the Winelands, the Garden Route, Kruger's private reserves and beyond.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cape-compass.vercel.app",
   locale: "en_ZA",
   foundedYear: 2012,

@@ -50,7 +50,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
           </p>
         </header>
         <div className="relative mx-auto mt-10 aspect-[16/9] max-w-5xl bg-ivory-200">
-          <Image src={cover(post.cover)} alt="" fill priority sizes="(min-width: 1024px) 1024px, 100vw" className="object-cover" />
+          <Image src={cover(post.cover)} alt={post.title} fill priority sizes="(min-width: 1024px) 1024px, 100vw" className="object-cover" />
         </div>
         <div className="prose-ed mx-auto mt-12 max-w-3xl pb-20">
           <MDXRemote source={post.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />

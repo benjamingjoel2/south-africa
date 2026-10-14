@@ -11,7 +11,7 @@ import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
 export const metadata = buildMetadata({
   title: "Why Travel With Us",
-  description: "Cape Compass is a small Cape Town team of South Africa specialists. One dedicated expert plans your tailor-made trip, from your first message to the day you fly home.",
+  description: "Cape Compass is a small Cape Town team of South Africa specialists. One dedicated expert plans your tailor-made trip from first message to flight home.",
   path: "/about",
   image: images.aboutTeam,
 });

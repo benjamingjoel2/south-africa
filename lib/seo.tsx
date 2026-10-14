@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
+import { images } from "@/data/images";
+
+/** Search snippets are cut around 155–160 characters; clamp at a word boundary. */
+export function clampDescription(text: string, max = 158) {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max - 1);
+  return `${cut.slice(0, Math.max(cut.lastIndexOf(" "), 80))}…`;
+}
 
 export function buildMetadata({
   title,
@@ -14,8 +23,9 @@ export function buildMetadata({
   image?: string;
   type?: "website" | "article";
 }): Metadata {
-  const desc = description ?? site.description;
-  const ogImage = image ? `${image}${image.includes("?") ? "&" : "?"}w=1200&h=630&fit=crop&q=80` : undefined;
+  const desc = clampDescription(description ?? site.description);
+  const img = image ?? images.heroCapeTown;
+  const ogImage = `${img}${img.includes("?") ? "&" : "?"}w=1200&h=630&fit=crop&q=80`;
   return {
     ...(title ? { title } : {}),
     description: desc,
@@ -27,13 +37,13 @@ export function buildMetadata({
       siteName: site.name,
       locale: site.locale,
       type,
-      images: ogImage ? [{ url: ogImage, width: 1200, height: 630 }] : undefined,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title ?? site.name }],
     },
     twitter: {
       card: "summary_large_image",
       title: title ? `${title} | ${site.name}` : site.name,
       description: desc,
-      images: ogImage ? [ogImage] : undefined,
+      images: [ogImage],
     },
   };
 }

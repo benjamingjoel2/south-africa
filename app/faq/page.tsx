@@ -7,7 +7,7 @@ import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
 export const metadata = buildMetadata({
   title: "South Africa Travel FAQ",
-  description: "Visas, children's documents, safety, malaria, best time to visit, getting around, safari etiquette, tipping and money: answers to common South Africa travel questions.",
+  description: "Answers to common South Africa travel questions: visas, children's documents, safety, malaria, best time to visit, getting around, tipping and money.",
   path: "/faq",
 });
 
