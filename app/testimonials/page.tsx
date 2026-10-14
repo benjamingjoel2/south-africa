@@ -5,7 +5,7 @@ import { Display } from "@/components/ui/Type";
 import { TestimonialBlock } from "@/components/cards/TestimonialBlock";
 import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
-export const metadata = buildMetadata({ title: "Guest Testimonials", description: "What travellers say about their tailor-made South Africa trips with Cape Compass.", path: "/testimonials" });
+export const metadata = buildMetadata({ title: "Guest Testimonials", description: "What travellers say about their tailor-made South Africa trips with Cape Compass: Cape Town, the Winelands, the Garden Route and private Kruger safaris.", path: "/testimonials" });
 
 export default function TestimonialsPage() {
   return (

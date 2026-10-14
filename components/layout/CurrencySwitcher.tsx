@@ -33,7 +33,7 @@ export function CurrencySwitcher({ className, tone = "light" }: { className?: st
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-controls={listId}
-        aria-label={`Display currency: ${currencies[currency].label}. Change currency`}
+        aria-label={`${currency}: change display currency (currently ${currencies[currency].label})`}
         onClick={() => setOpen((o) => !o)}
         className={cn(
           "flex h-8 items-center gap-1.5 text-[0.8125rem] font-medium transition-colors",

@@ -1,9 +1,10 @@
+import { site } from "@/config/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { experiences, getExperience } from "@/data/experiences";
 import { destinations } from "@/data/destinations";
 import { tours } from "@/data/tours";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, JsonLd } from "@/lib/seo";
 import { SplitHero } from "@/components/detail/SplitHero";
 import { SideCard, defaultRows } from "@/components/detail/SideCard";
 import { TourFilters } from "@/components/detail/TourFilters";
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: PageProps<"/experiences/[slug
   const { slug } = await params;
   const e = getExperience(slug);
   if (!e) return {};
-  return buildMetadata({ title: e.title, description: e.summary, path: `/experiences/${e.slug}`, image: e.image });
+  return buildMetadata({ title: e.title, description: `${e.summary} ${e.description[0]}`, path: `/experiences/${e.slug}`, image: e.image });
 }
 
 export default async function ExperiencePage({ params }: PageProps<"/experiences/[slug]">) {
@@ -33,6 +34,7 @@ export default async function ExperiencePage({ params }: PageProps<"/experiences
 
   return (
     <>
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "TouristAttraction", name: e.title, description: e.summary, image: e.image, url: `${site.url}/experiences/${e.slug}`, touristType: e.category, isAccessibleForFree: false }} />
       <SplitHero
         crumbs={[{ name: "Experiences", path: "/experiences" }, { name: e.category, path: "/experiences" }]}
         title={e.title}

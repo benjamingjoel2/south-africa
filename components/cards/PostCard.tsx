@@ -8,7 +8,7 @@ export function PostCard({ post, coverUrl, large, className }: { post: Post; cov
   return (
     <article className={cn("group relative", className)}>
       <div className={cn("relative overflow-hidden bg-ivory-200", large ? "aspect-[16/9]" : "aspect-[3/2]")}>
-        <Image src={coverUrl} alt="" fill sizes={large ? "(min-width: 1024px) 60vw, 100vw" : "(min-width: 1024px) 30vw, 100vw"} className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+        <Image src={coverUrl} alt={post.title} fill sizes={large ? "(min-width: 1024px) 60vw, 100vw" : "(min-width: 1024px) 30vw, 100vw"} className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
       </div>
       <p className="eyebrow mt-5">
         {post.category} · <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime}

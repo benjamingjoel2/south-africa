@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps<"/stays/[slug]">) {
   const { slug } = await params;
   const s = getStay(slug);
   if (!s) return {};
-  return buildMetadata({ title: `${s.name}, ${s.location}`, description: s.summary, path: `/stays/${s.slug}`, image: s.image });
+  return buildMetadata({ title: `${s.name}, ${s.location}`, description: `${s.summary} From US$${s.priceFromUsdPerNight.toLocaleString("en-US")} per person per night.`, path: `/stays/${s.slug}`, image: s.image });
 }
 
 export default async function StayPage({ params }: PageProps<"/stays/[slug]">) {
@@ -54,7 +54,7 @@ export default async function StayPage({ params }: PageProps<"/stays/[slug]">) {
           </div>
           {gallery.slice(1, 3).map((g, i) => (
             <div key={g + i} className="relative hidden aspect-[4/3] bg-ivory-200 md:block md:aspect-auto">
-              <Image src={g} alt="" fill sizes="33vw" className="object-cover" />
+              <Image src={g} alt={`${s.name}, photo ${i + 2}`} fill sizes="33vw" className="object-cover" />
             </div>
           ))}
         </div>

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps<"/tours/[slug]">) {
   const { slug } = await params;
   const t = getTour(slug);
   if (!t) return {};
-  return buildMetadata({ title: `${t.title}: ${t.nights + 1}-Day Itinerary`, description: `${t.subtitle}. ${t.highlights.slice(0, 2).join(". ")}. From US$${t.priceFromUsd.toLocaleString("en-US")} per person.`, path: `/tours/${t.slug}`, image: t.image });
+  return buildMetadata({ title: `${t.title}: ${t.nights + 1}-Day Itinerary`, description: `${t.subtitle}. ${t.nights + 1} days from US$${t.priceFromUsd.toLocaleString("en-US")} per person. ${t.highlights[0]}.`, path: `/tours/${t.slug}`, image: t.image });
 }
 
 function bucket(items: string[]) {
@@ -72,7 +72,7 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
           </div>
           {gallery.slice(1, 3).map((g, i) => (
             <div key={g + i} className="relative hidden aspect-[4/3] bg-ivory-200 md:block md:aspect-auto">
-              <Image src={g} alt="" fill sizes="33vw" className="object-cover" />
+              <Image src={g} alt={`${t.title}, photo ${i + 2}`} fill sizes="33vw" className="object-cover" />
             </div>
           ))}
         </div>

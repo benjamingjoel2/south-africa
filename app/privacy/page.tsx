@@ -2,7 +2,7 @@ import { site } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { LegalPage } from "@/components/detail/LegalPage";
 
-export const metadata = buildMetadata({ title: "Privacy Policy", path: "/privacy", description: `How ${site.name} collects, uses and protects your personal information.` });
+export const metadata = buildMetadata({ title: "Privacy Policy", path: "/privacy", description: `How ${site.name} collects, uses, stores and protects your personal information when you enquire, plan a trip or subscribe to the South Africa guide.` });
 
 export default function PrivacyPage() {
   return (

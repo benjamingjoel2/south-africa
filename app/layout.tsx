@@ -4,6 +4,7 @@ import "./globals.css";
 import { site } from "@/config/site";
 import { CurrencyProvider } from "@/lib/currency";
 import { JsonLd } from "@/lib/seo";
+import { images } from "@/data/images";
 import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -37,6 +38,8 @@ export const metadata: Metadata = {
   openGraph: { siteName: site.name, locale: site.locale, type: "website" },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
+  // Set GOOGLE_SITE_VERIFICATION in Vercel once the domain is added to Search Console.
+  ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
 };
 
 export const viewport: Viewport = {
@@ -64,12 +67,17 @@ export default function RootLayout({
             name: site.name,
             description: site.description,
             url: site.url,
+            logo: `${site.url}/icon.svg`,
+            image: `${images.heroCapeTown}?w=1200&h=630&fit=crop&q=80`,
+            foundingDate: String(site.foundedYear),
             email: site.contact.email,
             telephone: site.contact.phone,
             address: { "@type": "PostalAddress", addressLocality: "Cape Town", addressCountry: "ZA" },
             areaServed: { "@type": "Country", name: "South Africa" },
+            knowsLanguage: "en",
           }}
         />
+        <JsonLd data={{ "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: site.url, inLanguage: "en" }} />
         <CurrencyProvider>
           <TopBar />
           <Header />

@@ -5,7 +5,7 @@ import { Display, Eyebrow } from "@/components/ui/Type";
 import { SideCard } from "@/components/detail/SideCard";
 import { ContactForm } from "@/components/detail/ContactForm";
 
-export const metadata = buildMetadata({ title: "Contact Us", description: "Get in touch with a Cape Compass South Africa specialist by email, phone or WhatsApp.", path: "/contact" });
+export const metadata = buildMetadata({ title: "Contact Us", description: "Get in touch with a Cape Compass South Africa specialist by email, phone or WhatsApp. Send us a note and we reply within one working day with first ideas.", path: "/contact" });
 
 export default function ContactPage() {
   return (
