@@ -1,54 +1,50 @@
+import { site } from "@/config/site";
 import { destinations } from "@/data/destinations";
-import { tours, regions } from "@/data/tours";
+import { regions } from "@/data/tours";
 import { images } from "@/data/images";
-import { buildMetadata } from "@/lib/seo";
-import { PageHero } from "@/components/sections/PageHero";
-import { Stagger } from "@/components/motion/Reveal";
+import { buildMetadata, JsonLd } from "@/lib/seo";
+import { SplitHero } from "@/components/detail/SplitHero";
 import { DestinationCard } from "@/components/cards/DestinationCard";
-import { FinalCta } from "@/components/sections/FinalCta";
+import { tourCountFor } from "@/components/sections/PopularDestinations";
+import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
 export const metadata = buildMetadata({
   title: "South Africa Destinations",
-  description:
-    "Explore South Africa's best destinations, from Cape Town, the Winelands and the Garden Route to Kruger's private reserves, the Drakensberg, the KwaZulu-Natal coast and the Kalahari.",
+  description: "South Africa's best destinations: Cape Town, the Winelands, the Garden Route, Kruger's private reserves, the Drakensberg, the KwaZulu-Natal coast and the Kalahari.",
   path: "/destinations",
   image: images.capeTown,
 });
 
 export default function DestinationsPage() {
-  const count = (slug: string) => tours.filter((t) => t.destinationSlugs.includes(slug)).length;
-  const grouped = regions
-    .map((r) => ({ region: r, items: destinations.filter((d) => d.region === r.id) }))
-    .filter((g) => g.items.length);
-
+  const grouped = regions.map((r) => ({ region: r, items: destinations.filter((d) => d.region === r.id) })).filter((g) => g.items.length);
   return (
     <>
-      <PageHero
-        label="Destinations"
-        title={["From the Cape", "and beyond"]}
-        description="Twelve regions, each with its own season and character. Most trips combine two to four. Your specialist will help you choose the right mix for your time of year."
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", itemListElement: destinations.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, url: `${site.url}/destinations/${x.slug}` })) }} />
+      <SplitHero
         crumbs={[{ name: "Destinations", path: "/destinations" }]}
+        title="Destinations"
+        subtitle="Twelve regions, one country, endless combinations."
+        text="Most trips combine two to four of these. Start in Cape Town, then go further: wine country, whale coast, the bush, the mountains and the warm Indian Ocean."
+        cta={{ label: "Start planning", href: "/plan-your-trip" }}
+        image={images.capeTown}
+        imageAlt="Cape Town city bowl below Table Mountain"
       />
-      <div className="container-x section-y space-y-20">
+      <div className="container-x space-y-20 border-t border-ivory-200 section-y">
         {grouped.map(({ region, items }) => (
           <section key={region.id} aria-labelledby={`r-${region.id}`}>
-            <div className="flex items-baseline justify-between border-b border-white/10 pb-4">
-              <h2 id={`r-${region.id}`} className="text-h4 font-semibold">
-                {region.name}
-              </h2>
-              <span className="text-sm text-white/55">
-                {items.length} {items.length === 1 ? "destination" : "destinations"}
-              </span>
+            <div className="flex items-baseline justify-between border-b border-ivory-200 pb-4">
+              <h2 id={`r-${region.id}`} className="text-h3">{region.name}</h2>
+              <span className="eyebrow">{items.length} {items.length === 1 ? "destination" : "destinations"}</span>
             </div>
-            <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" amount={0.05}>
+            <div className="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
               {items.map((d) => (
-                <DestinationCard key={d.slug} destination={d} tourCount={count(d.slug)} />
+                <DestinationCard key={d.slug} destination={d} tourCount={tourCountFor(d.slug)} />
               ))}
-            </Stagger>
+            </div>
           </section>
         ))}
       </div>
-      <FinalCta />
+      <SpecialistCta />
     </>
   );
 }

@@ -1,22 +1,22 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "ghost" | "light" | "dark";
+type Variant = "dark" | "brass" | "outline-dark" | "outline-light" | "link" | "link-light";
 type Size = "sm" | "md" | "lg";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-ochre text-white hover:bg-ochre-700",
-  secondary:
-    "border border-white/20 text-white hover:border-white hover:bg-white hover:text-slate",
-  ghost: "text-white/70 hover:text-white",
-  light: "bg-sand text-ink hover:bg-white",
-  dark: "bg-slate text-white hover:bg-teal",
+  dark: "bg-forest-700 text-white hover:bg-forest-900",
+  brass: "bg-brass-400 text-forest-900 hover:bg-brass-300",
+  "outline-dark": "border border-charcoal-800 text-charcoal-800 hover:bg-charcoal-800 hover:text-white",
+  "outline-light": "border border-white/40 text-white hover:border-white hover:bg-white/10",
+  link: "h-auto px-0 text-charcoal-800 hover:text-brass-600",
+  "link-light": "h-auto px-0 text-white/85 hover:text-brass-300",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-10 px-4 text-sm",
-  md: "h-12 px-6 text-[0.9375rem]",
-  lg: "h-14 px-8 text-base",
+  sm: "h-10 px-5",
+  md: "h-11 px-6",
+  lg: "h-12 px-7",
 };
 
 type CommonProps = {
@@ -24,33 +24,27 @@ type CommonProps = {
   size?: Size;
   className?: string;
   children: React.ReactNode;
-  icon?: boolean;
+  /** Trailing arrow */
+  arrow?: boolean;
   fullWidth?: boolean;
 };
 
-function classes({ variant = "primary", size = "md", className, fullWidth }: CommonProps) {
+function classes({ variant = "dark", size = "md", className, fullWidth }: CommonProps) {
+  const isLink = variant.startsWith("link");
   return cn(
-    "group/btn relative inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-[-0.01em]",
-    "transition-[background-color,color,border-color,transform] duration-300 ease-out-expo active:scale-[0.98]",
+    "group/btn inline-flex items-center justify-center gap-3 whitespace-nowrap text-eyebrow font-medium uppercase tracking-eyebrow transition-colors duration-200",
     "disabled:pointer-events-none disabled:opacity-50",
+    !isLink && sizes[size],
     variants[variant],
-    sizes[size],
     fullWidth && "w-full",
     className,
   );
 }
 
-export function Arrow({ className }: { className?: string }) {
+export function ArrowRight({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 16 16"
-      aria-hidden="true"
-      className={cn(
-        "size-4 transition-transform duration-300 ease-out-expo group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5",
-        className,
-      )}
-    >
-      <path d="M4.5 11.5 11.5 4.5M5.5 4.5h6v6" fill="none" stroke="currentColor" strokeWidth="1.5" />
+    <svg viewBox="0 0 16 12" aria-hidden="true" className={cn("h-2.5 w-3.5 shrink-0 transition-transform duration-300 group-hover/btn:translate-x-0.5", className)}>
+      <path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.3" />
     </svg>
   );
 }
@@ -63,18 +57,12 @@ export function ButtonLink({
   const content = (
     <>
       {props.children}
-      {props.icon && <Arrow />}
+      {props.arrow && <ArrowRight />}
     </>
   );
   if (external) {
     return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes(props)}
-        aria-label={props["aria-label"]}
-      >
+      <a href={href} target="_blank" rel="noopener noreferrer" className={classes(props)} aria-label={props["aria-label"]}>
         {content}
       </a>
     );
@@ -91,15 +79,11 @@ export function Button({
   onClick,
   disabled,
   ...props
-}: CommonProps & {
-  type?: "button" | "submit";
-  onClick?: () => void;
-  disabled?: boolean;
-}) {
+}: CommonProps & { type?: "button" | "submit"; onClick?: () => void; disabled?: boolean }) {
   return (
     <button type={type} onClick={onClick} disabled={disabled} className={classes(props)}>
       {props.children}
-      {props.icon && <Arrow />}
+      {props.arrow && <ArrowRight />}
     </button>
   );
 }

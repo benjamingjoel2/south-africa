@@ -1,121 +1,120 @@
-import Image from "next/image";
 import Link from "next/link";
 import { site, whatsappHref } from "@/config/site";
-import { images } from "@/data/images";
+import { tours } from "@/data/tours";
+import { getAllPosts } from "@/lib/blog";
 import { Logo } from "@/components/ui/Logo";
-import { NdebeleLine } from "@/components/ui/NdebeleLine";
+import { StarIcon } from "@/components/ui/Icons";
+
+function Col({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <p className="font-display text-[0.8125rem] font-medium uppercase tracking-[0.14em] text-brass-400">{title}</p>
+      <ul className="mt-5 space-y-3 text-[0.9375rem] text-white/80">{children}</ul>
+    </div>
+  );
+}
+
+const L = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <li>
+    <Link href={href} className="transition-colors hover:text-white">
+      {children}
+    </Link>
+  </li>
+);
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const posts = getAllPosts().slice(0, 4);
+  const featured = [...tours].sort((a, b) => Number(!!b.featured) - Number(!!a.featured)).slice(0, 5);
+
   return (
-    <footer className="relative overflow-hidden bg-slate-900">
-      <NdebeleLine />
-      <div className="relative">
-        <div className="absolute inset-0">
-          <Image
-            src={images.footer}
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/80 to-slate-900" />
-        </div>
-
-        <div className="container-x relative grid gap-14 pb-12 pt-20 md:pt-28 lg:grid-cols-12">
-          <div className="lg:col-span-4">
-            <Logo />
-            <p className="mt-6 max-w-sm text-white/60">
-              Tailor-made South Africa trips with one dedicated local specialist, from your first message to the day you fly home.
-            </p>
-            <ul className="mt-8 space-y-3 text-sm">
-              <li>
-                <a href={`mailto:${site.contact.email}`} className="text-white/80 transition-colors hover:text-ochre-400">
-                  {site.contact.email}
-                </a>
-              </li>
-              <li>
-                <a href={site.contact.phoneHref} className="text-white/80 transition-colors hover:text-ochre-400">
-                  {site.contact.phone}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={whatsappHref()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 transition-colors hover:text-ochre-400"
-                >
-                  WhatsApp · +{site.contact.whatsappNumber}
-                </a>
-              </li>
-              <li className="text-white/50">{site.contact.address}</li>
-            </ul>
-          </div>
-
-          <div className="grid gap-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-3">
-            {site.footerNav.map((group) => (
-              <nav key={group.title} aria-label={group.title}>
-                <p className="label text-white/55">{group.title}</p>
-                <ul className="mt-5 space-y-2">
-                  {group.links.map((l) => (
-                    <li key={l.href}>
-                      <Link
-                        href={l.href}
-                        className="group inline-flex items-center gap-2 text-h4 font-medium text-white transition-colors hover:text-ochre-400"
-                      >
-                        <span aria-hidden="true" className="text-ochre-400 transition-transform group-hover:rotate-90">+</span>
-                        {l.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            ))}
-            <div>
-              <p className="label text-white/55">Follow</p>
-              <ul className="mt-5 space-y-2">
-                {site.social.map((s) => (
-                  <li key={s.label}>
-                    <a
-                      href={s.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-h4 font-medium text-white/80 transition-colors hover:text-ochre-400"
-                    >
-                      {s.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="container-x relative">
-          <p
-            aria-hidden="true"
-            className="select-none whitespace-nowrap text-[clamp(3rem,13.5vw,11rem)] font-semibold leading-[0.8] tracking-[-0.06em] text-white/[0.06]"
-          >
-            Cape Compass
+    <footer className="bg-forest-900 text-white">
+      <div className="container-x grid gap-12 py-16 lg:grid-cols-12 lg:gap-8 lg:py-20">
+        <div className="lg:col-span-3">
+          <Logo tone="light" size="lg" />
+          <p className="mt-5 max-w-xs text-[0.9375rem] leading-relaxed text-white/70">
+            Tailor-made South Africa trips, from Cape Town and the Winelands to Kruger&rsquo;s private reserves, designed by one dedicated local specialist.
           </p>
+          <ul className="mt-6 space-y-2 text-[0.9375rem] text-white/85">
+            <li>
+              <a href={site.contact.phoneHref} className="hover:text-white">{site.contact.phone}</a>
+            </li>
+            <li>
+              <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                Message us on WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${site.contact.email}`} className="hover:text-white">{site.contact.email}</a>
+            </li>
+          </ul>
         </div>
 
-        <div className="relative border-t border-white/10">
-          <div className="container-x flex flex-col gap-4 py-6 text-sm text-white/50 md:flex-row md:items-center md:justify-between">
-            <p>
-              © {year} {site.name}. All rights reserved. Registered tour operator (details TBC).
-            </p>
-            <ul className="flex flex-wrap gap-x-6 gap-y-2">
-              {site.legal.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="transition-colors hover:text-white">
-                    {l.label}
-                  </Link>
+        <div className="grid gap-10 sm:grid-cols-2 lg:col-span-9 lg:grid-cols-[1.1fr_1.5fr_1fr_1fr] lg:gap-8">
+          <Col title="Featured tours">
+            {featured.map((t) => (
+              <L key={t.slug} href={`/tours/${t.slug}`}>{t.title}</L>
+            ))}
+          </Col>
+          <Col title="Popular reads">
+            {posts.map((p) => (
+              <L key={p.slug} href={`/blog/${p.slug}`}>{p.title}</L>
+            ))}
+          </Col>
+          <div className="space-y-10">
+            <Col title="About">
+              <L href="/about">Why travel with us</L>
+              <L href="/about#story">Our story</L>
+              <L href="/about#team">Meet the team</L>
+              <L href="/testimonials">Testimonials</L>
+              <L href="/faq">FAQ</L>
+            </Col>
+          </div>
+          <div className="space-y-10">
+            <Col title="Practical">
+              <L href="/plan-your-trip">Plan your trip</L>
+              <L href="/destinations">Destinations</L>
+              <L href="/stays">Where to stay</L>
+              <L href="/contact">Contact us</L>
+            </Col>
+            <Col title="Connect">
+              {site.social.map((s) => (
+                <li key={s.label}>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
+                    {s.label}
+                  </a>
                 </li>
               ))}
-            </ul>
+            </Col>
           </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="container-x flex flex-col gap-3 py-5 text-[0.8125rem] text-white/70 md:flex-row md:items-center md:gap-8">
+          <span className="flex items-center gap-2">
+            <span className="flex gap-0.5 text-brass-400" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <StarIcon key={i} />
+              ))}
+            </span>
+            <span className="text-white">4.9</span> average guest rating · placeholder until real reviews are added
+          </span>
+          <span className="hidden md:inline text-white/25">|</span>
+          <span>Association membership placeholder</span>
+          <span>Award placeholder</span>
+        </div>
+      </div>
+      <div className="border-t border-white/10">
+        <div className="container-x flex flex-col gap-2 py-4 text-[0.8125rem] text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>© {year} {site.name}. All rights reserved.</p>
+          <ul className="flex gap-6">
+            {site.legal.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="hover:text-white">{l.label}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

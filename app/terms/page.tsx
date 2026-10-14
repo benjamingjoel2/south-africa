@@ -1,8 +1,8 @@
 import { site } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
-import { LegalPage } from "@/components/sections/LegalPage";
+import { LegalPage } from "@/components/detail/LegalPage";
 
-export const metadata = buildMetadata({ title: "Terms & Conditions", path: "/terms", description: `Booking terms and conditions for ${site.name}.` });
+export const metadata = buildMetadata({ title: "Terms & Conditions", path: "/terms", description: `Booking terms and conditions for ${site.name}: quotes and pricing, deposits and payments, changes and cancellations, travel insurance and your responsibilities.` });
 
 export default function TermsPage() {
   return (
