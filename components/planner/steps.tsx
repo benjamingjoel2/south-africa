@@ -31,15 +31,15 @@ export function StepWhen({ value, update, errors }: StepProps<"when">) {
             onChange={(e) => update({ arrivalDate: e.target.value })}
             aria-invalid={!!err(errors, "arrivalDate")}
             aria-describedby={describedBy(errors, "arrivalDate", "arrivalDate")}
-            className="[color-scheme:dark]"
+            className="[color-scheme:light]"
           />
           <FieldError id="arrivalDate-error" message={err(errors, "arrivalDate")} />
         </div>
         <div>
           <FieldLabel htmlFor="nights">
-            Length of stay: <span className="font-semibold text-white">{value.nights} {value.nights === 1 ? "night" : "nights"}</span>
+            Length of stay: <span className="font-medium text-charcoal-800">{value.nights} {value.nights === 1 ? "night" : "nights"}</span>
           </FieldLabel>
-          <div className="flex h-14 items-center gap-4 rounded-2xl border border-white/12 bg-white/[0.04] px-5">
+          <div className="flex h-14 items-center gap-4 rounded-none border border-ivory-200 bg-ivory-50 px-5">
             <input
               id="nights"
               type="range"
@@ -47,7 +47,7 @@ export function StepWhen({ value, update, errors }: StepProps<"when">) {
               max={30}
               value={value.nights}
               onChange={(e) => update({ nights: Number(e.target.value) })}
-              className="w-full accent-[var(--color-ochre)]"
+              className="w-full accent-[var(--color-forest-700)]"
               aria-valuetext={`${value.nights} nights`}
             />
             <input
@@ -57,7 +57,7 @@ export function StepWhen({ value, update, errors }: StepProps<"when">) {
               value={value.nights}
               onChange={(e) => update({ nights: Math.max(1, Math.min(30, Number(e.target.value) || 1)) })}
               aria-label="Number of nights"
-              className="w-14 rounded-lg bg-white/5 py-1 text-center"
+              className="w-14 rounded-none bg-ivory-100 py-1 text-center"
             />
           </div>
           <FieldError id="nights-error" message={err(errors, "nights")} />
@@ -138,32 +138,32 @@ export function StepBudget({ value, update, errors }: StepProps<"budget">) {
   return (
     <fieldset aria-describedby={describedBy(errors, "tier", "tier")}>
       <Legend>What level of comfort are you looking for?</Legend>
-      <p className="-mt-1 mb-5 text-sm text-white/50">Approximate land cost per person, per day, sharing. Excludes international flights.</p>
+      <p className="-mt-1 mb-5 text-sm text-charcoal-700">Approximate land cost per person, per day, sharing. Excludes international flights.</p>
       <div className="grid gap-3 md:grid-cols-2">
         {budgetTiers.map((t) => (
           <label
             key={t.id}
-            className={`relative flex cursor-pointer flex-col rounded-2xl border p-5 transition-colors has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-ochre-400 ${
-              value.tier === t.id ? "border-ochre bg-ochre/10" : "border-white/12 hover:border-white/30"
+            className={`relative flex cursor-pointer flex-col rounded-none border p-5 transition-colors has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brass-500 ${
+              value.tier === t.id ? "border-forest-700 bg-bone" : "border-ivory-200 hover:border-stone-300"
             }`}
           >
             <input type="radio" name="tier" className="sr-only" checked={value.tier === t.id} onChange={() => update({ tier: t.id })} />
             <span className="flex items-center justify-between">
-              <span className="text-h4 font-semibold">{t.title}</span>
+              <span className="font-display text-h4">{t.title}</span>
               <span
                 aria-hidden="true"
-                className={`size-5 rounded-full border-2 ${value.tier === t.id ? "border-ochre bg-ochre shadow-[inset_0_0_0_3px_var(--color-slate)]" : "border-white/30"}`}
+                className={`size-5 rounded-full border-2 ${value.tier === t.id ? "border-forest-700 bg-forest-700 shadow-[inset_0_0_0_3px_var(--color-ivory-50)]" : "border-stone-300"}`}
               />
             </span>
-            <span className="mt-3 text-white/60">{t.text}</span>
+            <span className="mt-3 text-charcoal-700">{t.text}</span>
             <span className="mt-4 text-sm">
               {t.priceUsd > 0 ? (
                 <>
-                  From approx. <Price usd={t.priceUsd} className="font-semibold text-white" />
-                  <span className="text-white/50"> pp / day</span>
+                  From approx. <Price usd={t.priceUsd} className="font-medium text-charcoal-800" />
+                  <span className="text-charcoal-700"> pp / day</span>
                 </>
               ) : (
-                <span className="text-white/50">We&apos;ll show you options</span>
+                <span className="text-charcoal-700">We&apos;ll show you options</span>
               )}
             </span>
           </label>
@@ -195,11 +195,11 @@ export function StepWho({ value, update, errors }: StepProps<"who">) {
       {value.children > 0 && (
         <fieldset aria-describedby={describedBy(errors, "childAges", "childAges")}>
           <Legend>Children&apos;s ages on arrival</Legend>
-          <p className="-mt-1 mb-4 text-sm text-white/50">Many safari lodges set minimum ages for game drives, so this helps us choose the right ones.</p>
+          <p className="-mt-1 mb-4 text-sm text-charcoal-700">Many safari lodges set minimum ages for game drives, so this helps us choose the right ones.</p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {value.childAges.map((age, i) => (
               <div key={i}>
-                <label htmlFor={`child-${i}`} className="mb-1.5 block text-xs text-white/50">
+                <label htmlFor={`child-${i}`} className="mb-1.5 block text-xs text-charcoal-700">
                   Child {i + 1}
                 </label>
                 <select
@@ -210,7 +210,7 @@ export function StepWho({ value, update, errors }: StepProps<"who">) {
                     ages[i] = e.target.value === "" ? null : Number(e.target.value);
                     update({ childAges: ages });
                   }}
-                  className={`${inputClass} [color-scheme:dark]`}
+                  className={`${inputClass} [color-scheme:light]`}
                   aria-invalid={age === null && !!err(errors, "childAges")}
                 >
                   <option value="">Age</option>
@@ -290,7 +290,7 @@ export function StepContact({ value, update, errors }: StepProps<"contact">) {
             aria-label="Country code"
             value={value.phoneCode}
             onChange={(e) => update({ phoneCode: e.target.value })}
-            className={`${inputClass} w-36 shrink-0 [color-scheme:dark]`}
+            className={`${inputClass} w-36 shrink-0 [color-scheme:light]`}
           >
             {phoneCodes.map(([code, label]) => (
               <option key={code} value={code}>
@@ -338,18 +338,18 @@ export function StepContact({ value, update, errors }: StepProps<"contact">) {
       </div>
 
       <div>
-        <label className="flex cursor-pointer items-start gap-3 text-sm text-white/70">
+        <label className="flex cursor-pointer items-start gap-3 text-sm text-charcoal-700">
           <input
             type="checkbox"
             checked={value.consent}
             onChange={(e) => update({ consent: e.target.checked })}
-            className="mt-0.5 size-5 shrink-0 accent-[var(--color-ochre)]"
+            className="mt-0.5 size-5 shrink-0 accent-[var(--color-forest-700)]"
             aria-invalid={!!err(errors, "consent")}
             aria-describedby={describedBy(errors, "consent", "consent")}
           />
           <span>
             I agree that Cape Compass may contact me about this trip and store my details in line with the{" "}
-            <a href="/privacy" className="text-white underline underline-offset-2" target="_blank">
+            <a href="/privacy" className="text-charcoal-800 underline underline-offset-2" target="_blank">
               Privacy Policy
             </a>
             .

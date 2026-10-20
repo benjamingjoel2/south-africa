@@ -1,73 +1,68 @@
-import Image from "next/image";
-import Link from "next/link";
-import { images } from "@/data/images";
 import { site, whatsappHref } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { SectionLabel } from "@/components/ui/SectionHead";
-import { ContactForm } from "@/components/sections/ContactForm";
-import { ButtonLink } from "@/components/ui/Button";
-import { WhatsAppIcon } from "@/components/layout/WhatsAppFloat";
+import { Display, Eyebrow } from "@/components/ui/Type";
+import { SideCard } from "@/components/detail/SideCard";
+import { ContactForm } from "@/components/detail/ContactForm";
 
-export const metadata = buildMetadata({
-  title: "Contact Us",
-  description: "Get in touch with a Cape Compass South Africa specialist by email, phone or WhatsApp.",
-  path: "/contact",
-});
+export const metadata = buildMetadata({ title: "Contact Us", description: "Get in touch with a Cape Compass South Africa specialist by email, phone or WhatsApp. Send us a note and we reply within one working day with first ideas.", path: "/contact" });
 
 export default function ContactPage() {
   return (
-    <div className="pt-28 md:pt-36">
-      <div className="container-x">
+    <div className="container-x grid gap-12 py-12 lg:grid-cols-12 lg:gap-16 lg:py-16">
+      <div className="lg:col-span-7">
         <Breadcrumbs items={[{ name: "Contact", path: "/contact" }]} />
-      </div>
-      <div className="container-x mt-12 grid gap-12 pb-24 lg:grid-cols-12 lg:gap-16">
-        <div className="relative hidden overflow-hidden rounded-card lg:col-span-5 lg:block">
-          <Image src={images.capeTown2} alt="Camps Bay beach beneath the Twelve Apostles, Cape Town" fill sizes="40vw" className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate/90 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-8">
-            <p className="label text-white/60">Office</p>
-            <p className="mt-2 text-h4 font-semibold">{site.contact.address}</p>
-            <p className="mt-2 text-sm text-white/65">{site.contact.hours}</p>
+        <Display as="h1" size="h1" lead="Speak to a" accent="specialist" className="mt-5" />
+        <p className="mt-5 max-w-xl text-lead text-charcoal-700">
+          Our team is on the ground in Cape Town. Reach us by phone, WhatsApp or email, and a specialist will reply within one working day, usually much sooner.
+        </p>
+
+        <div className="mt-12 border-t border-ivory-200 pt-10">
+          <Eyebrow>Three ways through</Eyebrow>
+          <h2 className="mt-3 text-h2">Whichever is easiest.</h2>
+          <div className="mt-8 divide-y divide-ivory-200 border-y border-ivory-200">
+            <div className="py-6">
+              <p className="eyebrow">Phone</p>
+              <a href={site.contact.phoneHref} className="mt-2 block font-display text-[1.5rem] italic hover:text-brass-600">{site.contact.phone}</a>
+              <p className="mt-1 text-sm text-charcoal-700">{site.contact.hours}</p>
+            </div>
+            <div className="py-6">
+              <p className="eyebrow">WhatsApp</p>
+              <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="mt-2 block font-display text-[1.5rem] italic hover:text-brass-600">
+                Message us on WhatsApp
+              </a>
+              <p className="mt-1 text-sm text-charcoal-700">+{site.contact.whatsappNumber} · 24/7 while you travel</p>
+            </div>
+            <div className="py-6">
+              <p className="eyebrow">Email</p>
+              <a href={`mailto:${site.contact.email}`} className="mt-2 block break-all font-display text-[1.5rem] italic hover:text-brass-600">{site.contact.email}</a>
+            </div>
           </div>
+          <p className="eyebrow mt-5">Headquartered in {site.contact.address}</p>
         </div>
-        <div className="lg:col-span-7">
-          <SectionLabel>Contact</SectionLabel>
-          <h1 className="mt-5 text-h1 font-semibold">Get in touch</h1>
-          <p className="mt-5 max-w-xl text-body-xl text-white/60">
-            Questions, ideas, half-formed plans: we&apos;d love to hear them. For a tailored proposal, our{" "}
-            <Link href="/plan-your-trip" className="text-white underline underline-offset-2">trip planner</Link> is the fastest route.
+
+        <div className="mt-12 border-t border-ivory-200 pt-10">
+          <Eyebrow>Before you reach out</Eyebrow>
+          <h2 className="mt-3 text-h2">Send us a note.</h2>
+          <p className="mt-3 max-w-xl text-charcoal-700">
+            For a tailored proposal, our <a href="/plan-your-trip" className="underline underline-offset-2">trip planner</a> is the fastest route. For anything else, write below.
           </p>
-
-          <ul className="mt-10 grid gap-3 sm:grid-cols-3">
-            <li>
-              <a href={`mailto:${site.contact.email}`} className="block rounded-2xl border border-white/10 p-5 transition-colors hover:border-ochre">
-                <span className="label text-white/55">Email</span>
-                <span className="mt-2 block break-all font-medium">{site.contact.email}</span>
-              </a>
-            </li>
-            <li>
-              <a href={site.contact.phoneHref} className="block rounded-2xl border border-white/10 p-5 transition-colors hover:border-ochre">
-                <span className="label text-white/55">Phone</span>
-                <span className="mt-2 block font-medium">{site.contact.phone}</span>
-              </a>
-            </li>
-            <li>
-              <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="block rounded-2xl border border-white/10 p-5 transition-colors hover:border-[#25D366]">
-                <span className="label flex items-center gap-1.5 text-white/55"><WhatsAppIcon className="size-3.5" /> WhatsApp</span>
-                <span className="mt-2 block font-medium">+{site.contact.whatsappNumber}</span>
-              </a>
-            </li>
-          </ul>
-
-          <div className="mt-12 border-t border-white/10 pt-12">
+          <div className="mt-8">
             <ContactForm />
           </div>
-          <div className="mt-12 flex flex-wrap items-center gap-4 rounded-card bg-teal p-6">
-            <p className="flex-1 font-medium">Ready to start planning properly?</p>
-            <ButtonLink href="/plan-your-trip" icon>Plan your trip</ButtonLink>
-          </div>
         </div>
+      </div>
+      <div className="lg:col-span-4 lg:col-start-9">
+        <SideCard rating className="lg:sticky lg:top-28">
+          <div className="mt-6 border-t border-ivory-200 pt-5 text-center">
+            <p className="eyebrow">Recognised by</p>
+            <div className="mt-4 flex justify-center gap-4">
+              {["Award placeholder", "Association placeholder"].map((l) => (
+                <span key={l} className="flex size-20 items-center justify-center rounded-full border border-dashed border-stone-300 p-2 text-center text-[0.625rem] uppercase tracking-wider text-stone-400">{l}</span>
+              ))}
+            </div>
+          </div>
+        </SideCard>
       </div>
     </div>
   );

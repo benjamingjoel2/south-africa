@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const KEY = "cc-cookie-consent";
@@ -13,9 +12,7 @@ export function CookieBanner() {
     try {
       // eslint-disable-next-line react-hooks/set-state-in-effect -- read consent after mount
       if (!window.localStorage.getItem(KEY)) setShow(true);
-    } catch {
-      /* storage unavailable: don't nag */
-    }
+    } catch {}
   }, []);
 
   const decide = (value: "accepted" | "declined") => {
@@ -25,43 +22,23 @@ export function CookieBanner() {
     setShow(false);
   };
 
+  if (!show) return null;
   return (
-    <AnimatePresence>
-      {show && (
-        <motion.div
-          role="region"
-          aria-label="Cookie consent"
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 40, opacity: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 1.2 }}
-          className="fixed bottom-5 left-4 right-24 z-40 max-w-xl rounded-2xl border border-white/10 bg-surface/95 p-5 shadow-2xl backdrop-blur md:left-8 md:right-auto"
-        >
-          <p className="text-sm leading-relaxed text-white/70">
-            We use cookies to understand how the site is used and to improve your planning experience. See our{" "}
-            <Link href="/privacy" className="text-white underline underline-offset-2">
-              Privacy Policy
-            </Link>
-            .
-          </p>
-          <div className="mt-4 flex gap-2">
-            <button
-              type="button"
-              onClick={() => decide("declined")}
-              className="h-10 rounded-full border border-white/20 px-5 text-sm font-medium text-white transition-colors hover:bg-white hover:text-slate"
-            >
-              Decline
-            </button>
-            <button
-              type="button"
-              onClick={() => decide("accepted")}
-              className="h-10 rounded-full bg-ochre px-5 text-sm font-medium text-white transition-colors hover:bg-ochre-700"
-            >
-              Accept
-            </button>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div role="region" aria-label="Cookie consent" className="fixed inset-x-0 bottom-0 z-40 border-t border-ivory-200 bg-bone">
+      <div className="container-x flex flex-col gap-3 py-3.5 text-[0.8125rem] text-charcoal-700 md:flex-row md:items-center md:justify-between">
+        <p>
+          We use cookies to understand how the site is used and to improve your planning experience. See our{" "}
+          <Link href="/privacy" className="underline underline-offset-2 hover:text-charcoal-800">Privacy Policy</Link>.
+        </p>
+        <div className="flex shrink-0 gap-2">
+          <button type="button" onClick={() => decide("declined")} className="h-9 border border-charcoal-800 px-4 text-eyebrow font-medium uppercase tracking-eyebrow text-charcoal-800 hover:bg-charcoal-800 hover:text-white">
+            Decline
+          </button>
+          <button type="button" onClick={() => decide("accepted")} className="h-9 bg-forest-700 px-4 text-eyebrow font-medium uppercase tracking-eyebrow text-white hover:bg-forest-900">
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }

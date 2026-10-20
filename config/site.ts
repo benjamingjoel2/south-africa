@@ -6,7 +6,7 @@ export const site = {
   shortName: "Cape Compass",
   tagline: "Tailor-made South Africa, from the Cape and beyond",
   description:
-    "Tailor-made South Africa trips planned by one dedicated local specialist, from Cape Town and the Winelands to Kruger's private reserves, the Garden Route and the Drakensberg.",
+    "Tailor-made South Africa trips planned by one dedicated local specialist: Cape Town, the Winelands, the Garden Route, Kruger's private reserves and beyond.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cape-compass.vercel.app",
   locale: "en_ZA",
   foundedYear: 2012,
@@ -30,13 +30,12 @@ export const site = {
   ],
 
   nav: [
-    { label: "Destinations", href: "/destinations" },
+    { label: "Destinations", href: "/destinations", menu: "destinations" },
     { label: "Tours", href: "/tours" },
-    { label: "Experiences", href: "/experiences" },
-    { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
+    { label: "Experiences", href: "/experiences", menu: "experiences" },
+    { label: "About", href: "/about", menu: "about" },
     { label: "Contact", href: "/contact" },
-  ],
+  ] as { label: string; href: string; menu?: "destinations" | "experiences" | "about" }[],
 
   footerNav: [
     {
@@ -65,13 +64,34 @@ export const site = {
     { label: "Terms & Conditions", href: "/terms" },
   ],
 
+  /** Announcement bar above the header */
+  topBar: {
+    items: ["Tailor-made South Africa since 2012", "One dedicated local specialist"],
+    cta: { label: "Replies within one working day", href: "/plan-your-trip" },
+    links: [
+      { label: "Blog", href: "/blog" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+
+  /** Promo line shown under the hero CTA and in sidebars. Set to null to hide. */
+  included: {
+    lead: "Included.",
+    text: "A free planning consultation and 24/7 WhatsApp support on every booking.",
+    href: "/about",
+  },
+
+  /** Show the delayed guide pop-up once per visitor. */
+  guidePopup: true,
+
   colors: {
-    slate: "#1C2124",
-    surface: "#252B2F",
-    teal: "#0F5257",
-    ochre: "#B35A2E",
-    protea: "#EC8FA2",
-    sand: "#F4EEE4",
+    ivory: "#FBF8F3",
+    bone: "#F6F3EC",
+    charcoal: "#191813",
+    forest: "#24382F",
+    forestDeep: "#141B16",
+    brass: "#B18444",
   },
 } as const;
 
