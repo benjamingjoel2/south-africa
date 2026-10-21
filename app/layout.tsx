@@ -16,16 +16,26 @@ import { GuidePopup } from "@/components/layout/GuidePopup";
 const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
+// Only the two serif faces the design uses: 500 upright for headings, 400 italic for accents.
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
+  weight: "500",
+  style: "normal",
   display: "swap",
+});
+
+const newsreaderItalic = Newsreader({
+  variable: "--font-newsreader-italic",
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -53,7 +63,7 @@ export default function RootLayout({
   modal,
 }: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${hanken.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${hanken.variable} ${newsreader.variable} ${newsreaderItalic.variable}`}>
       <body className="min-h-dvh bg-ivory-50 text-charcoal-800">
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.setAttribute('data-js','')" }} />
         <a

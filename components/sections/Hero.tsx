@@ -29,7 +29,7 @@ export function Hero() {
           </div>
           {site.included && (
             <p className="anim-fade-up mt-8 max-w-lg text-[0.8125rem] leading-relaxed text-charcoal-700" style={{ animationDelay: "0.34s" }}>
-              <em className="font-display italic text-brass-600">{site.included.lead}</em> {site.included.text}{" "}
+              <em className="font-display-italic text-brass-600">{site.included.lead}</em> {site.included.text}{" "}
               <Link href={site.included.href} className="underline underline-offset-2 hover:text-charcoal-800">
                 Details
               </Link>

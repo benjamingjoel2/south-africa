@@ -17,7 +17,7 @@ export function TrustGrid() {
       <div className="container-x grid gap-x-10 gap-y-10 py-14 sm:grid-cols-2 lg:grid-cols-3 lg:py-16">
         {items.map((it) => (
           <div key={it.title}>
-            <h2 className="font-display text-[1.5rem] italic font-normal">{it.title}</h2>
+            <h2 className="font-display-italic text-[1.5rem]">{it.title}</h2>
             <p className="mt-2 max-w-sm text-[0.9375rem] text-charcoal-700">{it.text}</p>
           </div>
         ))}
