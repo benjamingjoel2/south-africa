@@ -7,6 +7,7 @@ import { JsonLd } from "@/lib/seo";
 import { images } from "@/data/images";
 import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
+import { buildMenus } from "@/components/layout/menus";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { CookieBanner } from "@/components/layout/CookieBanner";
@@ -15,16 +16,26 @@ import { GuidePopup } from "@/components/layout/GuidePopup";
 const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
+// Only the two serif faces the design uses: 500 upright for headings, 400 italic for accents.
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
+  weight: "500",
+  style: "normal",
   display: "swap",
+});
+
+const newsreaderItalic = Newsreader({
+  variable: "--font-newsreader-italic",
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -52,8 +63,9 @@ export default function RootLayout({
   modal,
 }: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${hanken.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${hanken.variable} ${newsreader.variable} ${newsreaderItalic.variable}`}>
       <body className="min-h-dvh bg-ivory-50 text-charcoal-800">
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.setAttribute('data-js','')" }} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-forest-700 focus:px-5 focus:py-3 focus:text-white"
@@ -80,7 +92,7 @@ export default function RootLayout({
         <JsonLd data={{ "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: site.url, inLanguage: "en" }} />
         <CurrencyProvider>
           <TopBar />
-          <Header />
+          <Header menus={buildMenus()} />
           <main id="main">{children}</main>
           <Footer />
           <WhatsAppFloat />

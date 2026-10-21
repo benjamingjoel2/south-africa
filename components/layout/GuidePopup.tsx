@@ -95,7 +95,7 @@ export function GuidePopup() {
               <br />
               Garden Route <span className="text-brass-500">•</span> Kruger &amp; the private reserves
             </p>
-            <p className="mt-4 font-display italic text-brass-600">The icons, in one guide.</p>
+            <p className="mt-4 font-display-italic text-brass-600">The icons, in one guide.</p>
           </div>
           <div className="relative hidden min-h-64 md:block">
             <Image src={images.sabiSand} alt="" fill sizes="384px" className="object-cover" />

@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef } from "react";
 import { Planner } from "./Planner";
 import { CrossIcon } from "@/components/ui/Icons";
@@ -44,17 +43,14 @@ export function PlannerModal() {
 
   return (
     <div className="fixed inset-0 z-[60] flex items-end justify-center sm:items-center sm:p-6">
-      <motion.button type="button" aria-label="Close planner" tabIndex={-1} onClick={close} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute inset-0 bg-charcoal-800/60" />
-      <motion.div
+      <button type="button" aria-label="Close planner" tabIndex={-1} onClick={close} className="anim-fade absolute inset-0 bg-charcoal-800/60" />
+      <div
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-label="Plan your trip"
         tabIndex={-1}
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35 }}
-        className="relative max-h-[94dvh] w-full max-w-3xl overflow-y-auto overscroll-contain border border-ivory-200 bg-ivory-50 p-6 shadow-2xl focus:outline-none sm:p-10"
+        className="anim-fade-up relative max-h-[94dvh] w-full max-w-3xl overflow-y-auto overscroll-contain border border-ivory-200 bg-ivory-50 p-6 shadow-2xl focus:outline-none sm:p-10"
       >
         <div className="mb-8 flex items-center justify-between">
           <p className="eyebrow">Plan your trip</p>
@@ -68,7 +64,7 @@ export function PlannerModal() {
           </div>
         </div>
         <Planner variant="modal" onClose={close} />
-      </motion.div>
+      </div>
     </div>
   );
 }

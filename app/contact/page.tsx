@@ -23,19 +23,19 @@ export default function ContactPage() {
           <div className="mt-8 divide-y divide-ivory-200 border-y border-ivory-200">
             <div className="py-6">
               <p className="eyebrow">Phone</p>
-              <a href={site.contact.phoneHref} className="mt-2 block font-display text-[1.5rem] italic hover:text-brass-600">{site.contact.phone}</a>
+              <a href={site.contact.phoneHref} className="mt-2 block font-display-italic text-[1.5rem] hover:text-brass-600">{site.contact.phone}</a>
               <p className="mt-1 text-sm text-charcoal-700">{site.contact.hours}</p>
             </div>
             <div className="py-6">
               <p className="eyebrow">WhatsApp</p>
-              <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="mt-2 block font-display text-[1.5rem] italic hover:text-brass-600">
+              <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="mt-2 block font-display-italic text-[1.5rem] hover:text-brass-600">
                 Message us on WhatsApp
               </a>
               <p className="mt-1 text-sm text-charcoal-700">+{site.contact.whatsappNumber} · 24/7 while you travel</p>
             </div>
             <div className="py-6">
               <p className="eyebrow">Email</p>
-              <a href={`mailto:${site.contact.email}`} className="mt-2 block break-all font-display text-[1.5rem] italic hover:text-brass-600">{site.contact.email}</a>
+              <a href={`mailto:${site.contact.email}`} className="mt-2 block break-all font-display-italic text-[1.5rem] hover:text-brass-600">{site.contact.email}</a>
             </div>
           </div>
           <p className="eyebrow mt-5">Headquartered in {site.contact.address}</p>

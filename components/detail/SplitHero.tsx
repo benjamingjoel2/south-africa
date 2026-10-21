@@ -41,7 +41,7 @@ export function SplitHero({
               </>
             )}
           </h1>
-          {subtitle && <p className="mt-5 font-display text-[1.5rem] italic leading-snug text-charcoal-700">{subtitle}</p>}
+          {subtitle && <p className="mt-5 font-display-italic text-[1.5rem] leading-snug text-charcoal-700">{subtitle}</p>}
           {text && <p className="mt-5 max-w-lg text-lead text-charcoal-700">{text}</p>}
           {cta && (
             <ButtonLink href={cta.href} arrow className="mt-8">

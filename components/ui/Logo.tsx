@@ -21,7 +21,7 @@ export function Logo({ className, tone = "dark", size = "md" }: { className?: st
       className={cn("inline-flex items-center gap-2.5", tone === "light" ? "text-white" : "text-charcoal-800", className)}
     >
       <LogoMark className={size === "lg" ? "size-7" : "size-6"} />
-      <span className={cn("font-sans font-semibold uppercase tracking-[0.2em]", size === "lg" ? "text-[1.35rem]" : "text-[1.1rem]")}>
+      <span className={cn("font-sans font-medium uppercase tracking-[0.2em]", size === "lg" ? "text-[1.35rem]" : "text-[1.1rem]")}>
         Cape Compass
       </span>
     </Link>
