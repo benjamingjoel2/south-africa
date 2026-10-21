@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "framer-motion": "^14.2.0",
     "gray-matter": "^4.0.3",
     "next": "16.4.0",
     "next-mdx-remote": "^6.0.0",

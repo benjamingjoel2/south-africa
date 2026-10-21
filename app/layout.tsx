@@ -7,6 +7,7 @@ import { JsonLd } from "@/lib/seo";
 import { images } from "@/data/images";
 import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
+import { buildMenus } from "@/components/layout/menus";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { CookieBanner } from "@/components/layout/CookieBanner";
@@ -54,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${hanken.variable} ${newsreader.variable}`}>
       <body className="min-h-dvh bg-ivory-50 text-charcoal-800">
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.setAttribute('data-js','')" }} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-forest-700 focus:px-5 focus:py-3 focus:text-white"
@@ -80,7 +82,7 @@ export default function RootLayout({
         <JsonLd data={{ "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: site.url, inLanguage: "en" }} />
         <CurrencyProvider>
           <TopBar />
-          <Header />
+          <Header menus={buildMenus()} />
           <main id="main">{children}</main>
           <Footer />
           <WhatsAppFloat />

@@ -42,6 +42,7 @@ export function Hero() {
             alt="Aerial view of Cape Town and Table Mountain"
             fill
             priority
+            fetchPriority="high"
             sizes="(min-width: 1024px) 54vw, 100vw"
             className="object-cover"
           />
