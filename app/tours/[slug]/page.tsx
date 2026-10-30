@@ -91,7 +91,7 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
       <section className="container-x py-16 text-center lg:py-20" aria-label="About this itinerary">
         <Eyebrow>The journey</Eyebrow>
         <Display lead="About this" accent="itinerary" className="mt-3" />
-        <p className="mx-auto mt-8 max-w-3xl font-display text-[1.375rem] italic leading-relaxed text-charcoal-700">{t.overview[t.overview.length - 1]}</p>
+        <p className="mx-auto mt-8 max-w-3xl font-display-italic text-[1.375rem] leading-relaxed text-charcoal-700">{t.overview[t.overview.length - 1]}</p>
         <p className="mt-6 text-sm text-charcoal-700">
           Where you&rsquo;ll travel:{" "}
           {stops.map((d, i) => (
@@ -158,7 +158,7 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
       <section className="container-x py-16 text-center lg:py-20" aria-label="Rates">
         <Eyebrow>Direct local rates</Eyebrow>
         <Display lead="Rates and" accent="dates" className="mt-3" />
-        <p className="mx-auto mt-5 max-w-xl font-display italic text-charcoal-700">
+        <p className="mx-auto mt-5 max-w-xl font-display-italic text-charcoal-700">
           Per person sharing for the complete package. Final pricing depends on your dates, availability and the stays you choose.
         </p>
         <div className="mx-auto mt-10 grid max-w-3xl gap-px border border-ivory-200 bg-ivory-200 sm:grid-cols-3">
@@ -169,7 +169,7 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
           ].map((p) => (
             <div key={p.label} className="bg-ivory-50 p-6">
               <p className="eyebrow">{p.label}</p>
-              <p className="mt-2 text-[1.75rem] font-medium tracking-tight"><Price usd={p.usd} /></p>
+              <p className="mt-2 text-[1.75rem] font-medium tracking-tight">From <Price usd={p.usd} /></p>
             </div>
           ))}
         </div>

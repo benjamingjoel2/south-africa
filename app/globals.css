@@ -26,6 +26,7 @@
 
   --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-display-italic: var(--font-newsreader-italic), ui-serif, Georgia, serif;
 
   --tracking-eyebrow: 0.18em;
   --tracking-display: -0.015em;
@@ -86,6 +87,7 @@
   }
   em.accent,
   .accent {
+    font-family: var(--font-display-italic);
     font-style: italic;
     font-weight: 400;
   }
@@ -121,6 +123,13 @@
   text-transform: uppercase;
   font-weight: 500;
   color: var(--color-stone-400);
+}
+
+/* Serif italic (separate font file, so never a synthesised oblique) */
+@utility font-display-italic {
+  font-family: var(--font-display-italic);
+  font-style: italic;
+  font-weight: 400;
 }
 
 @utility hairline {
@@ -169,7 +178,7 @@
 }
 .prose-ed strong {
   color: var(--color-charcoal-800);
-  font-weight: 600;
+  font-weight: 500;
 }
 .prose-ed ul,
 .prose-ed ol {
@@ -187,7 +196,7 @@
 .prose-ed blockquote {
   border-left: 2px solid var(--color-brass-500);
   padding-left: 1.25em;
-  font-family: var(--font-display);
+  font-family: var(--font-display-italic);
   font-style: italic;
   font-size: 1.25rem;
   color: var(--color-charcoal-800);
@@ -212,6 +221,25 @@
   border-color: var(--color-ivory-200);
 }
 
+/* Scroll reveals (JS adds data-inview; without JS everything stays visible) */
+[data-js] .reveal:not([data-inview]),
+[data-js] .stagger:not([data-inview]) > .stagger-item {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.reveal,
+.stagger-item {
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal {
+  transition-delay: var(--reveal-delay, 0s);
+}
+.stagger-item {
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+
 /* Entrance animation for above-the-fold content */
 @keyframes fade-up {
   from {
@@ -226,8 +254,39 @@
 .anim-fade-up {
   animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+.anim-fade {
+  animation: fade 0.3s ease both;
+}
+@keyframes step-next {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
+@keyframes step-back {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+}
+.anim-step[data-dir="next"] {
+  animation: step-next 0.3s ease both;
+}
+.anim-step[data-dir="back"] {
+  animation: step-back 0.3s ease both;
+}
 
 @media (prefers-reduced-motion: reduce) {
+  [data-js] .reveal:not([data-inview]),
+  [data-js] .stagger:not([data-inview]) > .stagger-item {
+    opacity: 1;
+    transform: none;
+  }
   *,
   *::before,
   *::after {

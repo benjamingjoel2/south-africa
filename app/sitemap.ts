@@ -16,8 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     page("/", 1),
     ...["/destinations", "/tours", "/experiences", "/stays", "/plan-your-trip"].map((p) => page(p, 0.9)),
-    ...["/about", "/testimonials", "/faq", "/contact", "/blog"].map((p) => page(p, 0.6)),
-    ...["/privacy", "/terms"].map((p) => page(p, 0.2)),
+    ...["/about", "/faq", "/contact", "/blog"].map((p) => page(p, 0.6)),
+    ...["/privacy", "/terms", "/cookies"].map((p) => page(p, 0.2)),
     ...destinations.map((d) => page(`/destinations/${d.slug}`, 0.8)),
     ...tours.map((t) => page(`/tours/${t.slug}`, 0.8)),
     ...experiences.map((e) => page(`/experiences/${e.slug}`, 0.7)),

@@ -44,7 +44,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
         <header className="mx-auto max-w-3xl">
           <Breadcrumbs items={[{ name: "Journal", path: "/blog" }, { name: post.category, path: "/blog" }]} />
           <h1 className="mt-5 text-h1">{post.title}</h1>
-          <p className="mt-5 font-display text-[1.375rem] italic leading-snug text-charcoal-700">{post.excerpt}</p>
+          <p className="mt-5 font-display-italic text-[1.375rem] leading-snug text-charcoal-700">{post.excerpt}</p>
           <p className="eyebrow mt-5">
             <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime} · {post.author}
           </p>

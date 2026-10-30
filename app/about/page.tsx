@@ -1,12 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import { images } from "@/data/images";
 import { site } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { Eyebrow } from "@/components/ui/Type";
 import { IncludedBox } from "@/components/detail/SideCard";
-import { TestimonialBlock } from "@/components/cards/TestimonialBlock";
-import { testimonials } from "@/data/testimonials";
 import { SpecialistCta } from "@/components/sections/SpecialistCta";
 
 export const metadata = buildMetadata({
@@ -33,8 +30,8 @@ const sections = [
     title: "Here for you, every step of the",
     accent: "way",
     body: [
-      "Your specialist designs the trip, books every piece of it, briefs you before you fly and stays on WhatsApp until you're home. No call centres, no hand-offs.",
-      "Flights, transfers, lodging and support: one travel pack, one specialist, one number on WhatsApp. Reachable before, during and after your trip.",
+      "Your specialist designs the trip, books every piece of it, briefs you before you fly and stays with you until you're home. No call centres, no hand-offs.",
+      "Flights, transfers, lodging and support: one travel pack, one specialist, one point of contact. Reachable before, during and after your trip.",
     ],
   },
   {
@@ -64,14 +61,6 @@ const sections = [
   },
 ];
 
-// PLACEHOLDER team: replace names, roles and bios with real staff (and add photos).
-const team = [
-  { name: "Specialist name", role: "Founder & safari specialist", region: "Kruger & private reserves", bio: "Grew up between Cape Town and the lowveld. Has spent more nights in the bush than in most hotels." },
-  { name: "Specialist name", role: "Cape & Winelands specialist", region: "Western Cape", bio: "Knows every chef's table in Franschhoek and the quiet trail up Table Mountain." },
-  { name: "Specialist name", role: "Garden Route & self-drive", region: "Garden Route & Eastern Cape", bio: "Has driven the N2 more times than anyone should. Plans road trips down to the lunch stop." },
-  { name: "Specialist name", role: "KwaZulu-Natal & family travel", region: "Drakensberg & Zulu coast", bio: "A parent of two who matches families to the lodges that genuinely welcome children." },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -93,7 +82,7 @@ export default function AboutPage() {
           <div className="lg:sticky lg:top-28">
             <Eyebrow>On this page</Eyebrow>
             <ul className="mt-4 divide-y divide-ivory-200 border-y border-ivory-200 text-[0.9375rem]">
-              {[...sections, { id: "team", title: "Meet the team", accent: "" }].map((s) => (
+              {sections.map((s) => (
                 <li key={s.id}>
                   <a href={`#${s.id}`} className="block py-3 hover:text-brass-600">
                     {s.title} {s.accent}
@@ -119,35 +108,6 @@ export default function AboutPage() {
             </section>
           ))}
 
-          <section id="team" className="scroll-mt-28 py-10 lg:py-14" aria-label="Meet the team">
-            <Eyebrow>0{sections.length + 1}</Eyebrow>
-            <h2 className="mt-3 text-h2">
-              Meet the <em className="accent">team</em>.
-            </h2>
-            <p className="mt-4 text-charcoal-700">
-              Each specialist leads on a region but knows the whole country. <span className="text-brass-600">Team details are placeholders.</span>
-            </p>
-            <div className="mt-8 grid gap-px border border-ivory-200 bg-ivory-200 sm:grid-cols-2">
-              {team.map((p, i) => (
-                <div key={i} className="bg-ivory-50 p-6">
-                  <div className="flex aspect-[4/3] items-center justify-center bg-ivory-100">
-                    <span className="eyebrow">Photo placeholder</span>
-                  </div>
-                  <p className="eyebrow mt-5 text-brass-600">{p.region}</p>
-                  <h3 className="mt-2 text-h4">{p.name}</h3>
-                  <p className="text-sm text-charcoal-700">{p.role}</p>
-                  <p className="mt-3 text-[0.9375rem] text-charcoal-700">{p.bio}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="border-t border-ivory-200 pt-10 lg:pt-14" aria-label="Guest story">
-            <TestimonialBlock t={testimonials[1]} />
-            <Link href="/testimonials" className="mt-6 inline-block text-eyebrow font-medium uppercase tracking-eyebrow text-brass-600 hover:text-charcoal-800">
-              More guest stories →
-            </Link>
-          </section>
         </div>
       </section>
       <SpecialistCta />

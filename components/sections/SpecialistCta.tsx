@@ -1,4 +1,3 @@
-import { whatsappHref } from "@/config/site";
 import { ButtonLink } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Type";
 
@@ -25,8 +24,8 @@ export function SpecialistCta({
           <ButtonLink href="/plan-your-trip" variant="brass">
             Plan your trip
           </ButtonLink>
-          <ButtonLink href={whatsappHref()} external variant="outline-light">
-            Chat on WhatsApp
+          <ButtonLink href="/contact" variant="outline-light">
+            Contact us
           </ButtonLink>
         </div>
       </div>
@@ -37,7 +36,7 @@ export function SpecialistCta({
 export function BespokeLine() {
   return (
     <section className="py-16 text-center lg:py-20" aria-label="Bespoke travel">
-      <p className="font-display text-[1.5rem] italic">Planning something beyond the ordinary?</p>
+      <p className="font-display-italic text-[1.5rem]">Planning something beyond the ordinary?</p>
       <ButtonLink href="/contact" variant="link" className="mt-4 border-b border-charcoal-800 pb-0.5 hover:border-brass-600">
         Private &amp; bespoke travel
       </ButtonLink>

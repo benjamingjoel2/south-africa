@@ -1,5 +1,5 @@
 // Single source of truth for brand, contact, navigation and currency settings.
-// Replace the [BRACKETED] placeholders before launch.
+// No phone, WhatsApp, social links, ratings or memberships (owner decision).
 
 export const site = {
   name: "Cape Compass",
@@ -7,27 +7,16 @@ export const site = {
   tagline: "Tailor-made South Africa, from the Cape and beyond",
   description:
     "Tailor-made South Africa trips planned by one dedicated local specialist: Cape Town, the Winelands, the Garden Route, Kruger's private reserves and beyond.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cape-compass.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://capecompass.tourground.com",
   locale: "en_ZA",
   foundedYear: 2012,
 
   contact: {
-    email: "[EMAIL]",
-    phone: "+27 21 000 0000",
-    phoneHref: "tel:+27210000000",
-    // Digits only, international format without "+", e.g. 27820000000
-    whatsappNumber: "[NUMBER]",
-    whatsappMessage: "Hi Cape Compass, I'd love help planning a South Africa trip.",
-    address: "Cape Town, Western Cape, South Africa",
-    hours: "Mon–Fri 08:00–18:00 SAST · WhatsApp support 24/7 while you travel",
+    email: "capecompass@tourground.com",
+    /** Business address: Workshop17 Watershed, premium coworking at the V&A Waterfront. */
+    address: "Workshop17 Watershed, 17 Dock Road, V&A Waterfront, Cape Town, 8001, South Africa",
+    hours: "Mon–Fri 08:00–18:00 SAST",
   },
-
-  social: [
-    { label: "Instagram", href: "https://instagram.com/" },
-    { label: "Facebook", href: "https://facebook.com/" },
-    { label: "Pinterest", href: "https://pinterest.com/" },
-    { label: "YouTube", href: "https://youtube.com/" },
-  ],
 
   nav: [
     { label: "Destinations", href: "/destinations", menu: "destinations" },
@@ -51,7 +40,6 @@ export const site = {
       title: "Company",
       links: [
         { label: "About us", href: "/about" },
-        { label: "Testimonials", href: "/testimonials" },
         { label: "Journal", href: "/blog" },
         { label: "FAQ", href: "/faq" },
         { label: "Contact", href: "/contact" },
@@ -61,7 +49,8 @@ export const site = {
 
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms & Conditions", href: "/terms" },
+    { label: "Booking Terms", href: "/terms" },
+    { label: "Cookie Policy", href: "/cookies" },
   ],
 
   /** Announcement bar above the header */
@@ -78,7 +67,7 @@ export const site = {
   /** Promo line shown under the hero CTA and in sidebars. Set to null to hide. */
   included: {
     lead: "Included.",
-    text: "A free planning consultation and 24/7 WhatsApp support on every booking.",
+    text: "A free planning consultation and support from your specialist throughout every booking.",
     href: "/about",
   },
 
@@ -112,6 +101,3 @@ export type CurrencyCode = keyof typeof currencies;
 export const currencyCodes = Object.keys(currencies) as CurrencyCode[];
 export const defaultCurrency: CurrencyCode = "USD";
 
-export function whatsappHref(message: string = site.contact.whatsappMessage) {
-  return `https://wa.me/${site.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
-}

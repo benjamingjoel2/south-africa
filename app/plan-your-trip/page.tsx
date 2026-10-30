@@ -18,7 +18,7 @@ export default function PlanYourTripPage() {
         <Breadcrumbs items={[{ name: "Plan a trip", path: "/plan-your-trip" }]} />
         <h1 className="mt-5 text-h1">Begin your South Africa trip.</h1>
         <p className="mt-5 max-w-xl text-lead text-charcoal-700">
-          Five short steps. A specialist replies within one working day, usually much sooner. Or skip the form and message us on WhatsApp.
+          Five short steps. A specialist replies within one working day, usually much sooner. Or skip the form and email us.
         </p>
         <IncludedBox className="mt-8 max-w-xl" />
         <div className="mt-12 border-t border-ivory-200 pt-10">
@@ -26,7 +26,7 @@ export default function PlanYourTripPage() {
         </div>
       </div>
       <div className="lg:col-span-4 lg:col-start-9">
-        <SideCard rating className="lg:sticky lg:top-28" />
+        <SideCard className="lg:sticky lg:top-28" />
       </div>
     </div>
   );

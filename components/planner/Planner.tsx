@@ -1,14 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
 import type { z } from "zod";
 import { plannerRoutes, budgetTiers } from "@/data/planner";
 import { stepSchemas } from "@/lib/planner-schema";
-import { site, whatsappHref } from "@/config/site";
+import { site } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Button, ButtonLink } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
 import { usePlannerStore, type PlannerState } from "./usePlannerStore";
 import { StepBudget, StepContact, StepWhen, StepWhere, StepWho } from "./steps";
@@ -38,6 +37,19 @@ function sectionForValidation(state: PlannerState, i: number) {
   return state[key];
 }
 
+const reduceMq = () => window.matchMedia("(prefers-reduced-motion: reduce)");
+function useReducedMotionPref() {
+  return useSyncExternalStore(
+    (cb) => {
+      const mq = reduceMq();
+      mq.addEventListener("change", cb);
+      return () => mq.removeEventListener("change", cb);
+    },
+    () => reduceMq().matches,
+    () => false,
+  );
+}
+
 export function Planner({ variant = "page", onClose }: { variant?: "page" | "modal"; onClose?: () => void }) {
   const { state, update, setStep, reset, hydrated } = usePlannerStore();
   const [errors, setErrors] = useState<Errors>({});
@@ -45,7 +57,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
   const [direction, setDirection] = useState(1);
   const [submitted, setSubmitted] = useState<{ name: string; email: string } | null>(null);
   const topRef = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
+  const reduce = useReducedMotionPref();
   const step = Math.min(state.step, steps.length - 1);
   const current = steps[step];
 
@@ -113,7 +125,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
                 aria-label={`${s.label}${i < step ? " (completed, go back)" : ""}`}
                 className="block h-[3px] w-full bg-ivory-200 disabled:cursor-default"
               >
-                <motion.span className="block h-full bg-brass-500" initial={false} animate={{ width: i <= step ? "100%" : "0%" }} transition={{ duration: 0.4 }} />
+                <span className="block h-full bg-brass-500 transition-[width] duration-400" style={{ width: i <= step ? "100%" : "0%" }} />
               </button>
             </li>
           ))}
@@ -121,15 +133,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
       </nav>
 
       <div className="mt-10">
-        <AnimatePresence mode="wait" custom={direction} initial={false}>
-          <motion.div
-            key={current.key}
-            custom={direction}
-            initial={reduce ? false : { opacity: 0, x: 16 * direction }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={reduce ? undefined : { opacity: 0, x: -16 * direction }}
-            transition={{ duration: 0.3 }}
-          >
+        <div key={current.key} className="anim-step" data-dir={direction > 0 ? "next" : "back"}>
             <h2 className={cn(variant === "modal" ? "text-h3" : "text-h2")}>{current.title}</h2>
             <p className="mt-2 text-charcoal-700">{current.intro}</p>
 
@@ -170,7 +174,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
               {status === "error" && (
                 <p role="alert" className="mt-6 border-l-2 border-brass-500 bg-ivory-100 px-4 py-3 text-sm">
                   Sorry, something went wrong sending your request. Please try again, or{" "}
-                  <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="underline">message us on WhatsApp</a>.
+                  <a href={`mailto:${site.contact.email}`} className="underline">email us at {site.contact.email}</a>.
                 </p>
               )}
 
@@ -185,8 +189,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
                 </Button>
               </div>
             </form>
-          </motion.div>
-        </AnimatePresence>
+        </div>
       </div>
       <p className="mt-8 text-sm text-charcoal-700">
         Prefer email? Write to{" "}
@@ -213,7 +216,7 @@ function Summary({ items }: { items: (string | false | undefined)[] }) {
 
 function Confirmation({ name, email, variant, onClose }: { name: string; email: string; variant: "page" | "modal"; onClose?: () => void }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="py-4" role="status">
+    <div className="anim-fade-up py-4" role="status">
       <span className="flex size-12 items-center justify-center rounded-full bg-forest-700 text-white">
         <CheckIcon className="size-5" />
       </span>
@@ -238,10 +241,7 @@ function Confirmation({ name, email, variant, onClose }: { name: string; email: 
             Browse sample tours
           </Link>
         )}
-        <ButtonLink href={whatsappHref("Hi Cape Compass, I've just sent a trip request via your website.")} external>
-          Chat on WhatsApp
-        </ButtonLink>
       </div>
-    </motion.div>
+    </div>
   );
 }
