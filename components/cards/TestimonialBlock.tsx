@@ -11,7 +11,7 @@ export function TestimonialBlock({ t, className, tone = "light" }: { t: Testimon
           <StarIcon key={i} className="size-3" />
         ))}
       </div>
-      <blockquote className={cn("mt-3 font-display text-[1.0625rem] italic leading-relaxed", dark ? "text-white/85" : "text-charcoal-700")}>
+      <blockquote className={cn("mt-3 font-display-italic text-[1.0625rem] leading-relaxed", dark ? "text-white/85" : "text-charcoal-700")}>
         &ldquo;{t.quote}&rdquo;
       </blockquote>
       <figcaption className={cn("eyebrow mt-3 normal-case tracking-[0.08em]", dark ? "text-white/50" : "")}>

@@ -1,53 +1,65 @@
 "use client";
 
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { Children, cloneElement, isValidElement, useEffect, useRef, type CSSProperties, type ReactElement } from "react";
+import { cn } from "@/lib/utils";
 
-const EASE = [0.16, 1, 0.3, 1] as const;
+/** Adds data-inview once the element scrolls into view (CSS in globals.css does the animating). */
+function useInView<T extends HTMLElement>(amount: number) {
+  const ref = useRef<T>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (!("IntersectionObserver" in window)) {
+      el.setAttribute("data-inview", "");
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          el.setAttribute("data-inview", "");
+          io.disconnect();
+        }
+      },
+      { threshold: amount, rootMargin: "0px 0px -5% 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [amount]);
+  return ref;
+}
 
 /** Subtle fade-up on scroll. */
 export function Reveal({
   children,
   className,
   delay = 0,
-  as = "div",
+  as: Comp = "div",
 }: {
   children: React.ReactNode;
   className?: string;
   delay?: number;
   as?: "div" | "li" | "section" | "article";
 }) {
-  const reduce = useReducedMotion();
-  const Comp = motion[as];
+  const ref = useInView<HTMLElement>(0.15);
   return (
-    <Comp
-      className={className}
-      initial={{ opacity: 0, y: reduce ? 0 : 14 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: reduce ? 0 : 0.7, delay: reduce ? 0 : delay, ease: EASE }}
-    >
+    <Comp ref={ref as never} className={cn("reveal", className)} style={{ "--reveal-delay": `${delay}s` } as CSSProperties}>
       {children}
     </Comp>
   );
 }
 
-const parent: Variants = { hidden: {}, show: { transition: { staggerChildren: 0.07 } } };
-const child: Variants = { hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } } };
-
-export function Stagger({ children, className, as = "div" }: { children: React.ReactNode; className?: string; as?: "div" | "ul" | "ol" }) {
-  const reduce = useReducedMotion();
-  const Comp = motion[as];
+export function Stagger({ children, className, as: Comp = "div" }: { children: React.ReactNode; className?: string; as?: "div" | "ul" | "ol" }) {
+  const ref = useInView<HTMLElement>(0.1);
   return (
-    <Comp className={className} variants={parent} initial={reduce ? "show" : "hidden"} whileInView="show" viewport={{ once: true, amount: 0.1 }}>
-      {children}
+    <Comp ref={ref as never} className={cn("stagger", className)}>
+      {Children.map(children, (child, i) => (isValidElement(child) ? cloneElement(child as ReactElement<{ index?: number }>, { index: i }) : child))}
     </Comp>
   );
 }
 
-export function StaggerItem({ children, className, as = "div" }: { children: React.ReactNode; className?: string; as?: "div" | "li" | "article" }) {
-  const Comp = motion[as];
+export function StaggerItem({ children, className, index = 0, as: Comp = "div" }: { children: React.ReactNode; className?: string; index?: number; as?: "div" | "li" | "article" }) {
   return (
-    <Comp className={className} variants={child}>
+    <Comp className={cn("stagger-item", className)} style={{ "--i": index } as CSSProperties}>
       {children}
     </Comp>
   );
