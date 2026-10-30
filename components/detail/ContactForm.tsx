@@ -58,7 +58,7 @@ export function ContactForm() {
           <FieldError id="c-email-error" message={errors.email} />
         </div>
         <div>
-          <FieldLabel htmlFor="c-phone" optional>Phone / WhatsApp</FieldLabel>
+          <FieldLabel htmlFor="c-phone" optional>Phone</FieldLabel>
           <TextInput id="c-phone" type="tel" autoComplete="tel" value={values.phone} onChange={set("phone")} />
         </div>
         <div>

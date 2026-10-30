@@ -1,7 +1,5 @@
 import { site } from "@/config/site";
-import { testimonials } from "@/data/testimonials";
 import { Display, Eyebrow } from "@/components/ui/Type";
-import { TestimonialBlock } from "@/components/cards/TestimonialBlock";
 
 export function WhyUs() {
   const years = new Date().getFullYear() - site.foundedYear;
@@ -17,10 +15,9 @@ export function WhyUs() {
             Since {site.foundedYear} we have planned tailor-made trips across eight South African regions from our base in Cape Town. Every lodge we recommend is one our specialists have stayed in; every itinerary is one we would book ourselves.
           </p>
           <p>
-            You pay direct local rates, never a markup, and booking through us adds a dedicated specialist who designs the trip, books every piece of it, briefs you before you fly and stays on WhatsApp until you&rsquo;re home. {years}+ years in, that is still the whole idea.
+            You pay direct local rates, never a markup, and booking through us adds a dedicated specialist who designs the trip, books every piece of it, briefs you before you fly and stays with you until you&rsquo;re home. {years}+ years in, that is still the whole idea.
           </p>
         </div>
-        <TestimonialBlock t={testimonials[0]} className="mx-auto mt-12 max-w-2xl" />
       </div>
     </section>
   );

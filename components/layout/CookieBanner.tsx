@@ -27,8 +27,8 @@ export function CookieBanner() {
     <div role="region" aria-label="Cookie consent" className="fixed inset-x-0 bottom-0 z-40 border-t border-ivory-200 bg-bone">
       <div className="container-x flex flex-col gap-3 py-3.5 text-[0.8125rem] text-charcoal-700 md:flex-row md:items-center md:justify-between">
         <p>
-          We use cookies to understand how the site is used and to improve your planning experience. See our{" "}
-          <Link href="/privacy" className="underline underline-offset-2 hover:text-charcoal-800">Privacy Policy</Link>.
+          We only use essential storage for your preferences. Analytics, if we ever add them, only run with your consent. See our{" "}
+          <Link href="/cookies" className="underline underline-offset-2 hover:text-charcoal-800">Cookie Policy</Link>.
         </p>
         <div className="flex shrink-0 gap-2">
           <button type="button" onClick={() => decide("declined")} className="h-9 border border-charcoal-800 px-4 text-eyebrow font-medium uppercase tracking-eyebrow text-charcoal-800 hover:bg-charcoal-800 hover:text-white">

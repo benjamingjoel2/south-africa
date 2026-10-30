@@ -159,7 +159,7 @@ export function StepBudget({ value, update, errors }: StepProps<"budget">) {
             <span className="mt-4 text-sm">
               {t.priceUsd > 0 ? (
                 <>
-                  From approx. <Price usd={t.priceUsd} className="font-medium text-charcoal-800" />
+                  From <Price usd={t.priceUsd} className="font-medium text-charcoal-800" />
                   <span className="text-charcoal-700"> pp / day</span>
                 </>
               ) : (

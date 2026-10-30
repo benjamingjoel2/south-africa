@@ -5,9 +5,9 @@ import { useRef, useState, useSyncExternalStore } from "react";
 import type { z } from "zod";
 import { plannerRoutes, budgetTiers } from "@/data/planner";
 import { stepSchemas } from "@/lib/planner-schema";
-import { site, whatsappHref } from "@/config/site";
+import { site } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Button, ButtonLink } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 import { CheckIcon } from "@/components/ui/Icons";
 import { usePlannerStore, type PlannerState } from "./usePlannerStore";
 import { StepBudget, StepContact, StepWhen, StepWhere, StepWho } from "./steps";
@@ -174,7 +174,7 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
               {status === "error" && (
                 <p role="alert" className="mt-6 border-l-2 border-brass-500 bg-ivory-100 px-4 py-3 text-sm">
                   Sorry, something went wrong sending your request. Please try again, or{" "}
-                  <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="underline">message us on WhatsApp</a>.
+                  <a href={`mailto:${site.contact.email}`} className="underline">email us at {site.contact.email}</a>.
                 </p>
               )}
 
@@ -241,9 +241,6 @@ function Confirmation({ name, email, variant, onClose }: { name: string; email: 
             Browse sample tours
           </Link>
         )}
-        <ButtonLink href={whatsappHref("Hi Cape Compass, I've just sent a trip request via your website.")} external>
-          Chat on WhatsApp
-        </ButtonLink>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ export function TourCard({ tour: t, className, priority, compact }: { tour: Tour
           </p>
           <p className="mt-1.5 text-xs text-charcoal-700">per person, complete package</p>
           <p className="mt-0.5 text-xs text-stone-400">
-            ≈ <Price usd={t.priceFromUsd * 2} /> for two · international flights excluded
+            From <Price usd={t.priceFromUsd * 2} /> for two · international flights excluded
           </p>
         </div>
         <ButtonLink href={`/tours/${t.slug}`} size="sm" arrow>

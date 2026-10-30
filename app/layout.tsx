@@ -9,7 +9,6 @@ import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { buildMenus } from "@/components/layout/menus";
 import { Footer } from "@/components/layout/Footer";
-import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import { GuidePopup } from "@/components/layout/GuidePopup";
 
@@ -83,8 +82,7 @@ export default function RootLayout({
             image: `${images.heroCapeTown}?w=1200&h=630&fit=crop&q=80`,
             foundingDate: String(site.foundedYear),
             email: site.contact.email,
-            telephone: site.contact.phone,
-            address: { "@type": "PostalAddress", addressLocality: "Cape Town", addressCountry: "ZA" },
+            address: { "@type": "PostalAddress", streetAddress: "Workshop17 Watershed, 17 Dock Road, V&A Waterfront", addressLocality: "Cape Town", postalCode: "8001", addressCountry: "ZA" },
             areaServed: { "@type": "Country", name: "South Africa" },
             knowsLanguage: "en",
           }}
@@ -95,7 +93,6 @@ export default function RootLayout({
           <Header menus={buildMenus()} />
           <main id="main">{children}</main>
           <Footer />
-          <WhatsAppFloat />
           <CookieBanner />
           {site.guidePopup && <GuidePopup />}
           {modal}

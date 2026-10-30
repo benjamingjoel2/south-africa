@@ -4,10 +4,10 @@ const years = new Date().getFullYear() - site.foundedYear;
 
 const items = [
   { title: "One specialist", text: "From the first message to the day you come home, never a chain of strangers." },
-  { title: `${years >= 10 ? "Fourteen" : years} years`, text: `Planning South Africa since ${site.foundedYear}, from our base in Cape Town. Trip count placeholder: 2,400+.` },
+  { title: `${years >= 10 ? "Fourteen" : years} years`, text: `Planning South Africa since ${site.foundedYear}, from our base in Cape Town.` },
   { title: "Vetted lodges", text: "Direct relationships with the guides, drivers and properties we send you to." },
   { title: "Fair pricing", text: "Direct local rates, in your currency, with no surprise add-ons. The specialist comes free on top." },
-  { title: "Always reachable", text: "A specialist on WhatsApp, every hour of every day, throughout your trip." },
+  { title: "Always reachable", text: "Your specialist looks after you throughout your trip, from departure day to the flight home." },
   { title: "Eight regions", text: "From the Cape and the Garden Route to Kruger, the Drakensberg, the Zulu coast and the Kalahari." },
 ];
 

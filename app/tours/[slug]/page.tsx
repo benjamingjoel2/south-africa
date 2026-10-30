@@ -169,7 +169,7 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
           ].map((p) => (
             <div key={p.label} className="bg-ivory-50 p-6">
               <p className="eyebrow">{p.label}</p>
-              <p className="mt-2 text-[1.75rem] font-medium tracking-tight"><Price usd={p.usd} /></p>
+              <p className="mt-2 text-[1.75rem] font-medium tracking-tight">From <Price usd={p.usd} /></p>
             </div>
           ))}
         </div>

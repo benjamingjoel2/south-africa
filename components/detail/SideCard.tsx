@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { site } from "@/config/site";
-import { StarIcon } from "@/components/ui/Icons";
 import { cn } from "@/lib/utils";
 
 export const defaultRows = [
@@ -15,7 +13,7 @@ export function IncludedBox({ className }: { className?: string }) {
     <div className={cn("border-l-2 border-brass-500 bg-ivory-100 px-5 py-4", className)}>
       <p className="eyebrow text-brass-600">Included</p>
       <p className="mt-2 text-[0.9375rem] text-charcoal-700">
-        <span className="font-medium text-charcoal-800">Free planning consultation and 24/7 WhatsApp support.</span> {site.included.text.replace(/^A free planning consultation and 24\/7 WhatsApp support on /, "On ")}
+        <span className="font-medium text-charcoal-800">Free planning consultation.</span> Support from your specialist throughout every booking.
       </p>
     </div>
   );
@@ -24,13 +22,11 @@ export function IncludedBox({ className }: { className?: string }) {
 /** Bone sidebar card with the "Included" box and definition rows. */
 export function SideCard({
   rows = defaultRows,
-  rating = false,
   footer = "Tailor-made South Africa · since 2012",
   className,
   children,
 }: {
   rows?: { label: string; value: React.ReactNode }[];
-  rating?: boolean;
   footer?: string;
   className?: string;
   children?: React.ReactNode;
@@ -47,19 +43,6 @@ export function SideCard({
         ))}
       </dl>
       {children}
-      {rating && (
-        <div className="mt-5 border-t border-ivory-200 pt-5 text-sm text-charcoal-700">
-          <p className="flex items-center gap-2">
-            <span className="flex gap-0.5 text-brass-500" aria-hidden="true">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <StarIcon key={i} className="size-3" />
-              ))}
-            </span>
-            <span className="font-medium text-charcoal-800">4.9</span> placeholder rating
-          </p>
-          <Link href="/testimonials" className="mt-1 inline-block underline underline-offset-2">Read guest stories</Link>
-        </div>
-      )}
       {footer && <p className="eyebrow mt-6 border-t border-ivory-200 pt-5 text-center">{footer}</p>}
     </aside>
   );

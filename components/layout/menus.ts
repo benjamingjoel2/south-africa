@@ -37,15 +37,11 @@ export function buildMenus(): Record<MenuKey, Menu> {
           links: [
             { label: "Why travel with us", href: "/about" },
             { label: "Our story", href: "/about#story" },
-            { label: "Meet the team", href: "/about#team" },
           ],
         },
         {
-          title: "From our guests",
-          links: [
-            { label: "Testimonials", href: "/testimonials" },
-            { label: "Journal", href: "/blog" },
-          ],
+          title: "Read",
+          links: [{ label: "Journal", href: "/blog" }],
         },
         {
           title: "Practical",

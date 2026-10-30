@@ -1,4 +1,3 @@
-import { whatsappHref } from "@/config/site";
 import { ButtonLink } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Type";
 
@@ -25,8 +24,8 @@ export function SpecialistCta({
           <ButtonLink href="/plan-your-trip" variant="brass">
             Plan your trip
           </ButtonLink>
-          <ButtonLink href={whatsappHref()} external variant="outline-light">
-            Chat on WhatsApp
+          <ButtonLink href="/contact" variant="outline-light">
+            Contact us
           </ButtonLink>
         </div>
       </div>
