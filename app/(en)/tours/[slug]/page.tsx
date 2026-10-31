@@ -22,7 +22,8 @@ export async function generateMetadata({ params }: PageProps<"/tours/[slug]">) {
   const { slug } = await params;
   const t = getTour(slug);
   if (!t) return {};
-  return buildMetadata({ title: `${t.title}: ${t.nights + 1}-Day Itinerary`, description: `${t.subtitle}. ${t.nights + 1} days from US$${t.priceFromUsd.toLocaleString("en-US")} per person. ${t.highlights[0]}.`, path: `/tours/${t.slug}`, image: t.image });
+  const price = t.priceFromUsd.toLocaleString("en-US");
+  return buildMetadata({ title: `${t.title}: ${t.nights + 1}-Day Itinerary`, description: `${t.subtitle}. ${t.nights + 1} days from US$${price} per person. ${t.highlights[0]}.`, path: `/tours/${t.slug}`, image: t.image });
 }
 
 function bucket(items: string[]) {
@@ -186,7 +187,6 @@ export default async function TourPage({ params }: PageProps<"/tours/[slug]">) {
               </li>
             ))}
           </ol>
-          <p className="mt-2 text-xs text-stone-400">Interactive map placeholder.</p>
         </div>
         <ButtonLink href="/plan-your-trip" arrow className="mt-10">
           Enquire about this itinerary

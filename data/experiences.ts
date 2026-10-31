@@ -114,7 +114,7 @@ export const experiences: Experience[] = [
     duration: "5–10 days",
     bestTime: "Sep–Apr",
     image: images.roadTrip,
-    includes: ["Detailed route book", "Rental car with full insurance", "Curated stays", "24/7 WhatsApp support"],
+    includes: ["Detailed route book", "Rental car with full insurance", "Curated stays", "24/7 support while you travel"],
     goodToKnow: ["Driving is on the left", "Avoid driving after dark on rural roads"],
   },
   {

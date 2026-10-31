@@ -31,4 +31,4 @@ export const addOns = [
   { id: "safari-addon", title: "Safari add-on", text: "Add a few nights in the bush" },
 ] as const;
 
-export const contactMethods = ["Email", "WhatsApp", "Telephone"] as const;
+export const contactMethods = ["Email", "Telephone"] as const;

@@ -7,6 +7,12 @@ const styles: Record<MonthRating, string> = {
   good: "bg-brass-400/25 text-charcoal-800 border-brass-400/40",
   mixed: "bg-ivory-50 text-charcoal-700 border-ivory-200",
 };
+// Display names; the keys stay in English to match the data.
+const monthLabels: Record<MonthKey, string> = {
+  Jan: "Jan", Feb: "Feb", Mar: "Mar", Apr: "Apr", May: "May", Jun: "Jun",
+  Jul: "Jul", Aug: "Aug", Sep: "Sep", Oct: "Oct", Nov: "Nov", Dec: "Dec",
+};
+
 const labels: Record<MonthRating, string> = { best: "Best", good: "Good", mixed: "Mixed" };
 
 export function MonthGrid({ ratings }: { ratings: Record<MonthKey, MonthRating> }) {
@@ -17,7 +23,7 @@ export function MonthGrid({ ratings }: { ratings: Record<MonthKey, MonthRating> 
           const r = ratings[m as MonthKey];
           return (
             <li key={m} className={cn("flex flex-col items-center gap-1 border py-3 text-center", styles[r])}>
-              <span className="text-sm font-medium">{m}</span>
+              <span className="text-sm font-medium">{monthLabels[m as MonthKey]}</span>
               <span className="text-[0.625rem] uppercase tracking-[0.14em] opacity-80">{labels[r]}</span>
             </li>
           );

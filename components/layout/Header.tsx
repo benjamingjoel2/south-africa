@@ -10,6 +10,7 @@ import { Logo } from "@/components/ui/Logo";
 import { ArrowRight, ButtonLink } from "@/components/ui/Button";
 import { ChevronDown } from "@/components/ui/Icons";
 import { CurrencySwitcher } from "./CurrencySwitcher";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 
 export function Header({ menus }: { menus: Record<MenuKey, Menu> }) {
@@ -56,7 +57,7 @@ export function Header({ menus }: { menus: Record<MenuKey, Menu> }) {
             {site.nav.map((item) => {
               const active = pathname === item.href || pathname.startsWith(item.href + "/");
               const cls = cn(
-                "flex h-20 items-center gap-1.5 text-eyebrow font-medium uppercase tracking-eyebrow transition-colors",
+                "flex h-20 items-center gap-1.5 whitespace-nowrap text-eyebrow font-medium uppercase tracking-eyebrow transition-colors",
                 active || open === item.menu ? "text-charcoal-800" : "text-charcoal-700 hover:text-charcoal-800",
               );
               return (
@@ -84,6 +85,7 @@ export function Header({ menus }: { menus: Record<MenuKey, Menu> }) {
         </nav>
 
         <div className="flex items-center gap-3">
+          <LanguageSwitcher className="mr-2 hidden md:block lg:hidden xl:block" />
           <ButtonLink href="/plan-your-trip" className="hidden md:inline-flex">
             Start planning
           </ButtonLink>
@@ -183,6 +185,10 @@ export function Header({ menus }: { menus: Record<MenuKey, Menu> }) {
               ))}
             </ul>
             <div className="mt-6 flex items-center justify-between">
+              <span className="eyebrow">Language</span>
+              <LanguageSwitcher />
+            </div>
+            <div className="mt-4 flex items-center justify-between">
               <span className="eyebrow">Currency</span>
               <CurrencySwitcher tone="dark" />
             </div>

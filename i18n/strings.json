@@ -1,0 +1,4555 @@
+{
+ "Why Travel With Us": [
+  "app/(en)/about/page.tsx:10"
+ ],
+ "Cape Compass is a small Cape Town team of South Africa specialists. One dedicated expert plans your tailor-made trip from first message to flight home.": [
+  "app/(en)/about/page.tsx:11"
+ ],
+ "The seamless trip": [
+  "app/(en)/about/page.tsx:21"
+ ],
+ "promise": [
+  "app/(en)/about/page.tsx:22"
+ ],
+ "We understand what is at stake when planning a once-in-a-lifetime journey: a honeymoon, a family trip, a long-awaited adventure. With {0} years of experience planning South Africa, we have learned to anticipate what could go wrong before it does.": [
+  "app/(en)/about/page.tsx:24"
+ ],
+ "Safety sits at the heart of how we work: trusted suppliers, modern vehicles, expert private guides. We pace itineraries to reduce travel fatigue, often recommending a short flight over a long road transfer, so the journey is as smooth as it is secure.": [
+  "app/(en)/about/page.tsx:25"
+ ],
+ "Here for you, every step of the": [
+  "app/(en)/about/page.tsx:30"
+ ],
+ "way": [
+  "app/(en)/about/page.tsx:31"
+ ],
+ "Your specialist designs the trip, books every piece of it, briefs you before you fly and stays with you until you're home. No call centres, no hand-offs.": [
+  "app/(en)/about/page.tsx:33"
+ ],
+ "Flights, transfers, lodging and support: one travel pack, one specialist, one point of contact. Reachable before, during and after your trip.": [
+  "app/(en)/about/page.tsx:34"
+ ],
+ "Our": [
+  "app/(en)/about/page.tsx:39"
+ ],
+ "story": [
+  "app/(en)/about/page.tsx:40"
+ ],
+ "Cape Compass began around a kitchen table in Tamboerskloof. Friends from abroad kept asking the same questions: Is Kruger or a private reserve better? How many nights in Cape Town? Is the Garden Route worth the drive? We kept answering, then booking, then checking in on them while they travelled.": [
+  "app/(en)/about/page.tsx:42"
+ ],
+ "Word spread. Today we are a small team of specialists, each with a region we know intimately, but the approach hasn't changed. We listen first, design around how you like to travel, and never hand you off to someone who doesn't know your trip.": [
+  "app/(en)/about/page.tsx:43"
+ ],
+ "Same price, better": [
+  "app/(en)/about/page.tsx:48"
+ ],
+ "service": [
+  "app/(en)/about/page.tsx:49"
+ ],
+ "You pay direct local rates for lodges, guides and transfers, never a markup. Booking through us adds a specialist who knows the properties personally and can secure the right room, the right guide and the right table.": [
+  "app/(en)/about/page.tsx:51"
+ ],
+ "Community and": [
+  "app/(en)/about/page.tsx:56"
+ ],
+ "conservation": [
+  "app/(en)/about/page.tsx:57"
+ ],
+ "We favour lodges with real community and conservation programmes, and we'll tell you which ones. Ethical wildlife encounters only: no petting, no walking with predators, no interactions that compromise an animal's welfare.": [
+  "app/(en)/about/page.tsx:59"
+ ],
+ "Why travel with us": [
+  "app/(en)/about/page.tsx:70",
+  "app/(en)/about/page.tsx:67",
+  "components/layout/Footer.tsx:58"
+ ],
+ "Your journey,": [
+  "app/(en)/about/page.tsx:72"
+ ],
+ "we have planned tailor-made South Africa trips from our base in Cape Town. Below is what we promise, and what we do, for you.": [
+  "app/(en)/about/page.tsx:75"
+ ],
+ "Since": [
+  "app/(en)/about/page.tsx:75",
+  "components/sections/WhyUs.tsx:15"
+ ],
+ "Our promises": [
+  "app/(en)/about/page.tsx:80"
+ ],
+ "On this page": [
+  "app/(en)/about/page.tsx:83"
+ ],
+ "Journal": [
+  "app/(en)/blog/[slug]/page.tsx:45",
+  "app/(en)/blog/page.tsx:15",
+  "components/layout/menus.ts:44"
+ ],
+ "More from the journal": [
+  "app/(en)/blog/[slug]/page.tsx:59"
+ ],
+ "More from the journal.": [
+  "app/(en)/blog/[slug]/page.tsx:61"
+ ],
+ "beyond": [
+  "app/(en)/blog/page.tsx:16"
+ ],
+ "Notes from the Cape, and": [
+  "app/(en)/blog/page.tsx:16"
+ ],
+ "Honest, practical advice from our specialists: seasons, safaris, where to stay and how to make the most of every day.": [
+  "app/(en)/blog/page.tsx:17"
+ ],
+ "Expert South Africa travel advice: where to go, when to visit, which safari to choose and where to stay.": [
+  "app/(en)/blog/page.tsx:8"
+ ],
+ "South Africa Travel Journal": [
+  "app/(en)/blog/page.tsx:8"
+ ],
+ "Contact": [
+  "app/(en)/contact/page.tsx:14",
+  "components/planner/Planner.tsx:20",
+  "config/site.ts:63"
+ ],
+ "specialist": [
+  "app/(en)/contact/page.tsx:15"
+ ],
+ "Speak to a": [
+  "app/(en)/contact/page.tsx:15"
+ ],
+ "Our team is on the ground in Cape Town. Write to us or use the form, and a specialist will reply within one working day, usually much sooner.": [
+  "app/(en)/contact/page.tsx:17"
+ ],
+ "Write to us": [
+  "app/(en)/contact/page.tsx:21"
+ ],
+ "Whichever is easiest.": [
+  "app/(en)/contact/page.tsx:22"
+ ],
+ "Email": [
+  "app/(en)/contact/page.tsx:25",
+  "components/detail/ContactForm.tsx:56",
+  "components/planner/steps.tsx:275"
+ ],
+ "Headquartered in": [
+  "app/(en)/contact/page.tsx:30"
+ ],
+ "Before you reach out": [
+  "app/(en)/contact/page.tsx:34"
+ ],
+ "Send us a note.": [
+  "app/(en)/contact/page.tsx:35"
+ ],
+ "is the fastest route. For anything else, write below.": [
+  "app/(en)/contact/page.tsx:37"
+ ],
+ "trip planner": [
+  "app/(en)/contact/page.tsx:37"
+ ],
+ "For a tailored proposal, our": [
+  "app/(en)/contact/page.tsx:37"
+ ],
+ "Get in touch with a Cape Compass South Africa specialist by email or through our contact form. Send us a note and we reply within one working day with first ideas.": [
+  "app/(en)/contact/page.tsx:8"
+ ],
+ "Contact Us": [
+  "app/(en)/contact/page.tsx:8"
+ ],
+ "What cookies and local storage are": [
+  "app/(en)/cookies/page.tsx:10"
+ ],
+ "Cookies are small text files a website saves in your browser. Local storage is a similar feature that lets a website remember information on your own device. Neither is sent to us unless a page specifically reads it.": [
+  "app/(en)/cookies/page.tsx:11"
+ ],
+ "Cookies we use": [
+  "app/(en)/cookies/page.tsx:12"
+ ],
+ "This website does not set any cookies, and it does not use advertising or tracking cookies of any kind.": [
+  "app/(en)/cookies/page.tsx:13"
+ ],
+ "Local storage we use": [
+  "app/(en)/cookies/page.tsx:14"
+ ],
+ "We use your browser’s local storage only for features you choose to use:": [
+  "app/(en)/cookies/page.tsx:15"
+ ],
+ "cc-planner-v1 (local storage): Remembers your answers and the step you reached in the trip planner, so you can finish it later. Cleared when you submit the planner, or when you clear your browser data.": [
+  "app/(en)/cookies/page.tsx:17"
+ ],
+ "cc-currency (local storage): Remembers the display currency you chose for guide prices. Kept until you clear your browser data.": [
+  "app/(en)/cookies/page.tsx:18"
+ ],
+ "cc-cookie-consent (local storage): Remembers your answer to the cookie notice. Kept until you clear your browser data.": [
+  "app/(en)/cookies/page.tsx:19"
+ ],
+ "cc-guide-popup (local storage): Remembers that you have closed or used the South Africa guide pop-up, so it is not shown again. Kept until you clear your browser data.": [
+  "app/(en)/cookies/page.tsx:20"
+ ],
+ "This information stays on your device. It is not sent to us until you choose to submit the form.": [
+  "app/(en)/cookies/page.tsx:22"
+ ],
+ "Analytics and third parties": [
+  "app/(en)/cookies/page.tsx:23"
+ ],
+ "We do not use analytics, advertising or social-media tracking on this website. Photographs and fonts are served from our own website, so no third party receives information about your visit when you load a page.": [
+  "app/(en)/cookies/page.tsx:24"
+ ],
+ "Consent and how to withdraw it": [
+  "app/(en)/cookies/page.tsx:25"
+ ],
+ "The items above are strictly necessary for features you use, so they do not need your consent. The cookie notice asks whether you would accept analytics; we do not run any analytics today, and if we add them they will only load after you accept. To change your answer, clear this site’s data in your browser and the notice will appear again.": [
+  "app/(en)/cookies/page.tsx:26"
+ ],
+ "You can remove anything this site has stored at any time by clearing your browser’s site data for this website (usually under Settings, then Privacy, then Cookies and site data), or by using a private browsing window. You can also block cookies and storage entirely in your browser settings; the site will still work, but a half-completed trip planner will not be remembered.": [
+  "app/(en)/cookies/page.tsx:27"
+ ],
+ "Questions": [
+  "app/(en)/cookies/page.tsx:28"
+ ],
+ "explains how we handle personal information.": [
+  "app/(en)/cookies/page.tsx:29"
+ ],
+ "Privacy Policy": [
+  "app/(en)/cookies/page.tsx:29",
+  "app/(en)/privacy/page.tsx:9",
+  "app/(en)/privacy/page.tsx:5"
+ ],
+ ". Our": [
+  "app/(en)/cookies/page.tsx:29"
+ ],
+ "capecompass@tourground.com": [
+  "app/(en)/cookies/page.tsx:29",
+  "app/(en)/privacy/page.tsx:43",
+  "app/(en)/privacy/page.tsx:12"
+ ],
+ "If you have any questions about this policy, email us at": [
+  "app/(en)/cookies/page.tsx:29"
+ ],
+ "How the Cape Compass website uses cookies and your browser’s local storage.": [
+  "app/(en)/cookies/page.tsx:5"
+ ],
+ "30 October 2026": [
+  "app/(en)/cookies/page.tsx:9",
+  "app/(en)/privacy/page.tsx:9",
+  "app/(en)/terms/page.tsx:8"
+ ],
+ "Cookie Policy": [
+  "app/(en)/cookies/page.tsx:9",
+  "app/(en)/cookies/page.tsx:5",
+  "app/(en)/privacy/page.tsx:48"
+ ],
+ "Highlights and practical tips": [
+  "app/(en)/destinations/[slug]/page.tsx:101"
+ ],
+ "Highlights": [
+  "app/(en)/destinations/[slug]/page.tsx:104"
+ ],
+ "Practical tips": [
+  "app/(en)/destinations/[slug]/page.tsx:112"
+ ],
+ "Experiences here": [
+  "app/(en)/destinations/[slug]/page.tsx:123"
+ ],
+ "Things to do in": [
+  "app/(en)/destinations/[slug]/page.tsx:125"
+ ],
+ "Experiences": [
+  "app/(en)/destinations/[slug]/page.tsx:125",
+  "app/(en)/experiences/[slug]/page.tsx:39",
+  "app/(en)/experiences/page.tsx:22"
+ ],
+ "Common questions": [
+  "app/(en)/destinations/[slug]/page.tsx:138",
+  "app/(en)/destinations/[slug]/page.tsx:135"
+ ],
+ "answered": [
+  "app/(en)/destinations/[slug]/page.tsx:139",
+  "app/(en)/faq/page.tsx:21"
+ ],
+ "Read the full FAQ": [
+  "app/(en)/destinations/[slug]/page.tsx:141"
+ ],
+ "Where to stay": [
+  "app/(en)/destinations/[slug]/page.tsx:151",
+  "components/layout/Footer.tsx:67",
+  "components/layout/menus.ts:50"
+ ],
+ "Where to stay in": [
+  "app/(en)/destinations/[slug]/page.tsx:153"
+ ],
+ "Stays": [
+  "app/(en)/destinations/[slug]/page.tsx:153",
+  "app/(en)/stays/[slug]/page.tsx:42",
+  "app/(en)/stays/page.tsx:20"
+ ],
+ "Tours": [
+  "app/(en)/destinations/[slug]/page.tsx:163",
+  "app/(en)/experiences/[slug]/page.tsx:115",
+  "app/(en)/tours/page.tsx:22"
+ ],
+ "Tours including": [
+  "app/(en)/destinations/[slug]/page.tsx:165"
+ ],
+ "Tailor-made trips": [
+  "app/(en)/destinations/[slug]/page.tsx:165",
+  "app/(en)/experiences/[slug]/page.tsx:117"
+ ],
+ "We build": [
+  "app/(en)/destinations/[slug]/page.tsx:170"
+ ],
+ "and we&rsquo;ll design one around it.": [
+  "app/(en)/destinations/[slug]/page.tsx:171"
+ ],
+ "Tell us your dates": [
+  "app/(en)/destinations/[slug]/page.tsx:171"
+ ],
+ "Tell us when, who's coming and what you're hoping for. One named specialist designs the rest.": [
+  "app/(en)/destinations/[slug]/page.tsx:177"
+ ],
+ "Ready for": [
+  "app/(en)/destinations/[slug]/page.tsx:177"
+ ],
+ "{0} Best time to visit, highlights, where to stay and tailor-made itineraries.": [
+  "app/(en)/destinations/[slug]/page.tsx:29"
+ ],
+ "{0} Travel Guide": [
+  "app/(en)/destinations/[slug]/page.tsx:29"
+ ],
+ "South Africa": [
+  "app/(en)/destinations/[slug]/page.tsx:44",
+  "app/(en)/layout.tsx:86"
+ ],
+ "Destinations": [
+  "app/(en)/destinations/[slug]/page.tsx:46",
+  "app/(en)/destinations/page.tsx:25",
+  "app/(en)/destinations/page.tsx:24"
+ ],
+ "Explore the tours": [
+  "app/(en)/destinations/[slug]/page.tsx:50"
+ ],
+ "Overview": [
+  "app/(en)/destinations/[slug]/page.tsx:55",
+  "app/(en)/tours/[slug]/page.tsx:109",
+  "app/(en)/tours/[slug]/page.tsx:107"
+ ],
+ "Ways to build a": [
+  "app/(en)/destinations/[slug]/page.tsx:59"
+ ],
+ "Region": [
+  "app/(en)/destinations/[slug]/page.tsx:77",
+  "components/detail/TourFilters.tsx:61"
+ ],
+ "Stay": [
+  "app/(en)/destinations/[slug]/page.tsx:78",
+  "app/(en)/tours/[slug]/page.tsx:134"
+ ],
+ "Year-round": [
+  "app/(en)/destinations/[slug]/page.tsx:79",
+  "data/experiences.ts:216",
+  "data/experiences.ts:148"
+ ],
+ "Best months": [
+  "app/(en)/destinations/[slug]/page.tsx:79"
+ ],
+ "When to go": [
+  "app/(en)/destinations/[slug]/page.tsx:91"
+ ],
+ "Best time to visit": [
+  "app/(en)/destinations/[slug]/page.tsx:92",
+  "app/(en)/destinations/[slug]/page.tsx:88"
+ ],
+ "South Africa Destinations": [
+  "app/(en)/destinations/page.tsx:12"
+ ],
+ "South Africa's best destinations: Cape Town, the Winelands, the Garden Route, Kruger's private reserves, the Drakensberg, the KwaZulu-Natal coast and the Kalahari.": [
+  "app/(en)/destinations/page.tsx:13"
+ ],
+ "Twelve regions, one country, endless combinations.": [
+  "app/(en)/destinations/page.tsx:26"
+ ],
+ "Most trips combine two to four of these. Start in Cape Town, then go further: wine country, whale coast, the bush, the mountains and the warm Indian Ocean.": [
+  "app/(en)/destinations/page.tsx:27"
+ ],
+ "Start planning": [
+  "app/(en)/destinations/page.tsx:28",
+  "app/(en)/experiences/page.tsx:25",
+  "app/(en)/stays/page.tsx:23"
+ ],
+ "Cape Town city bowl below Table Mountain": [
+  "app/(en)/destinations/page.tsx:30"
+ ],
+ "More experiences": [
+  "app/(en)/experiences/[slug]/page.tsx:103"
+ ],
+ "More": [
+  "app/(en)/experiences/[slug]/page.tsx:105"
+ ],
+ "Tours featuring": [
+  "app/(en)/experiences/[slug]/page.tsx:117"
+ ],
+ "See the tours": [
+  "app/(en)/experiences/[slug]/page.tsx:43"
+ ],
+ "Details": [
+  "app/(en)/experiences/[slug]/page.tsx:47",
+  "components/sections/Hero.tsx:34"
+ ],
+ "Typically includes": [
+  "app/(en)/experiences/[slug]/page.tsx:57"
+ ],
+ "Good to know": [
+  "app/(en)/experiences/[slug]/page.tsx:65"
+ ],
+ "Where you can do it": [
+  "app/(en)/experiences/[slug]/page.tsx:74"
+ ],
+ "Duration": [
+  "app/(en)/experiences/[slug]/page.tsx:90",
+  "components/detail/TourFilters.tsx:68"
+ ],
+ "Best time": [
+  "app/(en)/experiences/[slug]/page.tsx:91"
+ ],
+ "Where": [
+  "app/(en)/experiences/[slug]/page.tsx:92",
+  "components/planner/Planner.tsx:17"
+ ],
+ "per person (guide price)": [
+  "app/(en)/experiences/[slug]/page.tsx:93"
+ ],
+ "From": [
+  "app/(en)/experiences/[slug]/page.tsx:93",
+  "app/(en)/stays/[slug]/page.tsx:47",
+  "app/(en)/tours/[slug]/page.tsx:173"
+ ],
+ "South Africa Experiences": [
+  "app/(en)/experiences/page.tsx:10"
+ ],
+ "Big Five game drives, walking safaris, Table Mountain, Boulders Beach penguins, Winelands tastings, whale watching, Robben Island and more, tailored to you.": [
+  "app/(en)/experiences/page.tsx:11"
+ ],
+ "By the kind of trip you want.": [
+  "app/(en)/experiences/page.tsx:23"
+ ],
+ "From dawn game drives to long lunches in the vines, here is what we love to weave into an itinerary. Pick a few favourites and we'll plan the route around them.": [
+  "app/(en)/experiences/page.tsx:24"
+ ],
+ "Safari vehicle at sunset": [
+  "app/(en)/experiences/page.tsx:27"
+ ],
+ "Answers to common South Africa travel questions: visas, children's documents, safety, malaria, best time to visit, getting around, tipping and money.": [
+  "app/(en)/faq/page.tsx:10"
+ ],
+ "FAQ": [
+  "app/(en)/faq/page.tsx:20",
+  "components/layout/menus.ts:51",
+  "config/site.ts:62"
+ ],
+ "Good questions,": [
+  "app/(en)/faq/page.tsx:21"
+ ],
+ "Everything travellers usually ask us before booking. Can&rsquo;t find what you need? Message your specialist any time.": [
+  "app/(en)/faq/page.tsx:22"
+ ],
+ "Note:": [
+  "app/(en)/faq/page.tsx:24"
+ ],
+ "South Africa Travel FAQ": [
+  "app/(en)/faq/page.tsx:9"
+ ],
+ "{0} | Tailor-made South Africa Trips": [
+  "app/(en)/layout.tsx:43"
+ ],
+ "%s | {0}": [
+  "app/(en)/layout.tsx:44"
+ ],
+ "document.documentElement.setAttribute('data-js','')": [
+  "app/(en)/layout.tsx:67"
+ ],
+ "Skip to content": [
+  "app/(en)/layout.tsx:72"
+ ],
+ "Cape Town": [
+  "app/(en)/layout.tsx:85",
+  "components/layout/GuidePopup.tsx:94",
+  "data/destinations.ts:7"
+ ],
+ "Workshop17 Watershed, 17 Dock Road, V&A Waterfront": [
+  "app/(en)/layout.tsx:85"
+ ],
+ "This page doesn&rsquo;t exist, but plenty of beautiful places do. Let&rsquo;s get you back on route.": [
+  "app/(en)/not-found.tsx:11"
+ ],
+ "Back home": [
+  "app/(en)/not-found.tsx:13"
+ ],
+ "Explore destinations": [
+  "app/(en)/not-found.tsx:14"
+ ],
+ "Off the": [
+  "app/(en)/not-found.tsx:9"
+ ],
+ "Plan a trip": [
+  "app/(en)/plan-your-trip/page.tsx:18"
+ ],
+ "Begin your South Africa trip.": [
+  "app/(en)/plan-your-trip/page.tsx:19"
+ ],
+ "Five short steps. A specialist replies within one working day, usually much sooner. Or skip the form and email us.": [
+  "app/(en)/plan-your-trip/page.tsx:21"
+ ],
+ "Plan Your Trip": [
+  "app/(en)/plan-your-trip/page.tsx:8"
+ ],
+ "Tell us about your South Africa trip in five quick steps. A dedicated local specialist will reply within one working day.": [
+  "app/(en)/plan-your-trip/page.tsx:9"
+ ],
+ "Who we are": [
+  "app/(en)/privacy/page.tsx:10"
+ ],
+ "Cape Compass plans tailor-made journeys in South Africa. In this policy, “we”, “us” and “our” mean Cape Compass, of Workshop17 Watershed, 17 Dock Road, V&amp;A Waterfront, Cape Town, 8001, South Africa. We are responsible for the personal information you share with us through this website.": [
+  "app/(en)/privacy/page.tsx:11"
+ ],
+ "If you have any question about this policy or your information, email us at": [
+  "app/(en)/privacy/page.tsx:12"
+ ],
+ "What we collect": [
+  "app/(en)/privacy/page.tsx:13"
+ ],
+ "We only collect what you choose to give us, and what we need to answer you and plan your trip:": [
+  "app/(en)/privacy/page.tsx:14"
+ ],
+ "Contact details you enter in the trip planner, the contact form or the guide sign-up: your name, email address and, if you give it, a phone number and your country.": [
+  "app/(en)/privacy/page.tsx:16"
+ ],
+ "Trip details: who is travelling, approximate dates, interests, travel style and anything else you tell us. Please only share health, dietary or accessibility information if you want us to take it into account.": [
+  "app/(en)/privacy/page.tsx:17"
+ ],
+ "Messages and emails you send us, and our replies.": [
+  "app/(en)/privacy/page.tsx:18"
+ ],
+ "If you go on to travel with us: the details our partners need to deliver your trip, such as passport names, dates of birth, flight details and emergency contacts.": [
+  "app/(en)/privacy/page.tsx:19"
+ ],
+ "Basic technical information that any web server receives (such as your IP address, browser type and the pages requested), kept briefly in server logs for security and to keep the site running.": [
+  "app/(en)/privacy/page.tsx:20"
+ ],
+ "How we use it and why": [
+  "app/(en)/privacy/page.tsx:22"
+ ],
+ "To answer your enquiry and prepare a tailor-made proposal (steps you ask us to take before entering into a contract).": [
+  "app/(en)/privacy/page.tsx:24"
+ ],
+ "To arrange and look after your trip if you book (performance of our contract with you).": [
+  "app/(en)/privacy/page.tsx:25"
+ ],
+ "To send our newsletter or guide, only if you sign up for it (your consent, which you can withdraw at any time).": [
+  "app/(en)/privacy/page.tsx:26"
+ ],
+ "To keep records we are required to keep, for example for accounting and tax (legal obligation).": [
+  "app/(en)/privacy/page.tsx:27"
+ ],
+ "To keep the website secure and working (our legitimate interests).": [
+  "app/(en)/privacy/page.tsx:28"
+ ],
+ "We do not sell your information, and we do not use it for automated decision-making or profiling.": [
+  "app/(en)/privacy/page.tsx:30"
+ ],
+ "Who we share it with": [
+  "app/(en)/privacy/page.tsx:31"
+ ],
+ "We only share your information where it is needed for the purposes above:": [
+  "app/(en)/privacy/page.tsx:32"
+ ],
+ "With the lodges, camps, hotels, guides, drivers, airlines and other suppliers who deliver your trip, when you book.": [
+  "app/(en)/privacy/page.tsx:34"
+ ],
+ "Our website host, which serves the site and keeps short-lived technical logs.": [
+  "app/(en)/privacy/page.tsx:35"
+ ],
+ "Our email provider, which delivers your enquiry to us and our replies to you.": [
+  "app/(en)/privacy/page.tsx:36"
+ ],
+ "With professional advisers or authorities where the law requires it.": [
+  "app/(en)/privacy/page.tsx:37"
+ ],
+ "Some of these suppliers and service providers are outside the country you live in. Where we transfer your information internationally, we take steps to make sure it is protected to the standard required by law.": [
+  "app/(en)/privacy/page.tsx:39"
+ ],
+ "How long we keep it": [
+  "app/(en)/privacy/page.tsx:40"
+ ],
+ "We keep enquiries for up to two years after our last contact so we can pick up where we left off if you come back to us. If you travel with us, we keep booking records for as long as accounting and tax law requires (usually up to seven years). Newsletter details are kept until you unsubscribe.": [
+  "app/(en)/privacy/page.tsx:41"
+ ],
+ "Your rights": [
+  "app/(en)/privacy/page.tsx:42"
+ ],
+ ". We will reply within one month.": [
+  "app/(en)/privacy/page.tsx:43"
+ ],
+ "Depending on where you live, you have the right to ask for a copy of the information we hold about you, to have it corrected or deleted, to restrict or object to how we use it, to receive it in a portable format, and to withdraw your consent at any time. To use any of these rights, email": [
+  "app/(en)/privacy/page.tsx:43"
+ ],
+ "If you are unhappy with how we have handled your information, please tell us first so we can put it right. You can also complain to the data-protection authority where you live or to the Information Regulator of South Africa under the Protection of Personal Information Act (POPIA).": [
+  "app/(en)/privacy/page.tsx:44"
+ ],
+ "Security": [
+  "app/(en)/privacy/page.tsx:45"
+ ],
+ "Our website is served over an encrypted connection (HTTPS), and we limit access to your information to the people who need it to plan and run your trip.": [
+  "app/(en)/privacy/page.tsx:46"
+ ],
+ "Cookies and local storage": [
+  "app/(en)/privacy/page.tsx:47"
+ ],
+ "How this website uses cookies and your browser’s storage is explained in our": [
+  "app/(en)/privacy/page.tsx:48"
+ ],
+ "Changes to this policy": [
+  "app/(en)/privacy/page.tsx:49"
+ ],
+ "How Cape Compass collects, uses and protects your personal information.": [
+  "app/(en)/privacy/page.tsx:5"
+ ],
+ "We may update this policy from time to time. The date at the top of the page shows when it last changed.": [
+  "app/(en)/privacy/page.tsx:50"
+ ],
+ "{0} From US${1} per person per night.": [
+  "app/(en)/stays/[slug]/page.tsx:24"
+ ],
+ "per person · night": [
+  "app/(en)/stays/[slug]/page.tsx:47",
+  "components/cards/StayCard.tsx:21"
+ ],
+ "Enquire now": [
+  "app/(en)/stays/[slug]/page.tsx:49",
+  "app/(en)/tours/[slug]/page.tsx:65"
+ ],
+ "{0}, photo {1}": [
+  "app/(en)/stays/[slug]/page.tsx:58",
+  "app/(en)/tours/[slug]/page.tsx:76"
+ ],
+ "Type ·": [
+  "app/(en)/stays/[slug]/page.tsx:69"
+ ],
+ "Rooms ·": [
+  "app/(en)/stays/[slug]/page.tsx:70"
+ ],
+ "Good for ·": [
+  "app/(en)/stays/[slug]/page.tsx:71"
+ ],
+ "Region ·": [
+  "app/(en)/stays/[slug]/page.tsx:73"
+ ],
+ "Features": [
+  "app/(en)/stays/[slug]/page.tsx:80",
+  "app/(en)/stays/[slug]/page.tsx:79"
+ ],
+ "Placeholder property for illustration. Rates vary by season and room type.": [
+  "app/(en)/stays/[slug]/page.tsx:86"
+ ],
+ "this stay": [
+  "app/(en)/stays/[slug]/page.tsx:89"
+ ],
+ "Tours with": [
+  "app/(en)/stays/[slug]/page.tsx:89"
+ ],
+ "Itineraries": [
+  "app/(en)/stays/[slug]/page.tsx:89",
+  "components/sections/Itineraries.tsx:13",
+  "components/sections/Itineraries.tsx:10"
+ ],
+ "stay": [
+  "app/(en)/stays/[slug]/page.tsx:90",
+  "app/(en)/tours/[slug]/page.tsx:200"
+ ],
+ "More places to": [
+  "app/(en)/stays/[slug]/page.tsx:90"
+ ],
+ "Hand-picked boutique hotels in Cape Town, Winelands wine estates, Garden Route coastal lodges, Kruger private game lodges and Drakensberg mountain lodges.": [
+  "app/(en)/stays/page.tsx:10"
+ ],
+ "A curated collection of South Africa's finest.": [
+  "app/(en)/stays/page.tsx:21"
+ ],
+ "Small, characterful and personally inspected. These are examples of the properties we work with; your specialist matches stays to your style and budget.": [
+  "app/(en)/stays/page.tsx:22"
+ ],
+ "Infinity pool at a safari lodge overlooking the bush": [
+  "app/(en)/stays/page.tsx:25"
+ ],
+ "Property names and details shown are placeholders for illustration.": [
+  "app/(en)/stays/page.tsx:33"
+ ],
+ "Where to Stay in South Africa": [
+  "app/(en)/stays/page.tsx:9"
+ ],
+ "These terms apply to the tailor-made travel arrangements that Cape Compass, of Workshop17 Watershed, 17 Dock Road, V&amp;A Waterfront, Cape Town, 8001, South Africa (“we”, “us”), plans for you. Please read them before you confirm a booking. When you confirm a booking you accept them on behalf of everyone in your party, and you confirm that you are at least 18 and have their authority to do so.": [
+  "app/(en)/terms/page.tsx:10"
+ ],
+ "These are general principles. The quote and booking confirmation we send you set out the specific arrangements, deposit, balance due date and cancellation charges for your trip, and they form part of your contract with us.": [
+  "app/(en)/terms/page.tsx:11"
+ ],
+ "Enquiries and quotes": [
+  "app/(en)/terms/page.tsx:12"
+ ],
+ "Sending us an enquiry through the website, by email or any other way does not commit you to anything. We will reply with ideas and, when you are ready, a written quote.": [
+  "app/(en)/terms/page.tsx:13"
+ ],
+ "Quotes are based on availability and supplier rates at the time we write them. Nothing is held for you until you confirm and we confirm back in writing. We will always tell you if anything in a quote changes before you book.": [
+  "app/(en)/terms/page.tsx:14"
+ ],
+ "Booking, deposit and balance": [
+  "app/(en)/terms/page.tsx:15"
+ ],
+ "Your booking is confirmed when you accept our quote, we receive the deposit stated in it, and we send you a written booking confirmation. Your contract with us starts from that point.": [
+  "app/(en)/terms/page.tsx:16"
+ ],
+ "The balance is due by the date shown in your quote and booking confirmation. If it is not paid on time, we may treat the booking as cancelled by you and apply the cancellation charges below.": [
+  "app/(en)/terms/page.tsx:17"
+ ],
+ "Some suppliers (for example certain lodges, flights and permits) need full payment when they are booked. Where this applies we will tell you before you confirm.": [
+  "app/(en)/terms/page.tsx:18"
+ ],
+ "Prices": [
+  "app/(en)/terms/page.tsx:19"
+ ],
+ "Prices on this website are guide prices that read “From”: the lowest price per person, based on two adults sharing, in US dollars, excluding international flights. Conversions into other currencies are approximate and for convenience only. The price of your trip is the one confirmed in your written quote and booking confirmation.": [
+  "app/(en)/terms/page.tsx:20"
+ ],
+ "The price of your trip is the price in your booking confirmation. We will only change it after confirmation if a cost outside our control changes, such as government taxes, park or conservation fees, or fuel surcharges set by a carrier, and we will show you how any change is worked out. If a change is significant, you may cancel without paying cancellation charges.": [
+  "app/(en)/terms/page.tsx:21"
+ ],
+ "Changes you ask for": [
+  "app/(en)/terms/page.tsx:22"
+ ],
+ "We will always try to help if you want to change your trip after booking. Changes depend on availability and on the suppliers’ own terms, and any extra cost they charge will be passed on to you, together with any reasonable administration cost we tell you about in advance.": [
+  "app/(en)/terms/page.tsx:23"
+ ],
+ "If you cancel": [
+  "app/(en)/terms/page.tsx:24"
+ ],
+ "To cancel, tell us in writing. Cancellation charges depend on how close to departure you cancel and on the charges our suppliers make to us. They are set out in your quote and booking confirmation. We will always try to keep them as low as we can, and we will refund anything we are able to recover.": [
+  "app/(en)/terms/page.tsx:25"
+ ],
+ "If we change or cancel your trip": [
+  "app/(en)/terms/page.tsx:26"
+ ],
+ "Occasionally we have to make changes, for example when a camp or flight is no longer available. If we make a significant change before you travel, we will tell you as soon as possible and offer you a choice of accepting it, taking a comparable alternative, or cancelling with a full refund of what you have paid us.": [
+  "app/(en)/terms/page.tsx:27"
+ ],
+ "We may need to cancel or change arrangements because of events outside anyone’s control, such as extreme weather, natural disasters, epidemics, civil unrest or official travel advice against travel. In that case we will help you rearrange, and refund what we are able to recover from suppliers.": [
+  "app/(en)/terms/page.tsx:28"
+ ],
+ "Travel insurance": [
+  "app/(en)/terms/page.tsx:29",
+  "data/tours.ts:313",
+  "data/tours.ts:280"
+ ],
+ "Comprehensive travel insurance is a condition of travelling with us. It must cover cancellation, medical treatment, emergency evacuation and repatriation, and any activities you plan to do. Please arrange it when you book so you are covered if you have to cancel.": [
+  "app/(en)/terms/page.tsx:30"
+ ],
+ "Passports, visas and health": [
+  "app/(en)/terms/page.tsx:31"
+ ],
+ "You are responsible for having a valid passport, any visas or electronic travel authorisations, and any vaccinations or health certificates required for your journey, including for transit countries. We are happy to share general guidance, but entry rules change, so please check them with the relevant embassy or official government source and with a travel-health professional well before you travel.": [
+  "app/(en)/terms/page.tsx:32"
+ ],
+ "Our responsibility to you": [
+  "app/(en)/terms/page.tsx:33"
+ ],
+ "We will plan your trip with reasonable skill and care, and we choose our suppliers carefully. Many services are provided by independent suppliers under their own terms and the laws of the country where they operate.": [
+  "app/(en)/terms/page.tsx:34"
+ ],
+ "We are not responsible for any loss, injury or damage caused by you or anyone in your party, by a third party not connected with the arrangements we provide, or by events outside our control. Where the law allows, our liability is limited to the price of your trip. Nothing in these terms limits liability that cannot legally be limited, such as liability for death or personal injury caused by our negligence.": [
+  "app/(en)/terms/page.tsx:35"
+ ],
+ "Wildlife is wild and outdoor activities carry some risk. Please follow the advice of your guides and lodge staff at all times.": [
+  "app/(en)/terms/page.tsx:36"
+ ],
+ "Your responsibilities": [
+  "app/(en)/terms/page.tsx:37"
+ ],
+ "Please give us accurate information, including the names on your passports and any medical, dietary or accessibility needs that affect your trip. Please respect local laws, customs and the rules of the parks and places you visit.": [
+  "app/(en)/terms/page.tsx:38"
+ ],
+ "Complaints": [
+  "app/(en)/terms/page.tsx:39"
+ ],
+ "The terms that apply when Cape Compass plans and arranges a tailor-made South Africa trip for you.": [
+  "app/(en)/terms/page.tsx:4"
+ ],
+ "within 28 days of your return and we will reply in full.": [
+  "app/(en)/terms/page.tsx:40"
+ ],
+ "If something is not right while you are travelling, tell your guide, the property or us straight away so it can be put right on the spot. If it cannot be resolved, write to us at": [
+  "app/(en)/terms/page.tsx:40"
+ ],
+ "Governing law": [
+  "app/(en)/terms/page.tsx:41"
+ ],
+ "These terms and any dispute connected with them are governed by the law that applies to your contract with us. Nothing in them affects your rights as a consumer under the law of the country where you live.": [
+  "app/(en)/terms/page.tsx:42"
+ ],
+ "Booking Terms": [
+  "app/(en)/terms/page.tsx:8",
+  "app/(en)/terms/page.tsx:4",
+  "config/site.ts:52"
+ ],
+ "About these terms": [
+  "app/(en)/terms/page.tsx:9"
+ ],
+ ". Every itinerary is tailor-made, so dates, pace and stays can all change.": [
+  "app/(en)/tours/[slug]/page.tsx:115"
+ ],
+ "Ideal for": [
+  "app/(en)/tours/[slug]/page.tsx:115"
+ ],
+ "Itinerary": [
+  "app/(en)/tours/[slug]/page.tsx:118"
+ ],
+ "Day by day": [
+  "app/(en)/tours/[slug]/page.tsx:122"
+ ],
+ "What's included": [
+  "app/(en)/tours/[slug]/page.tsx:128"
+ ],
+ "The complete package": [
+  "app/(en)/tours/[slug]/page.tsx:130"
+ ],
+ "included": [
+  "app/(en)/tours/[slug]/page.tsx:131"
+ ],
+ "Everything": [
+  "app/(en)/tours/[slug]/page.tsx:131"
+ ],
+ "Travel": [
+  "app/(en)/tours/[slug]/page.tsx:136"
+ ],
+ "Not included": [
+  "app/(en)/tours/[slug]/page.tsx:148"
+ ],
+ "Rates": [
+  "app/(en)/tours/[slug]/page.tsx:159"
+ ],
+ "Direct local rates": [
+  "app/(en)/tours/[slug]/page.tsx:160"
+ ],
+ "dates": [
+  "app/(en)/tours/[slug]/page.tsx:161"
+ ],
+ "Rates and": [
+  "app/(en)/tours/[slug]/page.tsx:161"
+ ],
+ "Per person sharing for the complete package. Final pricing depends on your dates, availability and the stays you choose.": [
+  "app/(en)/tours/[slug]/page.tsx:163"
+ ],
+ "Per person sharing": [
+  "app/(en)/tours/[slug]/page.tsx:167"
+ ],
+ "For two travellers": [
+  "app/(en)/tours/[slug]/page.tsx:168"
+ ],
+ "Per person per night": [
+  "app/(en)/tours/[slug]/page.tsx:169"
+ ],
+ "International flights excluded. Peak season (December to January, and July to October on safari) and upgrades increase the price; quieter months reduce it.": [
+  "app/(en)/tours/[slug]/page.tsx:178"
+ ],
+ "Route": [
+  "app/(en)/tours/[slug]/page.tsx:181"
+ ],
+ "Enquire about this itinerary": [
+  "app/(en)/tours/[slug]/page.tsx:192"
+ ],
+ "Where you'll stay": [
+  "app/(en)/tours/[slug]/page.tsx:197"
+ ],
+ "Where you'll": [
+  "app/(en)/tours/[slug]/page.tsx:200"
+ ],
+ "your own": [
+  "app/(en)/tours/[slug]/page.tsx:211"
+ ],
+ "Make this trip": [
+  "app/(en)/tours/[slug]/page.tsx:211"
+ ],
+ "{0}. {1} days from US${2} per person. {3}.": [
+  "app/(en)/tours/[slug]/page.tsx:26"
+ ],
+ "{0}: {1}-Day Itinerary": [
+  "app/(en)/tours/[slug]/page.tsx:26"
+ ],
+ "Tour itinerary": [
+  "app/(en)/tours/[slug]/page.tsx:57"
+ ],
+ "per person": [
+  "app/(en)/tours/[slug]/page.tsx:62"
+ ],
+ "Duration ·": [
+  "app/(en)/tours/[slug]/page.tsx:84"
+ ],
+ "Comfort ·": [
+  "app/(en)/tours/[slug]/page.tsx:85"
+ ],
+ "From, per person ·": [
+  "app/(en)/tours/[slug]/page.tsx:86"
+ ],
+ "Best time ·": [
+  "app/(en)/tours/[slug]/page.tsx:87"
+ ],
+ "About this itinerary": [
+  "app/(en)/tours/[slug]/page.tsx:92"
+ ],
+ "The journey": [
+  "app/(en)/tours/[slug]/page.tsx:93"
+ ],
+ "itinerary": [
+  "app/(en)/tours/[slug]/page.tsx:94"
+ ],
+ "About this": [
+  "app/(en)/tours/[slug]/page.tsx:94"
+ ],
+ "Where you&rsquo;ll travel:": [
+  "app/(en)/tours/[slug]/page.tsx:97"
+ ],
+ "South Africa Tours & Itineraries": [
+  "app/(en)/tours/page.tsx:10"
+ ],
+ "Tailor-made South Africa itineraries: Cape Town and the Winelands, Kruger private-reserve safaris, Garden Route self-drives, honeymoons and family trips.": [
+  "app/(en)/tours/page.tsx:11"
+ ],
+ "Tailor-made journeys across South Africa.": [
+  "app/(en)/tours/page.tsx:23"
+ ],
+ "From the Cape to the bush, these itineraries are starting points designed by specialists who travel them. Filter by region, length and budget, then let us reshape one around you.": [
+  "app/(en)/tours/page.tsx:24"
+ ],
+ "Explore tours": [
+  "app/(en)/tours/page.tsx:25"
+ ],
+ "Leopard resting in a tree in the Sabi Sand": [
+  "app/(en)/tours/page.tsx:27"
+ ],
+ "{0}, South Africa": [
+  "components/cards/DestinationCard.tsx:12"
+ ],
+ "Most requested ·": [
+  "components/cards/TourCard.tsx:16"
+ ],
+ "days ·": [
+  "components/cards/TourCard.tsx:17"
+ ],
+ "per person, complete package": [
+  "components/cards/TourCard.tsx:38"
+ ],
+ "for two · international flights excluded": [
+  "components/cards/TourCard.tsx:40"
+ ],
+ "View itinerary": [
+  "components/cards/TourCard.tsx:44"
+ ],
+ "Please enter your name.": [
+  "components/detail/ContactForm.tsx:19",
+  "lib/planner-schema.ts:50"
+ ],
+ "Please enter a valid email address.": [
+  "components/detail/ContactForm.tsx:20",
+  "components/layout/GuidePopup.tsx:127",
+  "components/sections/GuideSignup.tsx:68"
+ ],
+ "Please tell us a little more (at least 10 characters).": [
+  "components/detail/ContactForm.tsx:21"
+ ],
+ "Message received": [
+  "components/detail/ContactForm.tsx:37"
+ ],
+ "Thank you.": [
+  "components/detail/ContactForm.tsx:38"
+ ],
+ "A specialist will reply within one working day. In the meantime, you might enjoy our": [
+  "components/detail/ContactForm.tsx:40"
+ ],
+ "Name": [
+  "components/detail/ContactForm.tsx:51"
+ ],
+ "Phone": [
+  "components/detail/ContactForm.tsx:61"
+ ],
+ "Subject": [
+  "components/detail/ContactForm.tsx:65"
+ ],
+ "e.g. Honeymoon in March": [
+  "components/detail/ContactForm.tsx:66"
+ ],
+ "Message": [
+  "components/detail/ContactForm.tsx:70"
+ ],
+ "Something went wrong while sending. Please try again.": [
+  "components/detail/ContactForm.tsx:75"
+ ],
+ "Send message": [
+  "components/detail/ContactForm.tsx:78"
+ ],
+ "Sending…": [
+  "components/detail/ContactForm.tsx:78",
+  "components/layout/GuidePopup.tsx:124",
+  "components/planner/Planner.tsx:190"
+ ],
+ "Accommodation:": [
+  "components/detail/DayRow.tsx:15"
+ ],
+ "Meals:": [
+  "components/detail/DayRow.tsx:17"
+ ],
+ "Verify before launch:": [
+  "components/detail/FaqAccordion.tsx:18"
+ ],
+ "Last updated:": [
+  "components/detail/LegalPage.tsx:9"
+ ],
+ "Jun": [
+  "components/detail/MonthGrid.tsx:12",
+  "lib/utils.ts:26"
+ ],
+ "May": [
+  "components/detail/MonthGrid.tsx:12",
+  "lib/utils.ts:26"
+ ],
+ "Apr": [
+  "components/detail/MonthGrid.tsx:12",
+  "lib/utils.ts:26"
+ ],
+ "Mar": [
+  "components/detail/MonthGrid.tsx:12",
+  "lib/utils.ts:26"
+ ],
+ "Feb": [
+  "components/detail/MonthGrid.tsx:12",
+  "lib/utils.ts:26"
+ ],
+ "Jan": [
+  "components/detail/MonthGrid.tsx:12",
+  "lib/utils.ts:26"
+ ],
+ "Dec": [
+  "components/detail/MonthGrid.tsx:13",
+  "lib/utils.ts:27"
+ ],
+ "Nov": [
+  "components/detail/MonthGrid.tsx:13",
+  "lib/utils.ts:27"
+ ],
+ "Oct": [
+  "components/detail/MonthGrid.tsx:13",
+  "lib/utils.ts:27"
+ ],
+ "Sep": [
+  "components/detail/MonthGrid.tsx:13",
+  "lib/utils.ts:27"
+ ],
+ "Aug": [
+  "components/detail/MonthGrid.tsx:13",
+  "lib/utils.ts:27"
+ ],
+ "Jul": [
+  "components/detail/MonthGrid.tsx:13",
+  "lib/utils.ts:27"
+ ],
+ "Mixed": [
+  "components/detail/MonthGrid.tsx:16"
+ ],
+ "Month-by-month rating": [
+  "components/detail/MonthGrid.tsx:21"
+ ],
+ "Best": [
+  "components/detail/MonthGrid.tsx:33",
+  "components/detail/MonthGrid.tsx:16"
+ ],
+ "Good": [
+  "components/detail/MonthGrid.tsx:34",
+  "components/detail/MonthGrid.tsx:16"
+ ],
+ "Mixed / shoulder": [
+  "components/detail/MonthGrid.tsx:35"
+ ],
+ "Seasons are reversed from the northern hemisphere.": [
+  "components/detail/MonthGrid.tsx:38"
+ ],
+ "Cape Town&rsquo;s winter rains fall June to August": [
+  "components/detail/MonthGrid.tsx:40"
+ ],
+ "Kruger&rsquo;s dry season (May to September) is peak game viewing": [
+  "components/detail/MonthGrid.tsx:41"
+ ],
+ "Summer rains fall November to March in the north and east": [
+  "components/detail/MonthGrid.tsx:42"
+ ],
+ "Whale season on the Cape coast runs June to November": [
+  "components/detail/MonthGrid.tsx:43"
+ ],
+ "All itineraries": [
+  "components/detail/MoreTours.tsx:17",
+  "components/sections/Itineraries.tsx:19"
+ ],
+ "More itineraries": [
+  "components/detail/MoreTours.tsx:6"
+ ],
+ "You may also": [
+  "components/detail/MoreTours.tsx:6"
+ ],
+ "Included": [
+  "components/detail/SideCard.tsx:14"
+ ],
+ "Support from your specialist throughout every booking.": [
+  "components/detail/SideCard.tsx:16"
+ ],
+ "Free planning consultation.": [
+  "components/detail/SideCard.tsx:16"
+ ],
+ "Tailor-made South Africa · since 2012": [
+  "components/detail/SideCard.tsx:25"
+ ],
+ "Within one working day, usually much sooner.": [
+  "components/detail/SideCard.tsx:5"
+ ],
+ "Reply": [
+  "components/detail/SideCard.tsx:5"
+ ],
+ "Direct local rates, with a dedicated specialist included.": [
+  "components/detail/SideCard.tsx:6"
+ ],
+ "Pricing": [
+  "components/detail/SideCard.tsx:6"
+ ],
+ "Every flight, transfer, stay and activity. Before, during and after.": [
+  "components/detail/SideCard.tsx:7"
+ ],
+ "Coverage": [
+  "components/detail/SideCard.tsx:7"
+ ],
+ "Under 8 days": [
+  "components/detail/TourFilters.tsx:10"
+ ],
+ "8–10 days": [
+  "components/detail/TourFilters.tsx:11"
+ ],
+ "11+ days": [
+  "components/detail/TourFilters.tsx:12"
+ ],
+ "Filter tours": [
+  "components/detail/TourFilters.tsx:59"
+ ],
+ "All": [
+  "components/detail/TourFilters.tsx:62"
+ ],
+ "Budget": [
+  "components/detail/TourFilters.tsx:75",
+  "components/planner/Planner.tsx:18"
+ ],
+ "Any": [
+  "components/detail/TourFilters.tsx:76",
+  "components/detail/TourFilters.tsx:69"
+ ],
+ "No sample tours match those filters": [
+  "components/detail/TourFilters.tsx:95"
+ ],
+ "That doesn&rsquo;t mean we can&rsquo;t plan it. Every trip is tailor-made.": [
+  "components/detail/TourFilters.tsx:96"
+ ],
+ "Clear filters": [
+  "components/detail/TourFilters.tsx:98"
+ ],
+ "Cookie consent": [
+  "components/layout/CookieBanner.tsx:27"
+ ],
+ "We only use essential storage for your preferences. Analytics, if we ever add them, only run with your consent. See our": [
+  "components/layout/CookieBanner.tsx:30"
+ ],
+ "Decline": [
+  "components/layout/CookieBanner.tsx:35"
+ ],
+ "Accept": [
+  "components/layout/CookieBanner.tsx:38"
+ ],
+ "Escape": [
+  "components/layout/CurrencySwitcher.tsx:20",
+  "components/layout/GuidePopup.tsx:34",
+  "components/layout/Header.tsx:33"
+ ],
+ "Display currency": [
+  "components/layout/CurrencySwitcher.tsx:55",
+  "components/layout/CurrencySwitcher.tsx:52"
+ ],
+ "Tailor-made South Africa trips, from Cape Town and the Winelands to Kruger&rsquo;s private reserves, designed by one dedicated local specialist.": [
+  "components/layout/Footer.tsx:35"
+ ],
+ "Featured tours": [
+  "components/layout/Footer.tsx:46"
+ ],
+ "Popular reads": [
+  "components/layout/Footer.tsx:51"
+ ],
+ "About": [
+  "components/layout/Footer.tsx:57",
+  "config/site.ts:25"
+ ],
+ "Our story": [
+  "components/layout/Footer.tsx:59",
+  "components/layout/menus.ts:39"
+ ],
+ "Practical": [
+  "components/layout/Footer.tsx:64",
+  "components/layout/menus.ts:47"
+ ],
+ "Plan your trip": [
+  "components/layout/Footer.tsx:65",
+  "components/layout/menus.ts:49",
+  "components/planner/PlannerModal.tsx:56"
+ ],
+ "Contact us": [
+  "components/layout/Footer.tsx:68",
+  "components/layout/menus.ts:52",
+  "components/sections/SpecialistCta.tsx:28"
+ ],
+ ". All rights reserved.": [
+  "components/layout/Footer.tsx:76"
+ ],
+ "Check your inbox for The South Africa Guide.": [
+  "components/layout/GuidePopup.tsx:107",
+  "components/sections/GuideSignup.tsx:48"
+ ],
+ "It&rsquo;s on its way.": [
+  "components/layout/GuidePopup.tsx:107",
+  "components/sections/GuideSignup.tsx:48"
+ ],
+ "Get your free guide": [
+  "components/layout/GuidePopup.tsx:111"
+ ],
+ "Enter your email address": [
+  "components/layout/GuidePopup.tsx:118",
+  "components/sections/GuideSignup.tsx:60"
+ ],
+ "Email me the guide": [
+  "components/layout/GuidePopup.tsx:124"
+ ],
+ "Also subscribe to travel ideas, monthly": [
+  "components/layout/GuidePopup.tsx:130",
+  "components/sections/GuideSignup.tsx:71"
+ ],
+ "Your details are safe with us. No spam, ever.": [
+  "components/layout/GuidePopup.tsx:136"
+ ],
+ "Close": [
+  "components/layout/GuidePopup.tsx:82",
+  "components/layout/GuidePopup.tsx:73"
+ ],
+ "Free guide": [
+  "components/layout/GuidePopup.tsx:87",
+  "components/layout/GuidePopup.tsx:78",
+  "components/sections/GuideSignup.tsx:40"
+ ],
+ "The South Africa Guide": [
+  "components/layout/GuidePopup.tsx:88",
+  "components/sections/GuideSignup.tsx:41",
+  "components/sections/GuideSignup.tsx:34"
+ ],
+ "Seasons, routes and safari know-how from our specialists, shaped for a first trip or a bucket-list one.": [
+  "components/layout/GuidePopup.tsx:91"
+ ],
+ "Winelands": [
+  "components/layout/GuidePopup.tsx:94",
+  "data/destinations.ts:55",
+  "data/tours.ts:102"
+ ],
+ "Kruger &amp; the private reserves": [
+  "components/layout/GuidePopup.tsx:96"
+ ],
+ "Garden Route": [
+  "components/layout/GuidePopup.tsx:96",
+  "data/destinations.ts:143",
+  "data/tours.ts:6"
+ ],
+ "The icons, in one guide.": [
+  "components/layout/GuidePopup.tsx:98"
+ ],
+ "Mobile": [
+  "components/layout/Header.tsx:140"
+ ],
+ "Language": [
+  "components/layout/Header.tsx:188",
+  "components/layout/LanguageSwitcher.tsx:23"
+ ],
+ "Currency": [
+  "components/layout/Header.tsx:192"
+ ],
+ "Main": [
+  "components/layout/Header.tsx:55"
+ ],
+ "Open menu": [
+  "components/layout/Header.tsx:95"
+ ],
+ "Close menu": [
+  "components/layout/Header.tsx:95"
+ ],
+ "Español": [
+  "components/layout/LanguageSwitcher.tsx:10"
+ ],
+ "ES": [
+  "components/layout/LanguageSwitcher.tsx:10"
+ ],
+ "English": [
+  "components/layout/LanguageSwitcher.tsx:7"
+ ],
+ "EN": [
+  "components/layout/LanguageSwitcher.tsx:7"
+ ],
+ "Français": [
+  "components/layout/LanguageSwitcher.tsx:8"
+ ],
+ "FR": [
+  "components/layout/LanguageSwitcher.tsx:8"
+ ],
+ "Deutsch": [
+  "components/layout/LanguageSwitcher.tsx:9"
+ ],
+ "DE": [
+  "components/layout/LanguageSwitcher.tsx:9"
+ ],
+ "Top destinations": [
+  "components/layout/menus.ts:19"
+ ],
+ "Cape & coast": [
+  "components/layout/menus.ts:20"
+ ],
+ "Safari & beyond": [
+  "components/layout/menus.ts:21"
+ ],
+ "View all destinations": [
+  "components/layout/menus.ts:23"
+ ],
+ "Coast & ocean": [
+  "components/layout/menus.ts:27"
+ ],
+ "Safari": [
+  "components/layout/menus.ts:27"
+ ],
+ "Safari & wildlife": [
+  "components/layout/menus.ts:27"
+ ],
+ "Culture & history": [
+  "components/layout/menus.ts:28"
+ ],
+ "Food & wine": [
+  "components/layout/menus.ts:28"
+ ],
+ "Culture, food & wine": [
+  "components/layout/menus.ts:28"
+ ],
+ "Special occasions": [
+  "components/layout/menus.ts:29"
+ ],
+ "Adventure": [
+  "components/layout/menus.ts:29",
+  "data/destinations.ts:171"
+ ],
+ "Adventure & occasions": [
+  "components/layout/menus.ts:29"
+ ],
+ "View all experiences": [
+  "components/layout/menus.ts:31"
+ ],
+ "The company": [
+  "components/layout/menus.ts:36"
+ ],
+ "Read": [
+  "components/layout/menus.ts:43"
+ ],
+ "About Cape Compass": [
+  "components/layout/menus.ts:56"
+ ],
+ "IntersectionObserver": [
+  "components/motion/Reveal.tsx:12"
+ ],
+ "Decrease {0}": [
+  "components/planner/fields.tsx:118"
+ ],
+ "Increase {0}": [
+  "components/planner/fields.tsx:120"
+ ],
+ "(optional)": [
+  "components/planner/fields.tsx:20",
+  "components/planner/fields.tsx:11"
+ ],
+ "Planner progress": [
+  "components/planner/Planner.tsx:115"
+ ],
+ "Step": [
+  "components/planner/Planner.tsx:117"
+ ],
+ " (completed, go back)": [
+  "components/planner/Planner.tsx:127"
+ ],
+ "Approximate is perfectly fine. Seasons shape the best route.": [
+  "components/planner/Planner.tsx:16"
+ ],
+ "When would you like to travel?": [
+  "components/planner/Planner.tsx:16"
+ ],
+ "When": [
+  "components/planner/Planner.tsx:16"
+ ],
+ "{0} · {1} nights": [
+  "components/planner/Planner.tsx:162"
+ ],
+ "Pick the closest fit. We tailor every detail later.": [
+  "components/planner/Planner.tsx:17"
+ ],
+ "Where would you like to go?": [
+  "components/planner/Planner.tsx:17"
+ ],
+ "Sorry, something went wrong sending your request. Please try again, or": [
+  "components/planner/Planner.tsx:178"
+ ],
+ "email us at": [
+  "components/planner/Planner.tsx:179"
+ ],
+ "This helps us suggest the right stays from the start.": [
+  "components/planner/Planner.tsx:18"
+ ],
+ "What level of comfort suits you?": [
+  "components/planner/Planner.tsx:18"
+ ],
+ "← Back": [
+  "components/planner/Planner.tsx:185"
+ ],
+ "Progress saves automatically": [
+  "components/planner/Planner.tsx:187"
+ ],
+ "Tell us about your party and any extras you'd like help with.": [
+  "components/planner/Planner.tsx:19"
+ ],
+ "Who is coming along?": [
+  "components/planner/Planner.tsx:19"
+ ],
+ "Who": [
+  "components/planner/Planner.tsx:19"
+ ],
+ "Send my request": [
+  "components/planner/Planner.tsx:190"
+ ],
+ "Next": [
+  "components/planner/Planner.tsx:190"
+ ],
+ "Prefer email? Write to": [
+  "components/planner/Planner.tsx:197"
+ ],
+ "Your specialist replies within one working day.": [
+  "components/planner/Planner.tsx:20"
+ ],
+ "How can we reach you?": [
+  "components/planner/Planner.tsx:20"
+ ],
+ "Your trip so far": [
+  "components/planner/Planner.tsx:209"
+ ],
+ "Request received": [
+  "components/planner/Planner.tsx:225"
+ ],
+ "Thank you": [
+  "components/planner/Planner.tsx:226"
+ ],
+ "and your preferred contact methods.": [
+  "components/planner/Planner.tsx:228"
+ ],
+ "Your trip request is with us. A dedicated Cape Compass specialist will be in touch within one working day. We&rsquo;ll reply to": [
+  "components/planner/Planner.tsx:228"
+ ],
+ "You receive a tailored proposal": [
+  "components/planner/Planner.tsx:231"
+ ],
+ "Your specialist gets in touch": [
+  "components/planner/Planner.tsx:231"
+ ],
+ "We review your answers": [
+  "components/planner/Planner.tsx:231"
+ ],
+ "Continue browsing": [
+  "components/planner/Planner.tsx:240"
+ ],
+ "Browse sample tours": [
+  "components/planner/Planner.tsx:243"
+ ],
+ "Tab": [
+  "components/planner/PlannerModal.tsx:21"
+ ],
+ "Open full page": [
+  "components/planner/PlannerModal.tsx:59"
+ ],
+ "Close planner": [
+  "components/planner/PlannerModal.tsx:61",
+  "components/planner/PlannerModal.tsx:46"
+ ],
+ "Which kind of trip appeals most?": [
+  "components/planner/steps.tsx:104"
+ ],
+ "Telephone": [
+  "components/planner/steps.tsx:11",
+  "data/planner.ts:34"
+ ],
+ "Anything specific you'd like to include?": [
+  "components/planner/steps.tsx:122"
+ ],
+ "Tell us what you'd love to see or do": [
+  "components/planner/steps.tsx:122"
+ ],
+ "e.g. We'd love to see leopards, do a wine-tasting day and end on a beach…": [
+  "components/planner/steps.tsx:129"
+ ],
+ "What level of comfort are you looking for?": [
+  "components/planner/steps.tsx:143"
+ ],
+ "Approximate land cost per person, per day, sharing. Excludes international flights.": [
+  "components/planner/steps.tsx:144"
+ ],
+ "pp / day": [
+  "components/planner/steps.tsx:166"
+ ],
+ "We&apos;ll show you options": [
+  "components/planner/steps.tsx:169"
+ ],
+ "Adults": [
+  "components/planner/steps.tsx:193"
+ ],
+ "Children": [
+  "components/planner/steps.tsx:194"
+ ],
+ "Children&apos;s ages on arrival": [
+  "components/planner/steps.tsx:200"
+ ],
+ "Many safari lodges set minimum ages for game drives, so this helps us choose the right ones.": [
+  "components/planner/steps.tsx:201"
+ ],
+ "Child": [
+  "components/planner/steps.tsx:206"
+ ],
+ "Age": [
+  "components/planner/steps.tsx:219"
+ ],
+ "Under 1": [
+  "components/planner/steps.tsx:222"
+ ],
+ "Would you like help with any of these?": [
+  "components/planner/steps.tsx:234"
+ ],
+ "FR +33": [
+  "components/planner/steps.tsx:249"
+ ],
+ "DE +49": [
+  "components/planner/steps.tsx:249"
+ ],
+ "IE +353": [
+  "components/planner/steps.tsx:249"
+ ],
+ "UK +44": [
+  "components/planner/steps.tsx:249"
+ ],
+ "US/CA +1": [
+  "components/planner/steps.tsx:249"
+ ],
+ "IT +39": [
+  "components/planner/steps.tsx:250"
+ ],
+ "AT +43": [
+  "components/planner/steps.tsx:250"
+ ],
+ "CH +41": [
+  "components/planner/steps.tsx:250"
+ ],
+ "BE +32": [
+  "components/planner/steps.tsx:250"
+ ],
+ "NL +31": [
+  "components/planner/steps.tsx:250"
+ ],
+ "AU +61": [
+  "components/planner/steps.tsx:251"
+ ],
+ "DK +45": [
+  "components/planner/steps.tsx:251"
+ ],
+ "NO +47": [
+  "components/planner/steps.tsx:251"
+ ],
+ "SE +46": [
+  "components/planner/steps.tsx:251"
+ ],
+ "ES +34": [
+  "components/planner/steps.tsx:251"
+ ],
+ "IN +91": [
+  "components/planner/steps.tsx:252"
+ ],
+ "SG +65": [
+  "components/planner/steps.tsx:252"
+ ],
+ "AE +971": [
+  "components/planner/steps.tsx:252"
+ ],
+ "ZA +27": [
+  "components/planner/steps.tsx:252"
+ ],
+ "NZ +64": [
+  "components/planner/steps.tsx:252"
+ ],
+ "MX +52": [
+  "components/planner/steps.tsx:253"
+ ],
+ "BR +55": [
+  "components/planner/steps.tsx:253"
+ ],
+ "JP +81": [
+  "components/planner/steps.tsx:253"
+ ],
+ "CN +86": [
+  "components/planner/steps.tsx:253"
+ ],
+ "Full name": [
+  "components/planner/steps.tsx:263"
+ ],
+ "Arrival date in South Africa": [
+  "components/planner/steps.tsx:28"
+ ],
+ "Phone (with country code)": [
+  "components/planner/steps.tsx:290"
+ ],
+ "Country code": [
+  "components/planner/steps.tsx:293"
+ ],
+ "How would you like us to contact you?": [
+  "components/planner/steps.tsx:319"
+ ],
+ "Anything else we should know?": [
+  "components/planner/steps.tsx:332"
+ ],
+ "Special occasions, dietary needs, mobility, must-dos…": [
+  "components/planner/steps.tsx:339"
+ ],
+ "I agree that Cape Compass may contact me about this trip and store my details in line with the": [
+  "components/planner/steps.tsx:354"
+ ],
+ "Length of stay:": [
+  "components/planner/steps.tsx:43"
+ ],
+ "Number of nights": [
+  "components/planner/steps.tsx:62"
+ ],
+ "How fixed are your dates?": [
+  "components/planner/steps.tsx:71"
+ ],
+ "Flights booked or dates set": [
+  "components/planner/steps.tsx:73"
+ ],
+ "Exact dates": [
+  "components/planner/steps.tsx:74"
+ ],
+ "Flexible by a few days or weeks": [
+  "components/planner/steps.tsx:76"
+ ],
+ "Approximate": [
+  "components/planner/steps.tsx:77"
+ ],
+ "Have you been to South Africa before?": [
+  "components/planner/steps.tsx:84"
+ ],
+ "Show me the highlights": [
+  "components/planner/steps.tsx:86"
+ ],
+ "First time": [
+  "components/planner/steps.tsx:87"
+ ],
+ "I'd like to go deeper": [
+  "components/planner/steps.tsx:89"
+ ],
+ "I&apos;ve been before": [
+  "components/planner/steps.tsx:90"
+ ],
+ "By the kind of": [
+  "components/sections/ExperienceGrid.tsx:18"
+ ],
+ "trip": [
+  "components/sections/ExperienceGrid.tsx:19"
+ ],
+ "All experiences": [
+  "components/sections/ExperienceGrid.tsx:22"
+ ],
+ "Preview of The South Africa Guide": [
+  "components/sections/GuideSignup.tsx:37"
+ ],
+ "South Africa&rsquo;s icons shaped into one plan: Cape Town, the Winelands, the Garden Route and Kruger&rsquo;s private reserves, with when to go and how long to stay.": [
+  "components/sections/GuideSignup.tsx:43"
+ ],
+ "Email address": [
+  "components/sections/GuideSignup.tsx:53"
+ ],
+ "Get the guide": [
+  "components/sections/GuideSignup.tsx:65"
+ ],
+ "Introduction": [
+  "components/sections/Hero.tsx:10"
+ ],
+ "Tailor-made South Africa across eight regions": [
+  "components/sections/Hero.tsx:13"
+ ],
+ "Start at the Cape,": [
+  "components/sections/Hero.tsx:15"
+ ],
+ "go beyond": [
+  "components/sections/Hero.tsx:17"
+ ],
+ "From Table Mountain to the Sabi Sand, we craft private journeys to South Africa&rsquo;s most rewarding places. One named local specialist looks after everything, from your first message to the day you fly home.": [
+  "components/sections/Hero.tsx:20"
+ ],
+ "How we work": [
+  "components/sections/Hero.tsx:27"
+ ],
+ "Aerial view of Cape Town and Table Mountain": [
+  "components/sections/Hero.tsx:42"
+ ],
+ "Our most considered": [
+  "components/sections/Itineraries.tsx:14"
+ ],
+ "journeys": [
+  "components/sections/Itineraries.tsx:15"
+ ],
+ "Real itineraries designed by specialists who travel them. Ready to be tailored to your dates, your party and your pace.": [
+  "components/sections/Itineraries.tsx:16"
+ ],
+ "Lodges and stays": [
+  "components/sections/LodgesBand.tsx:12"
+ ],
+ "All stays": [
+  "components/sections/LodgesBand.tsx:21"
+ ],
+ "A curated collection of South Africa's": [
+  "components/sections/LodgesBand.tsx:7"
+ ],
+ "Most popular destinations": [
+  "components/sections/PopularDestinations.tsx:13"
+ ],
+ "Most popular": [
+  "components/sections/PopularDestinations.tsx:16"
+ ],
+ "Where to": [
+  "components/sections/PopularDestinations.tsx:17"
+ ],
+ "go": [
+  "components/sections/PopularDestinations.tsx:18"
+ ],
+ "All destinations": [
+  "components/sections/PopularDestinations.tsx:21"
+ ],
+ "Speak to a specialist": [
+  "components/sections/SpecialistCta.tsx:16"
+ ],
+ "Speak to a South Africa specialist": [
+  "components/sections/SpecialistCta.tsx:18"
+ ],
+ "Bespoke travel": [
+  "components/sections/SpecialistCta.tsx:38"
+ ],
+ "Planning something beyond the ordinary?": [
+  "components/sections/SpecialistCta.tsx:39"
+ ],
+ "Private &amp; bespoke travel": [
+  "components/sections/SpecialistCta.tsx:41"
+ ],
+ "Plan a trip, the": [
+  "components/sections/SpecialistCta.tsx:5"
+ ],
+ "Tell us when, who's coming and what you're hoping for. One named specialist looks after the rest.": [
+  "components/sections/SpecialistCta.tsx:8"
+ ],
+ "Your specialist looks after you throughout your trip, from departure day to the flight home.": [
+  "components/sections/TrustGrid.tsx:10"
+ ],
+ "Always reachable": [
+  "components/sections/TrustGrid.tsx:10"
+ ],
+ "From the Cape and the Garden Route to Kruger, the Drakensberg, the Zulu coast and the Kalahari.": [
+  "components/sections/TrustGrid.tsx:11"
+ ],
+ "Eight regions": [
+  "components/sections/TrustGrid.tsx:11"
+ ],
+ "Why Cape Compass": [
+  "components/sections/TrustGrid.tsx:16",
+  "components/sections/WhyUs.tsx:10",
+  "components/sections/WhyUs.tsx:7"
+ ],
+ "From the first message to the day you come home, never a chain of strangers.": [
+  "components/sections/TrustGrid.tsx:6"
+ ],
+ "One specialist": [
+  "components/sections/TrustGrid.tsx:6"
+ ],
+ "Planning South Africa since {0}, from our base in Cape Town.": [
+  "components/sections/TrustGrid.tsx:7"
+ ],
+ "Fourteen": [
+  "components/sections/TrustGrid.tsx:7"
+ ],
+ "Direct relationships with the guides, drivers and properties we send you to.": [
+  "components/sections/TrustGrid.tsx:8"
+ ],
+ "Vetted lodges": [
+  "components/sections/TrustGrid.tsx:8"
+ ],
+ "Direct local rates, in your currency, with no surprise add-ons. The specialist comes free on top.": [
+  "components/sections/TrustGrid.tsx:9"
+ ],
+ "Fair pricing": [
+  "components/sections/TrustGrid.tsx:9"
+ ],
+ "see South Africa": [
+  "components/sections/WhyUs.tsx:11"
+ ],
+ "A quietly confident way to": [
+  "components/sections/WhyUs.tsx:11"
+ ],
+ "we have planned tailor-made trips across eight South African regions from our base in Cape Town. Every lodge we recommend is one our specialists have stayed in; every itinerary is one we would book ourselves.": [
+  "components/sections/WhyUs.tsx:15"
+ ],
+ "+ years in, that is still the whole idea.": [
+  "components/sections/WhyUs.tsx:18"
+ ],
+ "You pay direct local rates, never a markup, and booking through us adds a dedicated specialist who designs the trip, books every piece of it, briefs you before you fly and stays with you until you&rsquo;re home.": [
+  "components/sections/WhyUs.tsx:18"
+ ],
+ "Breadcrumb": [
+  "components/ui/Breadcrumbs.tsx:11"
+ ],
+ "Home": [
+  "components/ui/Breadcrumbs.tsx:7"
+ ],
+ "Cape Compass": [
+  "components/ui/Logo.tsx:25",
+  "config/site.ts:6",
+  "config/site.ts:5"
+ ],
+ "Workshop17 Watershed, 17 Dock Road, V&A Waterfront, Cape Town, 8001, South Africa": [
+  "config/site.ts:17"
+ ],
+ "Mon–Fri 08:00–18:00 SAST": [
+  "config/site.ts:18"
+ ],
+ "Explore": [
+  "config/site.ts:31"
+ ],
+ "Company": [
+  "config/site.ts:40"
+ ],
+ "About us": [
+  "config/site.ts:42"
+ ],
+ "One dedicated local specialist": [
+  "config/site.ts:58"
+ ],
+ "Tailor-made South Africa since 2012": [
+  "config/site.ts:58"
+ ],
+ "Replies within one working day": [
+  "config/site.ts:59"
+ ],
+ "Blog": [
+  "config/site.ts:61"
+ ],
+ "Included.": [
+  "config/site.ts:69"
+ ],
+ "Tailor-made South Africa, from the Cape and beyond": [
+  "config/site.ts:7"
+ ],
+ "A free planning consultation and support from your specialist throughout every booking.": [
+  "config/site.ts:70"
+ ],
+ "Tailor-made South Africa trips planned by one dedicated local specialist: Cape Town, the Winelands, the Garden Route, Kruger's private reserves and beyond.": [
+  "config/site.ts:9"
+ ],
+ "US Dollar": [
+  "config/site.ts:93"
+ ],
+ "Euro": [
+  "config/site.ts:94"
+ ],
+ "British Pound": [
+  "config/site.ts:95"
+ ],
+ "Canadian Dollar": [
+  "config/site.ts:96"
+ ],
+ "South African Rand": [
+  "config/site.ts:97"
+ ],
+ "Hermanus": [
+  "data/destinations.ts:100"
+ ],
+ "Whale coast, fynbos and Africa's southern tip": [
+  "data/destinations.ts:102"
+ ],
+ "Southern right whales from the clifftops, wild fynbos reserves and the windswept coast to Cape Agulhas.": [
+  "data/destinations.ts:104"
+ ],
+ "Ninety minutes east of Cape Town along one of the country's most dramatic coastal roads, Hermanus is famous for land-based whale watching. Between June and November, southern right whales come into Walker Bay to calve, often within metres of the cliff path.": [
+  "data/destinations.ts:106"
+ ],
+ "Beyond town, the Overberg rolls out in wheat fields, fynbos reserves and empty beaches down to Cape Agulhas, the southernmost tip of Africa, where the Atlantic and Indian oceans officially meet.": [
+  "data/destinations.ts:107"
+ ],
+ "Table Mountain, Atlantic beaches, a world-class food scene and the Cape Peninsula on your doorstep.": [
+  "data/destinations.ts:11"
+ ],
+ "Whale season is June to November, peaking September–October. Summer brings beach weather, fynbos in flower and fewer crowds than Cape Town.": [
+  "data/destinations.ts:116"
+ ],
+ "Land-based whale watching from the Cliff Path": [
+  "data/destinations.ts:118"
+ ],
+ "Boat-based whale encounters with licensed operators": [
+  "data/destinations.ts:119"
+ ],
+ "Hemel-en-Aarde valley wineries (Pinot Noir and Chardonnay)": [
+  "data/destinations.ts:120"
+ ],
+ "Cape Agulhas, Africa's southernmost point": [
+  "data/destinations.ts:121"
+ ],
+ "Fynbos reserves and coastal hikes": [
+  "data/destinations.ts:122"
+ ],
+ "Walk the 12 km Cliff Path or join a licensed boat for close (but regulated) encounters.": [
+  "data/destinations.ts:125"
+ ],
+ "Whale watching": [
+  "data/destinations.ts:125"
+ ],
+ "Cool-climate Pinot and Chardonnay a few minutes from town.": [
+  "data/destinations.ts:126"
+ ],
+ "Hemel-en-Aarde wines": [
+  "data/destinations.ts:126"
+ ],
+ "Shark cage diving and marine 'Big Five' boat trips.": [
+  "data/destinations.ts:127"
+ ],
+ "Gansbaai": [
+  "data/destinations.ts:127"
+ ],
+ "Clarence Drive (R44) via Betty's Bay penguins. One of the world's great coastal roads.": [
+  "data/destinations.ts:128"
+ ],
+ "Coastal drive": [
+  "data/destinations.ts:128"
+ ],
+ "Almost every great South Africa trip begins here. Cape Town sits beneath the flat-topped bulk of Table Mountain, wrapped by the Atlantic on one side and False Bay on the other, and somehow manages to be a relaxed beach city, a serious food destination and a gateway to wild coastline all at once.": [
+  "data/destinations.ts:13"
+ ],
+ "Combine Hermanus with the start of a Garden Route road trip.": [
+  "data/destinations.ts:131"
+ ],
+ "Whale season overlaps Cape Town's winter. Pack layers.": [
+  "data/destinations.ts:132"
+ ],
+ "Never guaranteed, but between July and October sightings from shore are extremely likely, often daily.": [
+  "data/destinations.ts:138"
+ ],
+ "Are whales guaranteed?": [
+  "data/destinations.ts:138"
+ ],
+ "We plan your days around the weather and the wind, not a fixed timetable: cableway or hike on the first clear morning, Cape Point and the penguins on a still day, the Bo-Kaap, the V&A Waterfront and Robben Island when the cloud 'tablecloth' rolls in. Three to four nights is the minimum we'd recommend; five lets you breathe.": [
+  "data/destinations.ts:14"
+ ],
+ "Forests, lagoons and the ultimate road trip": [
+  "data/destinations.ts:145"
+ ],
+ "Indigenous forest, lagoons and long beaches between Mossel Bay and the Tsitsikamma: South Africa's classic self-drive.": [
+  "data/destinations.ts:147"
+ ],
+ "The Garden Route stretches roughly 300 km along the southern coast, a mix of temperate forest, lakes, lagoons and wide beaches backed by the Outeniqua mountains. Knysna and Plettenberg Bay are the main bases; the Tsitsikamma section of the Garden Route National Park is its wild heart.": [
+  "data/destinations.ts:149"
+ ],
+ "It's made for travelling at your own pace. We plan routes with properly unhurried driving days, book the stays that make it special and leave room for detours, from oyster bars to forest canopy walks.": [
+  "data/destinations.ts:150"
+ ],
+ "Rain falls year-round, typically in short bursts, so the Garden Route is green in every season. Summer (Dec–Feb) is warmest and busiest; spring and autumn are ideal.": [
+  "data/destinations.ts:159"
+ ],
+ "Tsitsikamma's suspension bridge and Storms River Mouth": [
+  "data/destinations.ts:161"
+ ],
+ "Knysna Heads and the lagoon": [
+  "data/destinations.ts:162"
+ ],
+ "Plettenberg Bay's beaches and Robberg Peninsula hike": [
+  "data/destinations.ts:163"
+ ],
+ "Oudtshoorn and the Cango Caves as a detour inland": [
+  "data/destinations.ts:164"
+ ],
+ "Marine life on a Plettenberg Bay boat trip": [
+  "data/destinations.ts:165"
+ ],
+ "A dramatic peninsula walk with seals, whales in season and sweeping views.": [
+  "data/destinations.ts:168"
+ ],
+ "Robberg hike": [
+  "data/destinations.ts:168"
+ ],
+ "Treetop canopy tours and forest walks among yellowwood giants.": [
+  "data/destinations.ts:169"
+ ],
+ "Forest & canopy": [
+  "data/destinations.ts:169"
+ ],
+ "Sunset cruises on the Knysna lagoon and fresh oysters at the waterfront.": [
+  "data/destinations.ts:170"
+ ],
+ "Lagoon life": [
+  "data/destinations.ts:170"
+ ],
+ "Kayaking, coasteering, and the world's highest commercial bridge bungee for the brave.": [
+  "data/destinations.ts:171"
+ ],
+ "Allow at least 6–7 nights from Cape Town to Gqeberha (Port Elizabeth).": [
+  "data/destinations.ts:174"
+ ],
+ "Driving in South Africa is on the left. Avoid driving after dark.": [
+  "data/destinations.ts:175"
+ ],
+ "Add Addo Elephant Park at the eastern end for a malaria-free safari finale.": [
+  "data/destinations.ts:176"
+ ],
+ "4–6 nights": [
+  "data/destinations.ts:178"
+ ],
+ "Yes. We can arrange a private driver-guide for the whole route, or combine short flights to George with chauffeured transfers.": [
+  "data/destinations.ts:182"
+ ],
+ "Can I do the Garden Route without driving?": [
+  "data/destinations.ts:182"
+ ],
+ "Kruger National Park": [
+  "data/destinations.ts:187"
+ ],
+ "Kruger": [
+  "data/destinations.ts:188"
+ ],
+ "Two million hectares of classic Big Five country": [
+  "data/destinations.ts:190"
+ ],
+ "One of Africa's great national parks: varied wildlife, excellent roads and rest camps, and superb guided drives.": [
+  "data/destinations.ts:192"
+ ],
+ "Kruger covers nearly 20,000 square kilometres, around the size of Wales or New Jersey, and holds an extraordinary diversity of wildlife: the Big Five, wild dogs, cheetah and more than 500 bird species.": [
+  "data/destinations.ts:194"
+ ],
+ "Inside the national park, you can self-drive or join guided drives from the rest camps, and a handful of concession lodges offer private-reserve style safaris on exclusive land within the park. For the most intimate experience, many guests pair Kruger with the adjoining private reserves.": [
+  "data/destinations.ts:195"
+ ],
+ "The dry winter (May–Sep) is peak game viewing: bush thins, animals gather at water. Summer rains (Nov–Mar) turn the park lush and bring baby animals and migrant birds, along with heat, afternoon storms and a higher malaria risk.": [
+  "data/destinations.ts:204"
+ ],
+ "Big Five on guided sunrise and sunset drives": [
+  "data/destinations.ts:206"
+ ],
+ "Bush walks with armed rangers": [
+  "data/destinations.ts:207"
+ ],
+ "Wild dog, cheetah and incredible birdlife": [
+  "data/destinations.ts:208"
+ ],
+ "Exclusive concession lodges inside the park": [
+  "data/destinations.ts:209"
+ ],
+ "Sunrise, sunset and night drives in open vehicles with expert guides.": [
+  "data/destinations.ts:212"
+ ],
+ "Guided game drives": [
+  "data/destinations.ts:212"
+ ],
+ "Morning walks to read tracks, learn plants and approach wildlife on foot.": [
+  "data/destinations.ts:213"
+ ],
+ "Walking trails": [
+  "data/destinations.ts:213"
+ ],
+ "Explore at your own pace with a route plan and sighting tips from us.": [
+  "data/destinations.ts:214"
+ ],
+ "Self-drive days": [
+  "data/destinations.ts:214"
+ ],
+ "Lantern-lit boma dinners under the stars at lodges.": [
+  "data/destinations.ts:215"
+ ],
+ "Bush dinners": [
+  "data/destinations.ts:215"
+ ],
+ "Kruger is in a malaria area. Speak to a travel clinic about prophylaxis.": [
+  "data/destinations.ts:218"
+ ],
+ "Fly into Skukuza, Kruger Mpumalanga (Nelspruit/KMIA) or Hoedspruit to save a long drive.": [
+  "data/destinations.ts:219"
+ ],
+ "Gate times are strictly enforced for self-drivers.": [
+  "data/destinations.ts:220"
+ ],
+ "Kruger is vast, varied and better value; private reserves offer off-road tracking, fewer vehicles at sightings and all-inclusive luxury. Read our Kruger vs private reserves guide, or let us combine both.": [
+  "data/destinations.ts:226"
+ ],
+ "Kruger or a private reserve?": [
+  "data/destinations.ts:226"
+ ],
+ "Cape Town has a Mediterranean climate. Summer (Nov–Mar) is dry, sunny and windy; winter (Jun–Aug) brings rain fronts between bright, crisp days, along with lower prices and whale season on the nearby coast.": [
+  "data/destinations.ts:23"
+ ],
+ "Sabi Sand & Greater Kruger": [
+  "data/destinations.ts:231"
+ ],
+ "Sabi Sand": [
+  "data/destinations.ts:232",
+  "data/tours.ts:206"
+ ],
+ "Private reserves, off-road tracking, unfenced from Kruger": [
+  "data/destinations.ts:234"
+ ],
+ "Leopard country. Exclusive lodges, expert tracker-and-ranger teams and all-inclusive luxury on unfenced private land.": [
+  "data/destinations.ts:236"
+ ],
+ "The private reserves on Kruger's western boundary (Sabi Sand, Timbavati, Klaserie, Manyeleti and others) share open borders with the national park, so wildlife moves freely. The difference is access: lodges here can drive off-road, limit the number of vehicles at each sighting and run walking safaris with ease.": [
+  "data/destinations.ts:238"
+ ],
+ "The Sabi Sand is famous for relaxed leopards and is consistently one of the best places in Africa to see them. Stays are all-inclusive, typically two game drives a day with meals, drinks and plenty of time to do nothing at all between them.": [
+  "data/destinations.ts:239"
+ ],
+ "Excellent year-round thanks to expert tracking. Peak game viewing is the dry season (May–Sep); summer (Nov–Mar) is green, with newborn animals and great value at many lodges.": [
+  "data/destinations.ts:248"
+ ],
+ "Table Mountain by cableway or one of its classic hiking routes": [
+  "data/destinations.ts:25"
+ ],
+ "World-class leopard sightings": [
+  "data/destinations.ts:250"
+ ],
+ "Off-road tracking with ranger and tracker teams": [
+  "data/destinations.ts:251"
+ ],
+ "Maximum vehicles per sighting rules": [
+  "data/destinations.ts:252"
+ ],
+ "All-inclusive luxury lodges with private plunge pools": [
+  "data/destinations.ts:253"
+ ],
+ "Early morning and late afternoon drives, with sundowners in the bush.": [
+  "data/destinations.ts:256"
+ ],
+ "Twice-daily game drives": [
+  "data/destinations.ts:256",
+  "data/stays.ts:112"
+ ],
+ "Guided walks to track rhino, read the signs of the bush and see the small things.": [
+  "data/destinations.ts:257"
+ ],
+ "Walking safaris": [
+  "data/destinations.ts:257",
+  "data/stays.ts:130",
+  "data/stays.ts:112"
+ ],
+ "Quiet hours in photographic hides overlooking waterholes.": [
+  "data/destinations.ts:258"
+ ],
+ "Hide time": [
+  "data/destinations.ts:258"
+ ],
+ "Lodge-supported schools and enterprise projects in neighbouring communities.": [
+  "data/destinations.ts:259"
+ ],
+ "Community visits": [
+  "data/destinations.ts:259"
+ ],
+ "The Cape Peninsula drive to Cape Point, via Chapman's Peak": [
+  "data/destinations.ts:26"
+ ],
+ "Three nights is the minimum we recommend for a private reserve; four is better.": [
+  "data/destinations.ts:262"
+ ],
+ "Most lodges have a minimum child age for game drives (often 6+). We match family-friendly lodges.": [
+  "data/destinations.ts:263"
+ ],
+ "Light-aircraft transfers have soft-bag luggage limits (typically 20 kg).": [
+  "data/destinations.ts:264"
+ ],
+ "African penguins at Boulders Beach": [
+  "data/destinations.ts:27"
+ ],
+ "Rates include all meals, most drinks, two guided activities a day, and low guest-to-guide ratios on exclusive traversing land. You pay for privacy and the quality of guiding.": [
+  "data/destinations.ts:270"
+ ],
+ "Why are private reserves more expensive?": [
+  "data/destinations.ts:270"
+ ],
+ "Panorama Route & Blyde River Canyon": [
+  "data/destinations.ts:275"
+ ],
+ "Panorama Route": [
+  "data/destinations.ts:276",
+  "data/tours.ts:275",
+  "data/tours.ts:8"
+ ],
+ "Escarpment views on the way to the bush": [
+  "data/destinations.ts:278"
+ ],
+ "Robben Island and the story of South Africa's democracy": [
+  "data/destinations.ts:28"
+ ],
+ "God's Window, Bourke's Luck Potholes and one of the largest green canyons on Earth, en route to Kruger.": [
+  "data/destinations.ts:280"
+ ],
+ "Where the Drakensberg escarpment drops dramatically to the lowveld, the Panorama Route links a string of viewpoints, waterfalls and gold-rush towns. Blyde River Canyon, carved through red sandstone and cloaked in subtropical green, is the showstopper.": [
+  "data/destinations.ts:282"
+ ],
+ "It slots perfectly between Johannesburg and Kruger, and turns a transfer day into one of the highlights of the trip.": [
+  "data/destinations.ts:283"
+ ],
+ "Colourful Bo-Kaap and its Cape Malay kitchens": [
+  "data/destinations.ts:29"
+ ],
+ "Dry winter months give the clearest views. Summer brings waterfalls at full flow, but also afternoon storms and morning mist that can cloak viewpoints.": [
+  "data/destinations.ts:292"
+ ],
+ "The Three Rondavels viewpoint over Blyde River Canyon": [
+  "data/destinations.ts:294"
+ ],
+ "Bourke's Luck Potholes": [
+  "data/destinations.ts:295"
+ ],
+ "God's Window and Wonderview": [
+  "data/destinations.ts:296"
+ ],
+ "Graskop's gorge lift and Lisbon/Berlin falls": [
+  "data/destinations.ts:297"
+ ],
+ "Historic Pilgrim's Rest": [
+  "data/destinations.ts:298"
+ ],
+ "Sunset on Lion's Head or Signal Hill": [
+  "data/destinations.ts:30"
+ ],
+ "Cruise Blyde Dam beneath the canyon walls, spotting hippos and crocodiles.": [
+  "data/destinations.ts:301"
+ ],
+ "Canyon boat trip": [
+  "data/destinations.ts:301"
+ ],
+ "A full day linking the best viewpoints, timed for the light.": [
+  "data/destinations.ts:302"
+ ],
+ "Viewpoint drive": [
+  "data/destinations.ts:302"
+ ],
+ "Short guided walks to the region's many falls.": [
+  "data/destinations.ts:303"
+ ],
+ "Waterfall hikes": [
+  "data/destinations.ts:303"
+ ],
+ "Start early. Mist often builds in the afternoon.": [
+  "data/destinations.ts:306"
+ ],
+ "Combine with 2–3 nights in Kruger or the Timbavati.": [
+  "data/destinations.ts:307"
+ ],
+ "Yes, but it's a long day. We prefer a night in Graskop or near the canyon so you can catch the viewpoints in good light.": [
+  "data/destinations.ts:313"
+ ],
+ "Can I do the Panorama Route as a day trip from Kruger?": [
+  "data/destinations.ts:313"
+ ],
+ "Drakensberg": [
+  "data/destinations.ts:318",
+  "data/tours.ts:239"
+ ],
+ "The Dragon Mountains: hike, breathe, slow down": [
+  "data/destinations.ts:320"
+ ],
+ "A UNESCO World Heritage mountain wilderness of basalt cliffs, ancient San rock art and some of Africa's finest hiking.": [
+  "data/destinations.ts:322"
+ ],
+ "The uKhahlamba-Drakensberg is South Africa's highest mountain range, a wall of basalt peaks over 3,000 m high. The Amphitheatre in the north, with Tugela Falls plunging off its edge, is one of the most dramatic sights in the country.": [
+  "data/destinations.ts:324"
+ ],
+ "It's a place for walking, from gentle valley trails past San rock art to full-day summit hikes, and for cosy mountain lodges with log fires. It pairs naturally with the Zulu battlefields and the KwaZulu-Natal coast.": [
+  "data/destinations.ts:325"
+ ],
+ "Ride the rotating cableway or hike Platteklip Gorge with a private guide, then walk the plateau's fynbos trails.": [
+  "data/destinations.ts:33"
+ ],
+ "Table Mountain": [
+  "data/destinations.ts:33"
+ ],
+ "Autumn (Apr–May) and spring (Sep–Oct) bring the best hiking weather. Summer (Nov–Mar) is green but has afternoon thunderstorms; winter is crisp and clear, with occasional snow on the peaks.": [
+  "data/destinations.ts:334"
+ ],
+ "The Amphitheatre and Tugela Falls": [
+  "data/destinations.ts:336"
+ ],
+ "San rock art at Game Pass Shelter or Main Caves": [
+  "data/destinations.ts:337"
+ ],
+ "Cathedral Peak and Champagne Castle hikes": [
+  "data/destinations.ts:338"
+ ],
+ "Horse riding in the foothills": [
+  "data/destinations.ts:339"
+ ],
+ "A full-day loop via Chapman's Peak, Cape Point Nature Reserve and Boulders Beach, with lunch in Kalk Bay.": [
+  "data/destinations.ts:34"
+ ],
+ "Cape Point day": [
+  "data/destinations.ts:34"
+ ],
+ "Day hikes for every fitness level with experienced mountain guides.": [
+  "data/destinations.ts:342"
+ ],
+ "Guided hikes": [
+  "data/destinations.ts:342",
+  "data/stays.ts:148"
+ ],
+ "Thousands of years of San paintings in sandstone shelters.": [
+  "data/destinations.ts:343"
+ ],
+ "Rock art": [
+  "data/destinations.ts:343"
+ ],
+ "Isandlwana and Rorke's Drift with a specialist storyteller-guide.": [
+  "data/destinations.ts:344"
+ ],
+ "Battlefields": [
+  "data/destinations.ts:344",
+  "data/tours.ts:240"
+ ],
+ "Trout fishing, spa time and long lunches with mountain views.": [
+  "data/destinations.ts:345"
+ ],
+ "Slow days": [
+  "data/destinations.ts:345"
+ ],
+ "Start hikes early in summer to avoid afternoon storms.": [
+  "data/destinations.ts:348"
+ ],
+ "Nights are cold year-round. Bring a warm layer.": [
+  "data/destinations.ts:349"
+ ],
+ "Tasting menus in the city, Bo-Kaap cooking classes and Saturday markets at the Old Biscuit Mill.": [
+  "data/destinations.ts:35"
+ ],
+ "Food & markets": [
+  "data/destinations.ts:35"
+ ],
+ "Yes, which makes it a great addition to family itineraries.": [
+  "data/destinations.ts:355"
+ ],
+ "Is the Drakensberg malaria-free?": [
+  "data/destinations.ts:355"
+ ],
+ "Robben Island, the District Six Museum and the Castle of Good Hope with a guide who brings it to life.": [
+  "data/destinations.ts:36"
+ ],
+ "History & heritage": [
+  "data/destinations.ts:36"
+ ],
+ "Durban & the KwaZulu-Natal Coast": [
+  "data/destinations.ts:360"
+ ],
+ "Durban & KZN": [
+  "data/destinations.ts:361"
+ ],
+ "Warm Indian Ocean, Zulu culture and coastal safari": [
+  "data/destinations.ts:363"
+ ],
+ "Warm-water beaches, Durban's Indian-influenced food scene, iSimangaliso Wetland Park and Hluhluwe-iMfolozi.": [
+  "data/destinations.ts:365"
+ ],
+ "KwaZulu-Natal's coast is South Africa's warm side: the Indian Ocean here is swimmable for most of the year. Durban is vibrant, multicultural and famous for its curries (the bunny chow was born here).": [
+  "data/destinations.ts:367"
+ ],
+ "Head north and the coast turns wild. iSimangaliso Wetland Park protects hippos, crocodiles, turtles and coral reefs, while Hluhluwe-iMfolozi Park, which saved the white rhino from extinction, offers excellent Big Five safaris.": [
+  "data/destinations.ts:368"
+ ],
+ "KZN's winter (May–Sep) is warm, dry and sunny, ideal beach and safari weather. Summer is hot and humid with tropical downpours. Turtle nesting season runs Nov–Mar.": [
+  "data/destinations.ts:377"
+ ],
+ "Hluhluwe-iMfolozi Big Five safaris": [
+  "data/destinations.ts:379"
+ ],
+ "iSimangaliso: hippos, crocs and beaches": [
+  "data/destinations.ts:380"
+ ],
+ "Turtle-nesting tours (Nov–Mar)": [
+  "data/destinations.ts:381"
+ ],
+ "Durban's curry trail and beachfront": [
+  "data/destinations.ts:382"
+ ],
+ "Combine game drives in Hluhluwe-iMfolozi with estuary boat trips in St Lucia.": [
+  "data/destinations.ts:385"
+ ],
+ "Coastal safari": [
+  "data/destinations.ts:385"
+ ],
+ "Sodwana Bay's reefs, the southernmost coral reefs in Africa.": [
+  "data/destinations.ts:386"
+ ],
+ "Diving & snorkelling": [
+  "data/destinations.ts:386"
+ ],
+ "Visits led by local guides to learn about Zulu history and contemporary culture.": [
+  "data/destinations.ts:387"
+ ],
+ "Zulu heritage": [
+  "data/destinations.ts:387"
+ ],
+ "Book the Table Mountain cableway online, and go up the first clear morning you get. Wind closes it often.": [
+  "data/destinations.ts:39"
+ ],
+ "Parts of northern KZN are in a low-risk malaria area. Consult a travel clinic.": [
+  "data/destinations.ts:390"
+ ],
+ "Pair with the Drakensberg for a varied 8–10 day trip.": [
+  "data/destinations.ts:391"
+ ],
+ "Yes. Durban's main beaches have lifeguards and shark nets; water is warm most of the year.": [
+  "data/destinations.ts:397"
+ ],
+ "Can you swim in the sea at Durban?": [
+  "data/destinations.ts:397"
+ ],
+ "The southeaster ('Cape Doctor') blows hard in summer. Atlantic-side beaches are calmer on those days.": [
+  "data/destinations.ts:40"
+ ],
+ "Johannesburg & Soweto": [
+  "data/destinations.ts:402",
+  "data/tours.ts:274"
+ ],
+ "Johannesburg": [
+  "data/destinations.ts:403",
+  "data/tours.ts:10"
+ ],
+ "The city that tells South Africa's story": [
+  "data/destinations.ts:405"
+ ],
+ "The Apartheid Museum, Soweto's Vilakazi Street, and an energetic art and food scene in Africa's economic heart.": [
+  "data/destinations.ts:407"
+ ],
+ "Most international flights land in Johannesburg, and too many travellers treat it as a transit stop. Give it a night or two and you'll find the most powerful history in the country, alongside galleries, rooftop bars and vibrant neighbourhoods like Maboneng, Rosebank and Parkhurst.": [
+  "data/destinations.ts:409"
+ ],
+ "Use registered drivers or ride-hailing apps after dark rather than walking between neighbourhoods.": [
+  "data/destinations.ts:41"
+ ],
+ "In Soweto, local guides take you to Vilakazi Street, the only street in the world that was home to two Nobel Peace Prize winners, and the Hector Pieterson Memorial. Pair it with the Apartheid Museum for a day that stays with you.": [
+  "data/destinations.ts:410"
+ ],
+ "Joburg's highveld climate is sunny year-round: dry, crisp winters and warm summers with short afternoon thunderstorms.": [
+  "data/destinations.ts:419"
+ ],
+ "Robben Island ferries sell out in peak season. We pre-book them.": [
+  "data/destinations.ts:42"
+ ],
+ "The Apartheid Museum": [
+  "data/destinations.ts:421"
+ ],
+ "Soweto with a resident guide": [
+  "data/destinations.ts:422"
+ ],
+ "Constitution Hill": [
+  "data/destinations.ts:423"
+ ],
+ "Maboneng and Braamfontein art and food": [
+  "data/destinations.ts:424"
+ ],
+ "Cradle of Humankind day trip": [
+  "data/destinations.ts:425"
+ ],
+ "Vilakazi Street, the Hector Pieterson Memorial and lunch at a local favourite.": [
+  "data/destinations.ts:428"
+ ],
+ "Soweto day": [
+  "data/destinations.ts:428"
+ ],
+ "The Apartheid Museum and Constitution Hill with an expert guide.": [
+  "data/destinations.ts:429"
+ ],
+ "Museums": [
+  "data/destinations.ts:429"
+ ],
+ "Fossil sites and the Maropeng visitor centre, an hour from the city.": [
+  "data/destinations.ts:430"
+ ],
+ "Cradle of Humankind": [
+  "data/destinations.ts:430"
+ ],
+ "Explore with a guide or private driver rather than on foot between areas.": [
+  "data/destinations.ts:433"
+ ],
+ "One night works for the highlights; two is better.": [
+  "data/destinations.ts:434"
+ ],
+ "1–2 nights": [
+  "data/destinations.ts:436",
+  "data/destinations.ts:309",
+  "data/destinations.ts:134"
+ ],
+ "3–5 nights": [
+  "data/destinations.ts:44"
+ ],
+ "Absolutely, for at least one night. The Apartheid Museum and Soweto give essential context to everything else you'll see in South Africa.": [
+  "data/destinations.ts:440"
+ ],
+ "Is it worth staying in Johannesburg?": [
+  "data/destinations.ts:440"
+ ],
+ "Addo & the Eastern Cape": [
+  "data/destinations.ts:445"
+ ],
+ "Addo": [
+  "data/destinations.ts:446"
+ ],
+ "Malaria-free Big Five safari": [
+  "data/destinations.ts:448"
+ ],
+ "Elephant herds in Addo and luxurious private reserves, all malaria-free, at the end of the Garden Route.": [
+  "data/destinations.ts:450"
+ ],
+ "The Eastern Cape is where we send families and travellers who'd rather avoid malaria medication. Addo Elephant National Park protects more than 600 elephants, and the surrounding private reserves offer the full Big Five with lodge experiences to rival the north.": [
+  "data/destinations.ts:452"
+ ],
+ "It's an easy add-on to a Garden Route road trip, or a short flight from Cape Town into Gqeberha (Port Elizabeth).": [
+  "data/destinations.ts:453"
+ ],
+ "Game viewing is good all year. Autumn and spring offer the most comfortable temperatures.": [
+  "data/destinations.ts:462"
+ ],
+ "Large elephant herds at Addo's waterholes": [
+  "data/destinations.ts:464"
+ ],
+ "Malaria-free Big Five private reserves": [
+  "data/destinations.ts:465"
+ ],
+ "Family-friendly lodges with kids' programmes": [
+  "data/destinations.ts:466"
+ ],
+ "Easy combination with the Garden Route": [
+  "data/destinations.ts:467"
+ ],
+ "Guided drives in Addo and private reserves like Shamwari and Kwandwe.": [
+  "data/destinations.ts:470"
+ ],
+ "Game drives": [
+  "data/destinations.ts:470"
+ ],
+ "Junior ranger programmes and age-appropriate activities.": [
+  "data/destinations.ts:471"
+ ],
+ "Family safari": [
+  "data/destinations.ts:471"
+ ],
+ "Combine sand dunes and beaches with the safari.": [
+  "data/destinations.ts:472"
+ ],
+ "Coast & bush": [
+  "data/destinations.ts:472"
+ ],
+ "Ideal for families with young children. Some lodges welcome all ages on game drives.": [
+  "data/destinations.ts:475"
+ ],
+ "Fly back to Cape Town or Johannesburg from Gqeberha.": [
+  "data/destinations.ts:476"
+ ],
+ "2–3 nights": [
+  "data/destinations.ts:478",
+  "data/destinations.ts:351",
+  "data/destinations.ts:90"
+ ],
+ "Three nights covers the highlights; four or five gives you weather flexibility for Table Mountain and time for the Winelands as a day trip or a separate stay.": [
+  "data/destinations.ts:48"
+ ],
+ "How many nights do I need in Cape Town?": [
+  "data/destinations.ts:48"
+ ],
+ "Yes. Several private reserves and Addo itself are home to all five, in a malaria-free area.": [
+  "data/destinations.ts:482"
+ ],
+ "Can you see the Big Five in the Eastern Cape?": [
+  "data/destinations.ts:482"
+ ],
+ "Kgalagadi & the Kalahari": [
+  "data/destinations.ts:487"
+ ],
+ "Kalahari": [
+  "data/destinations.ts:488",
+  "data/tours.ts:12"
+ ],
+ "The main visitor areas are well-travelled, but like any big city it calls for common sense. Don't leave valuables in cars, use registered transport at night, and take local advice on hiking routes. Your specialist briefs you on all of this before you land.": [
+  "data/destinations.ts:49"
+ ],
+ "Is Cape Town safe for visitors?": [
+  "data/destinations.ts:49"
+ ],
+ "Red dunes, black-maned lions and vast skies": [
+  "data/destinations.ts:490"
+ ],
+ "Remote, raw and spectacular: Kalahari predators, gemsbok on red dunes and some of the clearest night skies on Earth.": [
+  "data/destinations.ts:492"
+ ],
+ "The Kgalagadi Transfrontier Park straddles South Africa and Botswana, a vast wilderness of red dunes and dry riverbeds. It is famous for black-maned Kalahari lions, cheetah, raptors and the photogenic gemsbok.": [
+  "data/destinations.ts:494"
+ ],
+ "This is a destination for travellers who have done a classic safari and want something wilder. Reach it by long self-drive or light-aircraft charter, and pair it with the green Kalahari around Augrabies Falls.": [
+  "data/destinations.ts:495"
+ ],
+ "Autumn (Mar–May) is the sweet spot: green after the rains, with active predators. Winter nights fall below freezing; summer days can exceed 40°C.": [
+  "data/destinations.ts:504"
+ ],
+ "Black-maned Kalahari lions": [
+  "data/destinations.ts:506"
+ ],
+ "Cheetah and raptors along the Auob and Nossob riverbeds": [
+  "data/destinations.ts:507"
+ ],
+ "Gemsbok and springbok on red dunes": [
+  "data/destinations.ts:508"
+ ],
+ "Dark-sky stargazing": [
+  "data/destinations.ts:509"
+ ],
+ "Follow the dry riverbeds where predators hunt.": [
+  "data/destinations.ts:512"
+ ],
+ "Riverbed drives": [
+  "data/destinations.ts:512"
+ ],
+ "Unfenced camps that put you in the heart of the desert.": [
+  "data/destinations.ts:513"
+ ],
+ "Wilderness camps": [
+  "data/destinations.ts:513"
+ ],
+ "Some of the darkest skies in Africa.": [
+  "data/destinations.ts:514"
+ ],
+ "Stargazing": [
+  "data/destinations.ts:514"
+ ],
+ "Best for experienced safari-goers or as a second trip.": [
+  "data/destinations.ts:517"
+ ],
+ "Distances are huge. Consider a fly-in charter.": [
+  "data/destinations.ts:518"
+ ],
+ "The Kgalagadi is malaria-free.": [
+  "data/destinations.ts:519"
+ ],
+ "3–4 nights": [
+  "data/destinations.ts:521",
+  "data/destinations.ts:393",
+  "data/destinations.ts:266"
+ ],
+ "It's a long drive (around 10 hours from Cape Town), so most guests fly to Upington and drive from there, or take a light-aircraft charter.": [
+  "data/destinations.ts:525"
+ ],
+ "How do I get to the Kgalagadi?": [
+  "data/destinations.ts:525"
+ ],
+ "Cape Winelands": [
+  "data/destinations.ts:54"
+ ],
+ "Stellenbosch, Franschhoek & the valleys between": [
+  "data/destinations.ts:57"
+ ],
+ "Cape Dutch estates, mountain-ringed vineyards and some of the finest restaurants in the country, under an hour from Cape Town.": [
+  "data/destinations.ts:59"
+ ],
+ "An hour inland, the mountains rise steeply around valleys planted with Chenin Blanc, Cabernet and Pinotage. Stellenbosch is the historic university town with oak-lined streets; Franschhoek is the smaller, French-Huguenot village with a single main road lined with restaurants.": [
+  "data/destinations.ts:61"
+ ],
+ "Staying in the Winelands, rather than visiting on a day trip, changes the experience completely: long lunches, sunset tastings on the stoep and no need to rush back to the city. We pair you with a private driver so nobody has to count glasses.": [
+  "data/destinations.ts:62"
+ ],
+ "Harvest runs February to April, the most atmospheric time to visit. Winter (Jun–Aug) is green, cool and cosy, with fireside tastings and quieter estates.": [
+  "data/destinations.ts:71"
+ ],
+ "Private tastings at family-owned estates": [
+  "data/destinations.ts:73"
+ ],
+ "Long lunches at award-winning farm restaurants": [
+  "data/destinations.ts:74"
+ ],
+ "Cycling or e-biking between vineyards": [
+  "data/destinations.ts:75"
+ ],
+ "Franschhoek's wine tram (hop-on, hop-off)": [
+  "data/destinations.ts:76"
+ ],
+ "Historic Stellenbosch and its Cape Dutch architecture": [
+  "data/destinations.ts:77"
+ ],
+ "A driver-guide tailors a day around your taste, from old-vine Chenin to Bordeaux blends and bubbly (Méthode Cap Classique).": [
+  "data/destinations.ts:80"
+ ],
+ "Private wine route": [
+  "data/destinations.ts:80"
+ ],
+ "We secure tables at the valley's best restaurants, which can book out months ahead.": [
+  "data/destinations.ts:81"
+ ],
+ "Chef's tables": [
+  "data/destinations.ts:81"
+ ],
+ "Guided hikes, horseback rides through the vines, or e-bikes between estates.": [
+  "data/destinations.ts:82"
+ ],
+ "Active mornings": [
+  "data/destinations.ts:82"
+ ],
+ "Sculpture gardens, galleries and centuries-old estate grounds.": [
+  "data/destinations.ts:83"
+ ],
+ "Art & gardens": [
+  "data/destinations.ts:83"
+ ],
+ "Book a private driver or wine tram, and never self-drive between tastings.": [
+  "data/destinations.ts:86"
+ ],
+ "Many top restaurants close one or two days a week. We plan around that.": [
+  "data/destinations.ts:87"
+ ],
+ "Two nights is the sweet spot; three if you want a slower pace.": [
+  "data/destinations.ts:88"
+ ],
+ "Where the mountain meets two oceans": [
+  "data/destinations.ts:9"
+ ],
+ "Franschhoek is compact, romantic and walkable; Stellenbosch has more estates and a livelier town. Many of our guests split two nights between them, or base themselves in one and visit the other.": [
+  "data/destinations.ts:94"
+ ],
+ "Stellenbosch or Franschhoek?": [
+  "data/destinations.ts:94"
+ ],
+ "Hermanus & the Overberg": [
+  "data/destinations.ts:99"
+ ],
+ "Sunrise and sunset drives in open vehicles with expert rangers and trackers.": [
+  "data/experiences.ts:10"
+ ],
+ "Transfers on guided days": [
+  "data/experiences.ts:101"
+ ],
+ "Cliff Path walk": [
+  "data/experiences.ts:101"
+ ],
+ "Licensed boat trip (optional)": [
+  "data/experiences.ts:101"
+ ],
+ "Bring binoculars for clifftop viewing": [
+  "data/experiences.ts:102"
+ ],
+ "Boat trips are weather-dependent": [
+  "data/experiences.ts:102"
+ ],
+ "Garden Route road trip": [
+  "data/experiences.ts:106",
+  "data/planner.ts:6"
+ ],
+ "South Africa's classic self-drive: forests, lagoons and beaches at your own pace.": [
+  "data/experiences.ts:109"
+ ],
+ "We hand you a beautifully planned route, a quality rental car and a list of the places locals love: oyster bars, forest walks, quiet beaches and wine farms tucked into the hills.": [
+  "data/experiences.ts:111"
+ ],
+ "Prefer not to drive? A private driver-guide can do the route with you, or we can combine short flights with chauffeured transfers.": [
+  "data/experiences.ts:112"
+ ],
+ "5–10 days": [
+  "data/experiences.ts:114"
+ ],
+ "Sep–Apr": [
+  "data/experiences.ts:115",
+  "data/tours.ts:129"
+ ],
+ "24/7 support while you travel": [
+  "data/experiences.ts:117",
+  "data/tours.ts:312",
+  "data/tours.ts:279"
+ ],
+ "Curated stays": [
+  "data/experiences.ts:117"
+ ],
+ "Rental car with full insurance": [
+  "data/experiences.ts:117",
+  "data/tours.ts:141"
+ ],
+ "Detailed route book": [
+  "data/experiences.ts:117",
+  "data/tours.ts:141"
+ ],
+ "Avoid driving after dark on rural roads": [
+  "data/experiences.ts:118"
+ ],
+ "Driving is on the left": [
+  "data/experiences.ts:118"
+ ],
+ "The rhythm of safari is simple and addictive: coffee before dawn, out into the cool bush as the light comes up, back for breakfast, a siesta through the heat, then out again until sundowners and a spotlit drive home.": [
+  "data/experiences.ts:12"
+ ],
+ "Robben Island": [
+  "data/experiences.ts:122"
+ ],
+ "Ferry to the UNESCO-listed island where Nelson Mandela was imprisoned for 18 years.": [
+  "data/experiences.ts:125"
+ ],
+ "Robben Island is a place of profound significance. Tours of the maximum-security prison have historically been led by former political prisoners, who share personal stories of resistance and reconciliation.": [
+  "data/experiences.ts:127"
+ ],
+ "The ferry leaves from the V&A Waterfront and crosses Table Bay, with superb views back to Table Mountain.": [
+  "data/experiences.ts:128"
+ ],
+ "In private reserves, ranger-and-tracker teams read the ground for fresh signs and can follow animals off-road, so sightings feel personal rather than crowded. We choose lodges for the quality of their guiding as much as their rooms.": [
+  "data/experiences.ts:13"
+ ],
+ "~4 hours including ferry": [
+  "data/experiences.ts:130"
+ ],
+ "Year-round (weather-dependent sailing)": [
+  "data/experiences.ts:131"
+ ],
+ "Guided island and prison tour": [
+  "data/experiences.ts:134"
+ ],
+ "Return ferry": [
+  "data/experiences.ts:134"
+ ],
+ "Sailings are cancelled in rough seas": [
+  "data/experiences.ts:135"
+ ],
+ "Tickets sell out in peak season: we pre-book": [
+  "data/experiences.ts:135"
+ ],
+ "Soweto & Johannesburg history tours": [
+  "data/experiences.ts:139"
+ ],
+ "The Apartheid Museum, Vilakazi Street and Constitution Hill with expert local guides.": [
+  "data/experiences.ts:142"
+ ],
+ "This is the day that gives everything else context. Start at the Apartheid Museum, then head to Soweto with a guide who grew up there: Vilakazi Street, the Mandela House and the Hector Pieterson Memorial.": [
+  "data/experiences.ts:144"
+ ],
+ "We finish with lunch at a local favourite, or with a cycling tour through Soweto's streets.": [
+  "data/experiences.ts:145"
+ ],
+ "2 drives per day, ~3 hours each": [
+  "data/experiences.ts:15"
+ ],
+ "Lunch": [
+  "data/experiences.ts:151"
+ ],
+ "Museum entries": [
+  "data/experiences.ts:151"
+ ],
+ "Closed on some public holidays": [
+  "data/experiences.ts:152"
+ ],
+ "The Apartheid Museum needs at least 2 hours": [
+  "data/experiences.ts:152"
+ ],
+ "Drakensberg hiking": [
+  "data/experiences.ts:156"
+ ],
+ "Guided day hikes beneath basalt cliffs, past waterfalls and ancient San rock art.": [
+  "data/experiences.ts:159"
+ ],
+ "Year-round; peak May–Sep": [
+  "data/experiences.ts:16"
+ ],
+ "The Drakensberg is South Africa's finest hiking country. Gentle valley walks lead to rock art shelters; bigger days climb to the edge of the Amphitheatre with its jaw-dropping drop to the valley below.": [
+  "data/experiences.ts:161"
+ ],
+ "We match routes to your fitness and arrange experienced mountain guides.": [
+  "data/experiences.ts:162"
+ ],
+ "Half day to full day": [
+  "data/experiences.ts:164"
+ ],
+ "Apr–May & Sep–Oct": [
+  "data/experiences.ts:165"
+ ],
+ "Packed lunch": [
+  "data/experiences.ts:168"
+ ],
+ "Park permits": [
+  "data/experiences.ts:168"
+ ],
+ "Mountain guide": [
+  "data/experiences.ts:168"
+ ],
+ "Proper hiking boots recommended": [
+  "data/experiences.ts:169"
+ ],
+ "Summer storms build in the afternoon: start early": [
+  "data/experiences.ts:169"
+ ],
+ "Blyde River Canyon & Panorama Route": [
+  "data/experiences.ts:173"
+ ],
+ "Viewpoints, waterfalls and a boat trip beneath the canyon walls.": [
+  "data/experiences.ts:176"
+ ],
+ "Spend a day along the edge of the escarpment: God's Window, Bourke's Luck Potholes and the Three Rondavels, plus waterfalls along the way.": [
+  "data/experiences.ts:178"
+ ],
+ "Add a boat trip on Blyde Dam for the view from below, with hippos and crocodiles at the water's edge.": [
+  "data/experiences.ts:179"
+ ],
+ "Open 4x4 safari vehicle": [
+  "data/experiences.ts:18"
+ ],
+ "Sundowner or coffee stop in the bush": [
+  "data/experiences.ts:18"
+ ],
+ "Expert ranger and tracker": [
+  "data/experiences.ts:18"
+ ],
+ "Full day": [
+  "data/experiences.ts:181",
+  "data/experiences.ts:147",
+  "data/experiences.ts:80"
+ ],
+ "Apr–Sep for clear views": [
+  "data/experiences.ts:182"
+ ],
+ "Optional boat trip": [
+  "data/experiences.ts:185"
+ ],
+ "Entry fees": [
+  "data/experiences.ts:185"
+ ],
+ "Private guide and vehicle": [
+  "data/experiences.ts:185",
+  "data/experiences.ts:151",
+  "data/experiences.ts:51"
+ ],
+ "Easy to combine with a Kruger transfer": [
+  "data/experiences.ts:186"
+ ],
+ "Mist can roll in on summer afternoons": [
+  "data/experiences.ts:186"
+ ],
+ "Bring a warm layer: open vehicles are chilly at dawn": [
+  "data/experiences.ts:19"
+ ],
+ "Many private lodges set a minimum age for drives (often 6+)": [
+  "data/experiences.ts:19"
+ ],
+ "Shark cage diving": [
+  "data/experiences.ts:190"
+ ],
+ "Come face to face with sharks off Gansbaai, with responsible, licensed operators.": [
+  "data/experiences.ts:193"
+ ],
+ "Gansbaai, near Hermanus, has long been one of the world's best-known shark-cage-diving sites. Shark populations have shifted in recent years, so operators now encounter a range of species, including bronze whalers. We use licensed operators who put the animals' welfare first.": [
+  "data/experiences.ts:195"
+ ],
+ "No diving qualification is needed: you'll wear a wetsuit and mask and stay at the surface in the cage. Non-divers can watch from the deck.": [
+  "data/experiences.ts:196"
+ ],
+ "Half day (plus transfer)": [
+  "data/experiences.ts:198"
+ ],
+ "Year-round; best Apr–Oct": [
+  "data/experiences.ts:199"
+ ],
+ "Light breakfast or lunch": [
+  "data/experiences.ts:202"
+ ],
+ "Wetsuit and mask": [
+  "data/experiences.ts:202"
+ ],
+ "Licensed operator": [
+  "data/experiences.ts:202"
+ ],
+ "Take seasickness tablets beforehand": [
+  "data/experiences.ts:203"
+ ],
+ "Sightings vary, and great whites are no longer guaranteed": [
+  "data/experiences.ts:203"
+ ],
+ "Honeymoons": [
+  "data/experiences.ts:207"
+ ],
+ "Cape Town glamour, vineyard suites and a private plunge pool in the bush.": [
+  "data/experiences.ts:210"
+ ],
+ "South Africa is one of the world's great honeymoon destinations: city, wine country, safari and (if you like) an Indian Ocean island extension, all on one trip.": [
+  "data/experiences.ts:212"
+ ],
+ "We secure the best suites, add private touches (a bush dinner for two, a helicopter flip over the peninsula) and make sure the logistics are invisible.": [
+  "data/experiences.ts:213"
+ ],
+ "10–14 nights typical": [
+  "data/experiences.ts:215"
+ ],
+ "Romantic surprises": [
+  "data/experiences.ts:218"
+ ],
+ "Private experiences": [
+  "data/experiences.ts:218"
+ ],
+ "Suite upgrades where possible": [
+  "data/experiences.ts:218"
+ ],
+ "Book 6–12 months ahead for peak season": [
+  "data/experiences.ts:219"
+ ],
+ "Let us know your wedding date; many lodges offer honeymoon perks": [
+  "data/experiences.ts:219"
+ ],
+ "Family safaris": [
+  "data/experiences.ts:223"
+ ],
+ "Malaria-free reserves, kids' ranger programmes and lodges that truly welcome children.": [
+  "data/experiences.ts:226"
+ ],
+ "Travelling with children takes the right lodges: ones with family suites, flexible meal times, private vehicles and junior ranger programmes that keep young minds busy between drives.": [
+  "data/experiences.ts:228"
+ ],
+ "We often recommend the malaria-free Eastern Cape for younger children, and Greater Kruger for teens.": [
+  "data/experiences.ts:229"
+ ],
+ "Walking safari": [
+  "data/experiences.ts:23"
+ ],
+ "3–4 nights on safari": [
+  "data/experiences.ts:231"
+ ],
+ "School holidays; Jun–Aug is ideal": [
+  "data/experiences.ts:232"
+ ],
+ "Kids' activities": [
+  "data/experiences.ts:234"
+ ],
+ "Private vehicle options": [
+  "data/experiences.ts:234"
+ ],
+ "Family-friendly lodges": [
+  "data/experiences.ts:234"
+ ],
+ "Check children's travel document rules in our FAQ": [
+  "data/experiences.ts:235"
+ ],
+ "Many lodges have minimum ages for drives": [
+  "data/experiences.ts:235"
+ ],
+ "Track wildlife on foot with armed rangers, the most intimate way to experience the bush.": [
+  "data/experiences.ts:26"
+ ],
+ "On foot, the bush becomes a different place. You notice the tracks, dung, termite mounds and medicinal plants, the alarm call of a francolin, the faint smell of a passing buffalo herd.": [
+  "data/experiences.ts:28"
+ ],
+ "Walks are led by qualified, armed field guides and usually last two to four hours in the cool of the morning. Some lodges offer multi-day walking trails with fly-camp nights under the stars.": [
+  "data/experiences.ts:29"
+ ],
+ "2–4 hours, or multi-day trails": [
+  "data/experiences.ts:31"
+ ],
+ "May–Oct (cooler, thinner vegetation)": [
+  "data/experiences.ts:32"
+ ],
+ "Refreshments": [
+  "data/experiences.ts:34"
+ ],
+ "Safety briefing": [
+  "data/experiences.ts:34"
+ ],
+ "Armed, qualified walking guide": [
+  "data/experiences.ts:34"
+ ],
+ "Wear neutral colours and closed shoes": [
+  "data/experiences.ts:35"
+ ],
+ "Minimum age typically 12–16": [
+  "data/experiences.ts:35"
+ ],
+ "Table Mountain & Cape Point": [
+  "data/experiences.ts:39"
+ ],
+ "Cableway or guided hike up Table Mountain, then the spectacular peninsula drive.": [
+  "data/experiences.ts:42"
+ ],
+ "Go up Table Mountain early on the first clear day: by cableway, or with a private guide on one of the classic routes. The views stretch across the city, Robben Island and both oceans.": [
+  "data/experiences.ts:44"
+ ],
+ "The Cape Peninsula drive follows Chapman's Peak to the cliffs of Cape Point and the Cape of Good Hope, with fynbos, ostriches and baboons along the way.": [
+  "data/experiences.ts:45"
+ ],
+ "Half day each, or a full combined day": [
+  "data/experiences.ts:47"
+ ],
+ "Oct–Apr for clear days": [
+  "data/experiences.ts:48"
+ ],
+ "Reserve entry fees": [
+  "data/experiences.ts:51"
+ ],
+ "Cableway tickets or hiking guide": [
+  "data/experiences.ts:51"
+ ],
+ "Platteklip Gorge is steep: around 2–3 hours up": [
+  "data/experiences.ts:52"
+ ],
+ "The cableway closes in high wind; we keep plans flexible": [
+  "data/experiences.ts:52"
+ ],
+ "Boulders Beach penguins": [
+  "data/experiences.ts:56"
+ ],
+ "Watch a colony of endangered African penguins on granite-boulder beaches near Simon's Town.": [
+  "data/experiences.ts:59"
+ ],
+ "A colony of African penguins nests among the boulders and sheltered coves of Boulders Beach. Boardwalks bring you close without disturbing them, and on a calm day you can swim nearby.": [
+  "data/experiences.ts:61"
+ ],
+ "African penguins are endangered, and park fees support their conservation. We usually combine a visit with Cape Point and lunch in Kalk Bay or Simon's Town.": [
+  "data/experiences.ts:62"
+ ],
+ "1–2 hours": [
+  "data/experiences.ts:64"
+ ],
+ "Year-round; breeding peaks Mar–May": [
+  "data/experiences.ts:65"
+ ],
+ "Boardwalk viewing": [
+  "data/experiences.ts:67"
+ ],
+ "Entry fees (on guided days)": [
+  "data/experiences.ts:67"
+ ],
+ "Never touch or feed the penguins": [
+  "data/experiences.ts:68"
+ ],
+ "Go early to beat tour groups": [
+  "data/experiences.ts:68"
+ ],
+ "Big Five safari game drives": [
+  "data/experiences.ts:7"
+ ],
+ "Cape Winelands wine tasting": [
+  "data/experiences.ts:72"
+ ],
+ "Private tastings, cellar tours and long lunches at family-run estates.": [
+  "data/experiences.ts:75"
+ ],
+ "We design your day around what you love to drink: old-vine Chenin Blanc, elegant Syrah, cool-climate Chardonnay or Méthode Cap Classique bubbly. Then we pair it with estates where you'll meet the people who make it.": [
+  "data/experiences.ts:77"
+ ],
+ "Expect cellar tours, barrel tastings and lunches with mountain views, with a private driver so the only decision is red or white.": [
+  "data/experiences.ts:78"
+ ],
+ "Year-round; harvest Feb–Apr": [
+  "data/experiences.ts:81"
+ ],
+ "Lunch reservation": [
+  "data/experiences.ts:84"
+ ],
+ "Three to four tastings": [
+  "data/experiences.ts:84"
+ ],
+ "Private driver-guide": [
+  "data/experiences.ts:84"
+ ],
+ "Some estates close on Mondays": [
+  "data/experiences.ts:85"
+ ],
+ "Shipping wine home is possible from most estates": [
+  "data/experiences.ts:85"
+ ],
+ "Whale watching in Hermanus": [
+  "data/experiences.ts:89"
+ ],
+ "Southern right whales from the clifftops or a licensed boat, June to November.": [
+  "data/experiences.ts:92"
+ ],
+ "Every winter and spring, southern right whales migrate to the sheltered bays of the Overberg to calve. Hermanus is one of the world's best places for land-based whale watching: you can see them breaching from the Cliff Path.": [
+  "data/experiences.ts:94"
+ ],
+ "For a closer look, licensed boat operators are permitted to approach to a set distance.": [
+  "data/experiences.ts:95"
+ ],
+ "Half day, or an overnight stay": [
+  "data/experiences.ts:97"
+ ],
+ "Jun–Nov (peak Sep–Oct)": [
+  "data/experiences.ts:98"
+ ],
+ "Do I need a visa to visit South Africa?": [
+  "data/faqs.ts:11"
+ ],
+ "Passport holders from many countries, including the USA, Canada, the UK, Ireland, most EU countries, Australia and New Zealand, are currently visa-exempt for tourist stays of up to 90 days. Other nationalities may need to apply in advance; South Africa has been introducing an electronic visa system for many of them.\n\nYour passport should be valid for at least 30 days beyond your planned departure from South Africa and have at least two completely blank visa pages (endorsement pages don't count). Airlines can deny boarding if you don't meet this.\n\nWe confirm the current rules for every traveller's nationality when you book.": [
+  "data/faqs.ts:13"
+ ],
+ "What documents do children need?": [
+  "data/faqs.ts:19"
+ ],
+ "Every child needs their own valid passport. South Africa's rules on extra documents for minors have changed several times. Current guidance for visa-exempt visitors strongly recommends carrying an unabridged birth certificate (listing both parents) and, if a child is travelling with only one parent or with other adults, a parental consent affidavit and copies of the absent parent's ID.\n\nRequirements for children who need visas are stricter. Because this changes, we send a family-specific document checklist with your booking.": [
+  "data/faqs.ts:21"
+ ],
+ "Is South Africa safe for travellers?": [
+  "data/faqs.ts:26"
+ ],
+ "The vast majority of visitors have a trouble-free trip. Like anywhere with high inequality, it calls for sensible precautions: don't flash valuables, don't leave anything visible in a car, use registered drivers or ride-hailing apps at night, and take local advice on hikes and neighbourhoods.\n\nThe places we send you, from boutique hotels to private reserves, are chosen for their security as well as their style. Your specialist briefs you before you travel and is on call 24/7 while you're here.": [
+  "data/faqs.ts:28"
+ ],
+ "Do I need malaria tablets or vaccinations?": [
+  "data/faqs.ts:34"
+ ],
+ "Kruger, the surrounding private reserves, the lowveld and far northern KwaZulu-Natal are malaria areas, with the highest risk during the summer rains (roughly Nov–Apr). Cape Town, the Winelands, the Garden Route, the Eastern Cape reserves, the Drakensberg and Johannesburg are malaria-free.\n\nSee a travel clinic 6–8 weeks before you fly for advice on prophylaxis and routine vaccinations. A yellow fever certificate is required if you're arriving from, or have transited through, a country with yellow fever risk. Prefer to avoid malaria areas altogether? We'll plan a malaria-free safari.": [
+  "data/faqs.ts:36"
+ ],
+ "Entry and document requirements change. Verify against official government sources (South Africa's Department of Home Affairs and your own government's travel advice) before launch and before travel.": [
+  "data/faqs.ts:4"
+ ],
+ "When is the best time to visit South Africa?": [
+  "data/faqs.ts:41"
+ ],
+ "There's no bad time, just different trade-offs. Seasons are reversed from the northern hemisphere. Cape Town is at its best in the dry, sunny summer (Nov–Mar), with winter rain from June to August. Kruger's dry winter (May–Sep) is peak game viewing, while summer rains (Nov–Mar) turn the north and east green. Whale season on the Cape coast runs June to November.\n\nA combined Cape-and-safari trip works year-round. Our month-by-month guide on the blog goes into detail.": [
+  "data/faqs.ts:43"
+ ],
+ "What's the weather like, and what should I pack for the seasons?": [
+  "data/faqs.ts:48"
+ ],
+ "South Africa spans several climate zones. The Western Cape has a Mediterranean climate (hot, dry, windy summers; cool, wet winters). The northeast, including Kruger, Johannesburg and KwaZulu-Natal, has summer rainfall with afternoon thunderstorms and dry, sunny winters, which are surprisingly cold at night and on early-morning game drives.\n\nWhatever the month, pack layers: a warm fleece or down jacket, a light rain shell, sun protection and comfortable walking shoes.": [
+  "data/faqs.ts:50"
+ ],
+ "How do I get around South Africa?": [
+  "data/faqs.ts:55"
+ ],
+ "Distances are big, so most itineraries combine a few elements:\n\n• Domestic flights link Cape Town, Johannesburg, Durban, George, Gqeberha and the Kruger gateways (Skukuza, Kruger Mpumalanga and Hoedspruit), with light aircraft serving many private reserves.\n• Self-drive is excellent on the Garden Route and in the Cape. You'll drive on the left; most international licences printed in English are accepted (otherwise carry an International Driving Permit). We advise against driving after dark.\n• Private drivers and guides are our default in cities and the Winelands.\n• There's no reliable public transport network for travellers, apart from Johannesburg's Gautrain, so we arrange every transfer for you.": [
+  "data/faqs.ts:57"
+ ],
+ "What should I know about safari etiquette and what to pack?": [
+  "data/faqs.ts:62"
+ ],
+ "On game drives, stay seated, keep your voice low, never stand up or lean out of the vehicle and follow your ranger's instructions. Never feed animals, and keep a respectful distance on walks.\n\nPack neutral colours (khaki, olive, beige; avoid bright colours that stand out, and dark blue or black, which can attract insects), a warm layer for dawn drives, a hat, sunscreen, insect repellent, binoculars and a camera with a zoom lens. Light-aircraft transfers usually limit luggage to around 20 kg in soft-sided bags.": [
+  "data/faqs.ts:64"
+ ],
+ "How much should I tip?": [
+  "data/faqs.ts:69"
+ ],
+ "Tipping is customary and appreciated. As a guide: 10–15% in restaurants; R10–20 per bag for porters; a few rand for petrol attendants and car guards; and for private guides and drivers, around R300–600 per day depending on group size.\n\nOn safari, many guests tip their ranger and tracker separately (roughly US$10–20 and US$5–10 per guest per day respectively), plus a general staff tip. Your specialist will include suggested amounts in your travel documents.": [
+  "data/faqs.ts:71"
+ ],
+ "What currency is used, and can I use cards and ATMs?": [
+  "data/faqs.ts:76"
+ ],
+ "The currency is the South African rand (ZAR, R). Visa and Mastercard are accepted almost everywhere, including most markets; Amex less so. ATMs are widely available. Use ones inside banks, malls or hotels during the day, and shield your PIN.\n\nCarry some cash for tips and small purchases. Tell your bank you're travelling, and consider a card with no foreign transaction fees. Lodge extras and gratuities can often be paid by card.": [
+  "data/faqs.ts:78"
+ ],
+ "History, canyon, Kruger": [
+  "data/planner.ts:10"
+ ],
+ "Johannesburg & Panorama Route": [
+  "data/planner.ts:10"
+ ],
+ "Tell us what you love": [
+  "data/planner.ts:11"
+ ],
+ "Characterful 4-star stays, national-park safari lodges": [
+  "data/planner.ts:17"
+ ],
+ "Comfort": [
+  "data/planner.ts:17",
+  "data/tours.ts:321"
+ ],
+ "Boutique hotels, wine estates and private-reserve lodges": [
+  "data/planner.ts:18"
+ ],
+ "Premium": [
+  "data/planner.ts:18",
+  "data/tours.ts:322"
+ ],
+ "The finest suites, exclusive-use villas and private guiding": [
+  "data/planner.ts:19"
+ ],
+ "Ultra luxury": [
+  "data/planner.ts:19",
+  "data/tours.ts:323"
+ ],
+ "We'll suggest options across a range": [
+  "data/planner.ts:20"
+ ],
+ "Not sure yet": [
+  "data/planner.ts:20",
+  "data/planner.ts:11"
+ ],
+ "We'll send guidance on suitable cover": [
+  "data/planner.ts:26"
+ ],
+ "Travel insurance info": [
+  "data/planner.ts:26"
+ ],
+ "Help finding the best routings": [
+  "data/planner.ts:27"
+ ],
+ "International flights": [
+  "data/planner.ts:27",
+  "data/tours.ts:313",
+  "data/tours.ts:280"
+ ],
+ "e.g. Cape Town to the Kruger gateways": [
+  "data/planner.ts:28"
+ ],
+ "Domestic flights": [
+  "data/planner.ts:28",
+  "data/tours.ts:312",
+  "data/tours.ts:209"
+ ],
+ "Chauffeured throughout": [
+  "data/planner.ts:29"
+ ],
+ "Private driver": [
+  "data/planner.ts:29"
+ ],
+ "Freedom on the Garden Route & Cape": [
+  "data/planner.ts:30"
+ ],
+ "Self-drive car hire": [
+  "data/planner.ts:30"
+ ],
+ "Add a few nights in the bush": [
+  "data/planner.ts:31"
+ ],
+ "Safari add-on": [
+  "data/planner.ts:31"
+ ],
+ "City, coast and vineyards": [
+  "data/planner.ts:4"
+ ],
+ "Cape Town & Winelands": [
+  "data/planner.ts:4",
+  "data/tours.ts:5"
+ ],
+ "Cape Town, Winelands & Kruger": [
+  "data/planner.ts:5"
+ ],
+ "Classic South Africa": [
+  "data/planner.ts:5",
+  "data/tours.ts:21"
+ ],
+ "Whale coast to Addo": [
+  "data/planner.ts:6"
+ ],
+ "Kruger & private reserves": [
+  "data/planner.ts:7",
+  "data/tours.ts:7"
+ ],
+ "Safari focus": [
+  "data/planner.ts:7"
+ ],
+ "The best of both": [
+  "data/planner.ts:8"
+ ],
+ "Cape Town + Safari": [
+  "data/planner.ts:8"
+ ],
+ "Mountains, history, warm sea": [
+  "data/planner.ts:9"
+ ],
+ "Drakensberg & KwaZulu-Natal": [
+  "data/planner.ts:9"
+ ],
+ "Lion's Head Townhouse": [
+  "data/stays.ts:10",
+  "data/tours.ts:48",
+  "data/tours.ts:47"
+ ],
+ "Leadwood Ridge Lodge": [
+  "data/stays.ts:100",
+  "data/tours.ts:206",
+  "data/tours.ts:170"
+ ],
+ "Sabi Sand Game Reserve": [
+  "data/stays.ts:103"
+ ],
+ "Six glass-fronted suites on a riverbank, with private plunge pools and expert leopard tracking.": [
+  "data/stays.ts:104"
+ ],
+ "Leadwood Ridge overlooks a seasonal river where elephants and buffalo come to drink. Each suite has a private plunge pool, an outdoor shower and a deck facing the bush.": [
+  "data/stays.ts:106"
+ ],
+ "Stays are fully inclusive: two game drives a day with a dedicated ranger-and-tracker team, all meals, drinks and laundry.": [
+  "data/stays.ts:107"
+ ],
+ "Private plunge pools": [
+  "data/stays.ts:112"
+ ],
+ "6 suites": [
+  "data/stays.ts:112"
+ ],
+ "First safari": [
+  "data/stays.ts:114",
+  "data/tours.ts:269"
+ ],
+ "Photographers": [
+  "data/stays.ts:114",
+  "data/tours.ts:164"
+ ],
+ "Honeymooners": [
+  "data/stays.ts:114",
+  "data/stays.ts:42",
+  "data/tours.ts:199"
+ ],
+ "Jackalberry Plains Camp": [
+  "data/stays.ts:118",
+  "data/tours.ts:276",
+  "data/tours.ts:172"
+ ],
+ "Timbavati, Greater Kruger": [
+  "data/stays.ts:121"
+ ],
+ "A relaxed tented camp on open plains, renowned for lion sightings and walking safaris.": [
+  "data/stays.ts:122"
+ ],
+ "Canvas-and-timber tents bring you close to the sounds of the bush without sacrificing comfort: proper beds, en-suite bathrooms and a shaded pool overlooking a waterhole.": [
+  "data/stays.ts:124"
+ ],
+ "The camp welcomes families, with family tents and private vehicle options.": [
+  "data/stays.ts:125"
+ ],
+ "Tamboerskloof, Cape Town": [
+  "data/stays.ts:13"
+ ],
+ "Waterhole views": [
+  "data/stays.ts:130"
+ ],
+ "All-inclusive": [
+  "data/stays.ts:130",
+  "data/stays.ts:112"
+ ],
+ "Family tents": [
+  "data/stays.ts:130"
+ ],
+ "10 tents": [
+  "data/stays.ts:130"
+ ],
+ "Walkers": [
+  "data/stays.ts:132"
+ ],
+ "Value-conscious safari": [
+  "data/stays.ts:132"
+ ],
+ "Stone Crown Mountain Lodge": [
+  "data/stays.ts:136",
+  "data/tours.ts:239",
+  "data/tours.ts:238"
+ ],
+ "Central Drakensberg": [
+  "data/stays.ts:139"
+ ],
+ "A twelve-room Victorian townhouse beneath Lion's Head, a short walk from Kloof Street's cafés.": [
+  "data/stays.ts:14"
+ ],
+ "Stone-and-thatch chalets facing the Drakensberg's great basalt wall.": [
+  "data/stays.ts:140"
+ ],
+ "Fireplaces, deep baths and huge windows framing the peaks. Guided hikes leave from the door, from gentle walks to rock-art shelters to full summit days.": [
+  "data/stays.ts:142"
+ ],
+ "Afterwards, there's a spa, a trout dam and hearty dinners by the fire.": [
+  "data/stays.ts:143"
+ ],
+ "Half board": [
+  "data/stays.ts:148",
+  "data/tours.ts:240",
+  "data/tours.ts:239"
+ ],
+ "Fireplaces": [
+  "data/stays.ts:148"
+ ],
+ "Spa": [
+  "data/stays.ts:148",
+  "data/stays.ts:76",
+  "data/stays.ts:40"
+ ],
+ "14 chalets": [
+  "data/stays.ts:148"
+ ],
+ "Couples": [
+  "data/stays.ts:150",
+  "data/stays.ts:96",
+  "data/stays.ts:78"
+ ],
+ "Families": [
+  "data/stays.ts:150",
+  "data/stays.ts:132",
+  "data/stays.ts:78"
+ ],
+ "Hikers": [
+  "data/stays.ts:150",
+  "data/tours.ts:233"
+ ],
+ "Restored with local craft, contemporary South African art and a lap pool in a walled garden, the Townhouse feels like staying with stylish friends who know the city inside out.": [
+  "data/stays.ts:16"
+ ],
+ "Breakfast is served on the terrace with a view of Table Mountain, and the concierge team works hand in hand with your Cape Compass specialist.": [
+  "data/stays.ts:17"
+ ],
+ "Daily breakfast": [
+  "data/stays.ts:22",
+  "data/tours.ts:105"
+ ],
+ "Walkable to restaurants": [
+  "data/stays.ts:22"
+ ],
+ "Mountain views": [
+  "data/stays.ts:22"
+ ],
+ "Heated pool": [
+  "data/stays.ts:22"
+ ],
+ "12 rooms": [
+  "data/stays.ts:22"
+ ],
+ "Foodies": [
+  "data/stays.ts:24"
+ ],
+ "First-time visitors": [
+  "data/stays.ts:24",
+  "data/tours.ts:39"
+ ],
+ "Atlantic Terrace Hotel": [
+  "data/stays.ts:28",
+  "data/tours.ts:204",
+  "data/tours.ts:101"
+ ],
+ "Camps Bay, Cape Town": [
+  "data/stays.ts:31"
+ ],
+ "Ocean-facing suites above Camps Bay, with the Twelve Apostles mountains behind.": [
+  "data/stays.ts:32"
+ ],
+ "Every suite faces the Atlantic, with sliding walls that open onto private terraces. Sunset is the main event here, best enjoyed with a glass of Cap Classique by the infinity pool.": [
+  "data/stays.ts:34"
+ ],
+ "The beach and its restaurants are two minutes' walk away.": [
+  "data/stays.ts:35"
+ ],
+ "Beach access": [
+  "data/stays.ts:40"
+ ],
+ "Sea views": [
+  "data/stays.ts:40"
+ ],
+ "Infinity pool": [
+  "data/stays.ts:40"
+ ],
+ "18 suites": [
+  "data/stays.ts:40"
+ ],
+ "Beach lovers": [
+  "data/stays.ts:42"
+ ],
+ "Klipkop Wine Estate": [
+  "data/stays.ts:46",
+  "data/tours.ts:205",
+  "data/tours.ts:102"
+ ],
+ "Franschhoek valley": [
+  "data/stays.ts:49"
+ ],
+ "Cottage suites among working vineyards, with a celebrated farm-to-table restaurant.": [
+  "data/stays.ts:50"
+ ],
+ "Klipkop's whitewashed Cape Dutch cottages sit among Chenin Blanc vines, with mountain views from every stoep. Wake to birdsong, walk the vineyard trails and take a private tasting with the winemaker.": [
+  "data/stays.ts:52"
+ ],
+ "The restaurant's tasting menu draws from the estate garden, and the village is a five-minute drive away.": [
+  "data/stays.ts:53"
+ ],
+ "Pool": [
+  "data/stays.ts:58"
+ ],
+ "Vineyard walks": [
+  "data/stays.ts:58"
+ ],
+ "Farm restaurant": [
+  "data/stays.ts:58"
+ ],
+ "Winemaker tastings": [
+  "data/stays.ts:58"
+ ],
+ "9 cottage suites": [
+  "data/stays.ts:58"
+ ],
+ "Slow travellers": [
+  "data/stays.ts:60"
+ ],
+ "Wine lovers": [
+  "data/stays.ts:60"
+ ],
+ "Fynbos Ridge Estate": [
+  "data/stays.ts:64"
+ ],
+ "Helderberg, Stellenbosch": [
+  "data/stays.ts:67"
+ ],
+ "Contemporary suites on a hillside estate with views to False Bay.": [
+  "data/stays.ts:68"
+ ],
+ "Set high on the slopes of the Helderberg, Fynbos Ridge pairs a modern design hotel with an organic wine farm and a spa built into the hillside.": [
+  "data/stays.ts:70"
+ ],
+ "It's 30 minutes from the airport, perfect for a first or last night.": [
+  "data/stays.ts:71"
+ ],
+ "Close to airport": [
+  "data/stays.ts:76"
+ ],
+ "Mountain biking": [
+  "data/stays.ts:76"
+ ],
+ "Organic wines": [
+  "data/stays.ts:76"
+ ],
+ "16 suites": [
+  "data/stays.ts:76"
+ ],
+ "Active travellers": [
+  "data/stays.ts:78"
+ ],
+ "Outeniqua Cliffs Lodge": [
+  "data/stays.ts:82",
+  "data/tours.ts:308",
+  "data/tours.ts:136"
+ ],
+ "Plettenberg Bay": [
+  "data/stays.ts:85",
+  "data/tours.ts:308",
+  "data/tours.ts:136"
+ ],
+ "Clifftop suites above the Indian Ocean, with whales and dolphins from your deck.": [
+  "data/stays.ts:86"
+ ],
+ "Perched on a fynbos-covered headland, the lodge has eight suites with floor-to-ceiling windows, outdoor showers and wide decks over the sea.": [
+  "data/stays.ts:88"
+ ],
+ "Guided walks on the Robberg Peninsula, marine safaris and forest canopy tours are all close by.": [
+  "data/stays.ts:89"
+ ],
+ "Dinner included": [
+  "data/stays.ts:94"
+ ],
+ "Marine safaris": [
+  "data/stays.ts:94"
+ ],
+ "Private decks": [
+  "data/stays.ts:94"
+ ],
+ "Ocean views": [
+  "data/stays.ts:94"
+ ],
+ "8 suites": [
+  "data/stays.ts:94"
+ ],
+ "Road-trippers": [
+  "data/stays.ts:96"
+ ],
+ "Nature lovers": [
+  "data/stays.ts:96"
+ ],
+ "The full peninsula loop with a private guide.": [
+  "data/tours.ts:100"
+ ],
+ "Cape Point & penguins": [
+  "data/tours.ts:100"
+ ],
+ "Coastal drive to Hermanus for whale watching (in season) and Hemel-en-Aarde tastings.": [
+  "data/tours.ts:101"
+ ],
+ "Hermanus day": [
+  "data/tours.ts:101"
+ ],
+ "Transfer to Franschhoek. Private tastings, a wine tram day and a free day for the spa or a vineyard ride.": [
+  "data/tours.ts:102"
+ ],
+ "Days 5–7": [
+  "data/tours.ts:102"
+ ],
+ "Transfer to Cape Town International (around one hour).": [
+  "data/tours.ts:103"
+ ],
+ "Wine tastings": [
+  "data/tours.ts:105"
+ ],
+ "Private guided days as listed": [
+  "data/tours.ts:105"
+ ],
+ "7 nights' accommodation": [
+  "data/tours.ts:105"
+ ],
+ "Most lunches and dinners": [
+  "data/tours.ts:106"
+ ],
+ "Eastern Cape": [
+  "data/tours.ts:11"
+ ],
+ "Garden Route Self-Drive": [
+  "data/tours.ts:111"
+ ],
+ "Whale coast to Addo, at your own pace": [
+  "data/tours.ts:112"
+ ],
+ "Breakfast daily, 4 dinners · 4 activities · Rental car & route book": [
+  "data/tours.ts:118"
+ ],
+ "Clifftop whale watching in Hermanus": [
+  "data/tours.ts:120"
+ ],
+ "Knysna lagoon and Plettenberg Bay beaches": [
+  "data/tours.ts:121"
+ ],
+ "Tsitsikamma forest and Storms River Mouth": [
+  "data/tours.ts:122"
+ ],
+ "Malaria-free safari finale in Addo": [
+  "data/tours.ts:123"
+ ],
+ "The great South African road trip: hand-picked stays, a detailed route book with our favourite detours, and a safari finale in malaria-free Addo.": [
+  "data/tours.ts:126"
+ ],
+ "Independent travellers": [
+  "data/tours.ts:128"
+ ],
+ "Cape Town boutique hotel": [
+  "data/tours.ts:133"
+ ],
+ "Arrive and settle in; a guided peninsula day.": [
+  "data/tours.ts:133"
+ ],
+ "Hermanus guesthouse": [
+  "data/tours.ts:134"
+ ],
+ "Collect your car and drive the coastal road to Hermanus.": [
+  "data/tours.ts:134"
+ ],
+ "To Hermanus": [
+  "data/tours.ts:134"
+ ],
+ "Day 3": [
+  "data/tours.ts:134",
+  "data/tours.ts:100",
+  "data/tours.ts:46"
+ ],
+ "Knysna lodge": [
+  "data/tours.ts:135"
+ ],
+ "Drive east via Swellendam to the lakes and lagoons; sunset lagoon cruise.": [
+  "data/tours.ts:135"
+ ],
+ "Wilderness & Knysna": [
+  "data/tours.ts:135"
+ ],
+ "Days 4–5": [
+  "data/tours.ts:135"
+ ],
+ "Robberg hike, marine safari and beach time.": [
+  "data/tours.ts:136"
+ ],
+ "Days 6–7": [
+  "data/tours.ts:136",
+  "data/tours.ts:49"
+ ],
+ "Tsitsikamma lodge": [
+  "data/tours.ts:137"
+ ],
+ "Storms River Mouth suspension bridge and forest trails.": [
+  "data/tours.ts:137"
+ ],
+ "Tsitsikamma": [
+  "data/tours.ts:137"
+ ],
+ "Day 8": [
+  "data/tours.ts:137",
+  "data/tours.ts:103",
+  "data/tours.ts:50"
+ ],
+ "Eastern Cape safari lodge": [
+  "data/tours.ts:138"
+ ],
+ "Drive to a private reserve near Addo for two days of game drives.": [
+  "data/tours.ts:138"
+ ],
+ "Addo safari": [
+  "data/tours.ts:138"
+ ],
+ "Days 9–10": [
+  "data/tours.ts:138"
+ ],
+ "Drop your car at Gqeberha airport for your flight home or onward.": [
+  "data/tours.ts:139"
+ ],
+ "Depart Gqeberha": [
+  "data/tours.ts:139"
+ ],
+ "Safari activities in Addo": [
+  "data/tours.ts:141"
+ ],
+ "Breakfast daily, dinners as listed": [
+  "data/tours.ts:141"
+ ],
+ "10 nights' accommodation": [
+  "data/tours.ts:141"
+ ],
+ "Fuel and tolls": [
+  "data/tours.ts:142"
+ ],
+ "Kruger Private Reserve Safari": [
+  "data/tours.ts:147"
+ ],
+ "Six nights in two of Greater Kruger's finest reserves": [
+  "data/tours.ts:148"
+ ],
+ "All meals & drinks · 2 game drives daily + walks · Flights & transfers from Johannesburg": [
+  "data/tours.ts:154"
+ ],
+ "Three nights tracking leopard in the Sabi Sand": [
+  "data/tours.ts:156"
+ ],
+ "Three nights on foot and by vehicle in the Timbavati": [
+  "data/tours.ts:157"
+ ],
+ "Light-aircraft transfers between lodges": [
+  "data/tours.ts:158"
+ ],
+ "Private vehicle upgrade available": [
+  "data/tours.ts:159"
+ ],
+ "A pure safari, designed as a stand-alone trip or an add-on to Cape Town. Two contrasting reserves double your chances of seeing the Big Five and give you two very different lodge experiences.": [
+  "data/tours.ts:162"
+ ],
+ "Add-on to Cape Town": [
+  "data/tours.ts:164"
+ ],
+ "Wildlife lovers": [
+  "data/tours.ts:164"
+ ],
+ "May–Oct": [
+  "data/tours.ts:165"
+ ],
+ "Lunch, dinner": [
+  "data/tours.ts:169"
+ ],
+ "Scheduled flight from Johannesburg, then a short transfer to the lodge for the afternoon drive.": [
+  "data/tours.ts:169"
+ ],
+ "Fly into the Sabi Sand": [
+  "data/tours.ts:169"
+ ],
+ "Twice-daily drives, a bush walk and a private boma dinner.": [
+  "data/tours.ts:170"
+ ],
+ "Leopard country": [
+  "data/tours.ts:170"
+ ],
+ "Light-aircraft hop north to the open plains of the Timbavati.": [
+  "data/tours.ts:171"
+ ],
+ "To the Timbavati": [
+  "data/tours.ts:171"
+ ],
+ "Morning walking safaris and afternoon drives in search of lion and wild dog.": [
+  "data/tours.ts:172"
+ ],
+ "Walk & drive": [
+  "data/tours.ts:172"
+ ],
+ "Final morning drive, then fly to Johannesburg or Cape Town.": [
+  "data/tours.ts:173"
+ ],
+ "Day 7": [
+  "data/tours.ts:173"
+ ],
+ "Laundry": [
+  "data/tours.ts:175"
+ ],
+ "Conservation fees": [
+  "data/tours.ts:175"
+ ],
+ "Flights from/to Johannesburg and between lodges": [
+  "data/tours.ts:175"
+ ],
+ "Two activities daily": [
+  "data/tours.ts:175"
+ ],
+ "Gratuities for rangers and trackers": [
+  "data/tours.ts:176"
+ ],
+ "Premium drinks": [
+  "data/tours.ts:176"
+ ],
+ "Cape & Safari Honeymoon": [
+  "data/tours.ts:182"
+ ],
+ "Ocean-view suites, vineyard dinners and a plunge pool in the bush": [
+  "data/tours.ts:183"
+ ],
+ "Breakfast daily, all meals on safari · 6 private experiences · All flights & transfers in SA": [
+  "data/tours.ts:189"
+ ],
+ "Sea-view suite in Camps Bay": [
+  "data/tours.ts:191"
+ ],
+ "Helicopter flip over the Cape Peninsula": [
+  "data/tours.ts:192"
+ ],
+ "Private tasting and dinner on a wine estate": [
+  "data/tours.ts:193"
+ ],
+ "Bush dinner for two in the Sabi Sand": [
+  "data/tours.ts:194"
+ ],
+ "Ten nights of the very best: the Cape's coastline, its vineyards and an intimate safari lodge, with private experiences and surprises along the way.": [
+  "data/tours.ts:197"
+ ],
+ "Anniversaries": [
+  "data/tours.ts:199"
+ ],
+ "Private touring, a helicopter flip over the peninsula and sunsets on your terrace.": [
+  "data/tours.ts:204"
+ ],
+ "Camps Bay": [
+  "data/tours.ts:204"
+ ],
+ "Breakfast, 1 dinner": [
+  "data/tours.ts:205",
+  "data/tours.ts:135",
+  "data/tours.ts:49"
+ ],
+ "Private winemaker tasting, spa treatments for two and a chef's-table dinner.": [
+  "data/tours.ts:205"
+ ],
+ "Franschhoek": [
+  "data/tours.ts:205"
+ ],
+ "All meals & drinks": [
+  "data/tours.ts:206",
+  "data/tours.ts:172",
+  "data/tours.ts:171"
+ ],
+ "Game drives, a private bush dinner and lazy afternoons by your plunge pool.": [
+  "data/tours.ts:206"
+ ],
+ "Days 7–10": [
+  "data/tours.ts:206"
+ ],
+ "Fly to Johannesburg to connect with your international flight, or on to Mauritius or the Seychelles.": [
+  "data/tours.ts:207"
+ ],
+ "Day 11": [
+  "data/tours.ts:207",
+  "data/tours.ts:139"
+ ],
+ "All transfers": [
+  "data/tours.ts:209",
+  "data/tours.ts:105",
+  "data/tours.ts:60"
+ ],
+ "Private dinners": [
+  "data/tours.ts:209"
+ ],
+ "Spa treatments": [
+  "data/tours.ts:209"
+ ],
+ "Helicopter flip": [
+  "data/tours.ts:209"
+ ],
+ "10 nights in suites": [
+  "data/tours.ts:209"
+ ],
+ "Drakensberg & Zulu Coast": [
+  "data/tours.ts:216"
+ ],
+ "Mountains, battlefields, rhino country and the Indian Ocean": [
+  "data/tours.ts:217"
+ ],
+ "Cape Town, the Winelands and a private Kruger safari": [
+  "data/tours.ts:22"
+ ],
+ "Half board in the mountains · 6 guided activities · Private transfers": [
+  "data/tours.ts:223"
+ ],
+ "Guided Drakensberg hikes and San rock art": [
+  "data/tours.ts:225"
+ ],
+ "Isandlwana and Rorke's Drift with a storyteller-guide": [
+  "data/tours.ts:226"
+ ],
+ "Rhino tracking in Hluhluwe-iMfolozi": [
+  "data/tours.ts:227"
+ ],
+ "Hippos and crocs in iSimangaliso": [
+  "data/tours.ts:228"
+ ],
+ "KwaZulu-Natal in one trip: cool mountain air, compelling history, a Big Five safari and warm Indian Ocean beaches.": [
+  "data/tours.ts:231"
+ ],
+ "Repeat visitors": [
+  "data/tours.ts:233",
+  "data/tours.ts:128"
+ ],
+ "History buffs": [
+  "data/tours.ts:233"
+ ],
+ "Dinner": [
+  "data/tours.ts:238"
+ ],
+ "Fly into King Shaka International; transfer to the Drakensberg foothills.": [
+  "data/tours.ts:238"
+ ],
+ "Durban arrival": [
+  "data/tours.ts:238"
+ ],
+ "Day 1": [
+  "data/tours.ts:238",
+  "data/tours.ts:169",
+  "data/tours.ts:98"
+ ],
+ "Guided hikes, rock art and a spa afternoon.": [
+  "data/tours.ts:239"
+ ],
+ "Days 2–3": [
+  "data/tours.ts:239",
+  "data/tours.ts:170"
+ ],
+ "Battlefields lodge": [
+  "data/tours.ts:240"
+ ],
+ "Isandlwana and Rorke's Drift with an expert guide.": [
+  "data/tours.ts:240"
+ ],
+ "Day 4": [
+  "data/tours.ts:240",
+  "data/tours.ts:171",
+  "data/tours.ts:101"
+ ],
+ "Zululand safari lodge": [
+  "data/tours.ts:241"
+ ],
+ "Big Five game drives in the park that saved the white rhino.": [
+  "data/tours.ts:241"
+ ],
+ "Hluhluwe-iMfolozi": [
+  "data/tours.ts:241"
+ ],
+ "Days 5–6": [
+  "data/tours.ts:241",
+  "data/tours.ts:205",
+  "data/tours.ts:172"
+ ],
+ "St Lucia lodge": [
+  "data/tours.ts:242"
+ ],
+ "Estuary boat cruise, beach time and (Nov–Mar) turtle tours.": [
+  "data/tours.ts:242"
+ ],
+ "iSimangaliso": [
+  "data/tours.ts:242"
+ ],
+ "Days 7–8": [
+  "data/tours.ts:242"
+ ],
+ "Umhlanga hotel": [
+  "data/tours.ts:243"
+ ],
+ "Curry trail and beachfront, final night in Umhlanga.": [
+  "data/tours.ts:243"
+ ],
+ "Durban": [
+  "data/tours.ts:243"
+ ],
+ "Transfer to the airport.": [
+  "data/tours.ts:244"
+ ],
+ "Day 10": [
+  "data/tours.ts:244"
+ ],
+ "Guided activities": [
+  "data/tours.ts:246"
+ ],
+ "Private transfers": [
+  "data/tours.ts:246"
+ ],
+ "9 nights' accommodation": [
+  "data/tours.ts:246"
+ ],
+ "International and domestic flights": [
+  "data/tours.ts:247",
+  "data/tours.ts:142"
+ ],
+ "Johannesburg, Panorama & Kruger": [
+  "data/tours.ts:252"
+ ],
+ "History, canyon views and a classic safari": [
+  "data/tours.ts:253"
+ ],
+ "Breakfast daily, all meals on safari · 7 activities · Private road transfers": [
+  "data/tours.ts:259"
+ ],
+ "Soweto and the Apartheid Museum with a local guide": [
+  "data/tours.ts:261"
+ ],
+ "Blyde River Canyon and God's Window": [
+  "data/tours.ts:262"
+ ],
+ "Four nights of game drives in Greater Kruger": [
+  "data/tours.ts:263"
+ ],
+ "No domestic flights needed": [
+  "data/tours.ts:264"
+ ],
+ "A brilliant-value loop from Johannesburg: the city's history, the escarpment's views and a Big Five safari, all connected by private road transfers.": [
+  "data/tours.ts:267"
+ ],
+ "History lovers": [
+  "data/tours.ts:269"
+ ],
+ "Value-conscious travellers": [
+  "data/tours.ts:269"
+ ],
+ "Apr–Oct": [
+  "data/tours.ts:270",
+  "data/tours.ts:234"
+ ],
+ "Rosebank boutique hotel": [
+  "data/tours.ts:274"
+ ],
+ "Arrive and rest; the next day explore Soweto and the Apartheid Museum.": [
+  "data/tours.ts:274"
+ ],
+ "Days 1–2": [
+  "data/tours.ts:274",
+  "data/tours.ts:133"
+ ],
+ "Graskop lodge": [
+  "data/tours.ts:275"
+ ],
+ "Drive to the escarpment; a full day of viewpoints and a Blyde Dam boat trip.": [
+  "data/tours.ts:275"
+ ],
+ "Days 3–4": [
+  "data/tours.ts:275"
+ ],
+ "Game drives and a bush walk from a relaxed tented camp.": [
+  "data/tours.ts:276"
+ ],
+ "Greater Kruger": [
+  "data/tours.ts:276"
+ ],
+ "Transfer to Hoedspruit or Johannesburg for your flight.": [
+  "data/tours.ts:277"
+ ],
+ "Day 9": [
+  "data/tours.ts:277",
+  "data/tours.ts:243"
+ ],
+ "Park fees": [
+  "data/tours.ts:279",
+  "data/tours.ts:246"
+ ],
+ "Safari activities": [
+  "data/tours.ts:279"
+ ],
+ "Guided touring": [
+  "data/tours.ts:279"
+ ],
+ "Private road transfers": [
+  "data/tours.ts:279"
+ ],
+ "8 nights' accommodation": [
+  "data/tours.ts:279"
+ ],
+ "Daily breakfast, all meals on safari · 8 guided activities · All transfers & domestic flight": [
+  "data/tours.ts:28"
+ ],
+ "Malaria-Free Family Adventure": [
+  "data/tours.ts:285"
+ ],
+ "Penguins, beaches and a Big Five safari for all ages": [
+  "data/tours.ts:286"
+ ],
+ "Breakfast daily, all meals on safari · 8 family activities · Flights & transfers": [
+  "data/tours.ts:292"
+ ],
+ "Boulders Beach penguins and Table Mountain": [
+  "data/tours.ts:294"
+ ],
+ "Plettenberg Bay beaches and marine safaris": [
+  "data/tours.ts:295"
+ ],
+ "Junior ranger programme on safari": [
+  "data/tours.ts:296"
+ ],
+ "Malaria-free throughout": [
+  "data/tours.ts:297"
+ ],
+ "Table Mountain, Cape Point and the Boulders Beach penguins": [
+  "data/tours.ts:30"
+ ],
+ "Designed around the realities of travelling with kids: shorter driving days, family suites, flexible meal times and a safari lodge that genuinely welcomes children of all ages.": [
+  "data/tours.ts:300"
+ ],
+ "Multi-generational groups": [
+  "data/tours.ts:302"
+ ],
+ "Families with young children": [
+  "data/tours.ts:302"
+ ],
+ "Jun–Aug & Dec–Jan school holidays": [
+  "data/tours.ts:303"
+ ],
+ "Breakfast": [
+  "data/tours.ts:307",
+  "data/tours.ts:274",
+  "data/tours.ts:243"
+ ],
+ "Family suite, Cape Town": [
+  "data/tours.ts:307"
+ ],
+ "Table Mountain, penguins, the aquarium and beach time, at kid pace.": [
+  "data/tours.ts:307"
+ ],
+ "Days 1–4": [
+  "data/tours.ts:307",
+  "data/tours.ts:204"
+ ],
+ "Breakfast, dinner": [
+  "data/tours.ts:308",
+  "data/tours.ts:275",
+  "data/tours.ts:136"
+ ],
+ "Fly to George and drive to Plett: beaches, a marine safari and a monkey sanctuary.": [
+  "data/tours.ts:308"
+ ],
+ "Days 5–8": [
+  "data/tours.ts:308",
+  "data/tours.ts:276"
+ ],
+ "All meals": [
+  "data/tours.ts:309",
+  "data/tours.ts:276",
+  "data/tours.ts:241"
+ ],
+ "Family safari lodge": [
+  "data/tours.ts:309"
+ ],
+ "Big Five drives and junior ranger activities in a malaria-free reserve.": [
+  "data/tours.ts:309"
+ ],
+ "Eastern Cape safari": [
+  "data/tours.ts:309"
+ ],
+ "Days 9–11": [
+  "data/tours.ts:309",
+  "data/tours.ts:51"
+ ],
+ "Two nights on a Franschhoek wine estate": [
+  "data/tours.ts:31"
+ ],
+ "Fly from Gqeberha to Cape Town or Johannesburg.": [
+  "data/tours.ts:310"
+ ],
+ "Depart": [
+  "data/tours.ts:310",
+  "data/tours.ts:277",
+  "data/tours.ts:244"
+ ],
+ "Day 12": [
+  "data/tours.ts:310",
+  "data/tours.ts:52"
+ ],
+ "Family activities": [
+  "data/tours.ts:312"
+ ],
+ "Rental car or transfers": [
+  "data/tours.ts:312"
+ ],
+ "Meals as listed": [
+  "data/tours.ts:312",
+  "data/tours.ts:246"
+ ],
+ "11 nights in family rooms": [
+  "data/tours.ts:312"
+ ],
+ "Gratuities": [
+  "data/tours.ts:313",
+  "data/tours.ts:280",
+  "data/tours.ts:247"
+ ],
+ "Four nights in the Sabi Sand: leopard country": [
+  "data/tours.ts:32"
+ ],
+ "Private guides throughout": [
+  "data/tours.ts:33"
+ ],
+ "The trip most first-timers dream of, done properly. Five nights in Cape Town give you time to wait out the wind and enjoy the city; two nights in the Winelands slow things down; four nights in a private reserve deliver the safari you'll talk about for years.": [
+  "data/tours.ts:36"
+ ],
+ "Your specialist handles every connection, from the airport meet-and-greet to the light-aircraft hop into the bush.": [
+  "data/tours.ts:37"
+ ],
+ "Year-round; safari best May–Oct": [
+  "data/tours.ts:40"
+ ],
+ "Meet-and-greet at the airport and private transfer to your hotel beneath Lion's Head. Sunset drinks on Signal Hill if you're up for it.": [
+  "data/tours.ts:44"
+ ],
+ "Up Table Mountain early with your guide, then the Bo-Kaap, Company's Garden and a long lunch.": [
+  "data/tours.ts:45"
+ ],
+ "Table Mountain & the city": [
+  "data/tours.ts:45"
+ ],
+ "Breakfast, lunch": [
+  "data/tours.ts:46"
+ ],
+ "Chapman's Peak, Cape Point and the penguins at Boulders Beach, with seafood in Kalk Bay.": [
+  "data/tours.ts:46"
+ ],
+ "Cape Peninsula": [
+  "data/tours.ts:46"
+ ],
+ "Morning ferry to Robben Island; afternoon at leisure at the V&A Waterfront or Zeitz MOCAA.": [
+  "data/tours.ts:47"
+ ],
+ "Robben Island & the Waterfront": [
+  "data/tours.ts:47"
+ ],
+ "Kept free for weather flexibility. Beach day, shopping, or a helicopter flip over the peninsula.": [
+  "data/tours.ts:48"
+ ],
+ "Free day in Cape Town": [
+  "data/tours.ts:48"
+ ],
+ "Day 5": [
+  "data/tours.ts:48"
+ ],
+ "Private driver to the Winelands. Tastings, cellar tours and a chef's-table dinner, plus a free morning for a vineyard walk or spa.": [
+  "data/tours.ts:49"
+ ],
+ "Franschhoek Winelands": [
+  "data/tours.ts:49"
+ ],
+ "Morning flight to Skukuza or Kruger Mpumalanga, then road or light-aircraft transfer to your lodge in time for the afternoon drive.": [
+  "data/tours.ts:50"
+ ],
+ "Fly to the bush": [
+  "data/tours.ts:50"
+ ],
+ "Twice-daily game drives with your ranger and tracker, a morning bush walk, and siestas by your plunge pool.": [
+  "data/tours.ts:51"
+ ],
+ "Sabi Sand safari": [
+  "data/tours.ts:51"
+ ],
+ "Final sunrise drive, then fly to Johannesburg to connect with your international flight.": [
+  "data/tours.ts:52"
+ ],
+ "Last drive & depart": [
+  "data/tours.ts:52"
+ ],
+ "11 nights' accommodation as listed": [
+  "data/tours.ts:55"
+ ],
+ "Daily breakfast; all meals and local drinks on safari": [
+  "data/tours.ts:56"
+ ],
+ "Private guided touring in Cape Town (3 days)": [
+  "data/tours.ts:57"
+ ],
+ "Private Winelands driver and tastings": [
+  "data/tours.ts:58"
+ ],
+ "Domestic flight Cape Town–Kruger and onward to Johannesburg": [
+  "data/tours.ts:59"
+ ],
+ "Park and conservation fees": [
+  "data/tours.ts:61"
+ ],
+ "24/7 support from your specialist while you travel": [
+  "data/tours.ts:62"
+ ],
+ "Travel insurance (strongly recommended)": [
+  "data/tours.ts:66"
+ ],
+ "Lunches and dinners in Cape Town unless stated": [
+  "data/tours.ts:67"
+ ],
+ "Visas where applicable": [
+  "data/tours.ts:69"
+ ],
+ "Cape Town & Winelands Escape": [
+  "data/tours.ts:76"
+ ],
+ "A week of mountains, oceans and great wine": [
+  "data/tours.ts:77"
+ ],
+ "Daily breakfast · 5 guided activities · All transfers": [
+  "data/tours.ts:83"
+ ],
+ "Private Table Mountain and Cape Point touring": [
+  "data/tours.ts:85"
+ ],
+ "Stellenbosch and Franschhoek estate tastings": [
+  "data/tours.ts:86"
+ ],
+ "Day trip to Hermanus (whales Jun–Nov)": [
+  "data/tours.ts:87"
+ ],
+ "Boutique stays in the city and the vines": [
+  "data/tours.ts:88"
+ ],
+ "KwaZulu-Natal & Drakensberg": [
+  "data/tours.ts:9"
+ ],
+ "A focused week in the Western Cape for travellers who want depth over distance: the city, the peninsula, the Winelands and, in season, the whales of Hermanus.": [
+  "data/tours.ts:91"
+ ],
+ "Safari add-on later": [
+  "data/tours.ts:93"
+ ],
+ "Food & wine lovers": [
+  "data/tours.ts:93"
+ ],
+ "Shorter trips": [
+  "data/tours.ts:93"
+ ],
+ "Oct–Apr; Jun–Nov for whales": [
+  "data/tours.ts:94"
+ ],
+ "Private transfer to your Camps Bay hotel and an evening at leisure.": [
+  "data/tours.ts:98"
+ ],
+ "Arrive in Cape Town": [
+  "data/tours.ts:98",
+  "data/tours.ts:44"
+ ],
+ "Morning on the mountain, afternoon exploring the city with your guide.": [
+  "data/tours.ts:99"
+ ],
+ "Table Mountain & Bo-Kaap": [
+  "data/tours.ts:99"
+ ],
+ "Day 2": [
+  "data/tours.ts:99",
+  "data/tours.ts:45"
+ ],
+ "Planning": [
+  "lib/blog.ts:18"
+ ],
+ "Cape Compass team": [
+  "lib/blog.ts:20"
+ ],
+ "{0} min read": [
+  "lib/blog.ts:21"
+ ],
+ "useCurrency must be used inside <CurrencyProvider>": [
+  "lib/currency.tsx:62"
+ ],
+ "Please choose an arrival date (approximate is fine).": [
+  "lib/planner-schema.ts:11"
+ ],
+ "Please choose a valid date.": [
+  "lib/planner-schema.ts:12"
+ ],
+ "Arrival date can't be in the past.": [
+  "lib/planner-schema.ts:17"
+ ],
+ "For trips over 30 nights, add a note and we'll tailor it.": [
+  "lib/planner-schema.ts:18"
+ ],
+ "Minimum 1 night.": [
+  "lib/planner-schema.ts:18"
+ ],
+ "Are your dates exact or approximate?": [
+  "lib/planner-schema.ts:19"
+ ],
+ "Let us know if this is your first visit.": [
+  "lib/planner-schema.ts:20"
+ ],
+ "Choose a route, or 'Not sure yet'.": [
+  "lib/planner-schema.ts:25"
+ ],
+ "Tell us a little about what you'd love to see or do.": [
+  "lib/planner-schema.ts:30"
+ ],
+ "Choose a budget level, or 'Not sure yet'.": [
+  "lib/planner-schema.ts:34"
+ ],
+ "At least one adult must travel.": [
+  "lib/planner-schema.ts:39"
+ ],
+ "Please add each child's age.": [
+  "lib/planner-schema.ts:46"
+ ],
+ "Choose a country code.": [
+  "lib/planner-schema.ts:52"
+ ],
+ "Please enter a valid phone number.": [
+  "lib/planner-schema.ts:56"
+ ],
+ "Choose at least one way to reach you.": [
+  "lib/planner-schema.ts:57"
+ ],
+ "Please agree so we can contact you about your trip.": [
+  "lib/planner-schema.ts:59"
+ ],
+ "{0}{1}w=1200&h=630&fit=crop&q=80": [
+  "lib/seo.tsx:35"
+ ],
+ "eyebrow": [
+  "lib/utils.ts:8"
+ ],
+ "body-sm": [
+  "lib/utils.ts:8"
+ ],
+ "body": [
+  "lib/utils.ts:8"
+ ],
+ "lead": [
+  "lib/utils.ts:8"
+ ],
+ "h4": [
+  "lib/utils.ts:8"
+ ],
+ "h3": [
+  "lib/utils.ts:8"
+ ],
+ "h2": [
+  "lib/utils.ts:8"
+ ],
+ "h1": [
+  "lib/utils.ts:8"
+ ],
+ "display": [
+  "lib/utils.ts:8"
+ ]
+}

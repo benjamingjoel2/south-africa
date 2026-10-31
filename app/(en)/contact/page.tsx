@@ -5,7 +5,7 @@ import { Display, Eyebrow } from "@/components/ui/Type";
 import { SideCard } from "@/components/detail/SideCard";
 import { ContactForm } from "@/components/detail/ContactForm";
 
-export const metadata = buildMetadata({ title: "Contact Us", description: "Get in touch with a Cape Compass South Africa specialist by email, phone or WhatsApp. Send us a note and we reply within one working day with first ideas.", path: "/contact" });
+export const metadata = buildMetadata({ title: "Contact Us", description: "Get in touch with a Cape Compass South Africa specialist by email or through our contact form. Send us a note and we reply within one working day with first ideas.", path: "/contact" });
 
 export default function ContactPage() {
   return (
@@ -18,7 +18,7 @@ export default function ContactPage() {
         </p>
 
         <div className="mt-12 border-t border-ivory-200 pt-10">
-          <Eyebrow>Three ways through</Eyebrow>
+          <Eyebrow>Write to us</Eyebrow>
           <h2 className="mt-3 text-h2">Whichever is easiest.</h2>
           <div className="mt-8 divide-y divide-ivory-200 border-y border-ivory-200">
             <div className="py-6">
