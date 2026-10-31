@@ -45,3 +45,8 @@ next-env.d.ts
 /app/fr
 /app/de
 /app/es
+
+# Cloudflare (OpenNext / Wrangler)
+/.open-next
+/.wrangler
+.dev.vars*

@@ -60,3 +60,19 @@ English is the source and keeps its URLs (`app/(en)`). `scripts/i18n-build.mjs` 
 ## Deploying
 
 The project deploys to Vercel with zero config. Set `NEXT_PUBLIC_SITE_URL` to the production domain so canonical URLs, the sitemap and OG tags are correct.
+
+## Cloudflare Workers (OpenNext)
+
+The site can also run on Cloudflare Workers through the [OpenNext adapter](https://opennext.js.org/cloudflare) (`@opennextjs/cloudflare`). This is additive: Vercel still runs `npm run build` and ignores the Cloudflare files.
+
+```bash
+npm run cf-build   # npm run build (scripts/i18n-build.mjs + next build), OpenNext bundle, prerendered pages copied into the assets
+npx wrangler dev   # serve the Worker locally on http://localhost:8787
+npm run preview    # cf-build, then OpenNext's local preview
+npm run deploy     # cf-build, then deploy the Worker (needs a Cloudflare login; not done yet)
+```
+
+- `wrangler.jsonc`: Worker `south-africa`, `nodejs_compat`, static assets from `.open-next/assets` and the `IMAGES` binding (Cloudflare Images) for `next/image` optimisation.
+- `open-next.config.ts`: OpenNext runs `npm run build`, so the French, German and Spanish routes are generated exactly as on Vercel. Prerendered pages are served read-only from Workers static assets (`static-assets-incremental-cache`): the site has no ISR, and the blog reads `content/` with `node:fs`, which is not available at request time on Workers. That is why `cf-build` also runs `opennextjs-cloudflare populateCache local`.
+- `vercel.json` is not read by Cloudflare, so its rules are mirrored in `cloudflare/_headers` (year-long immutable cache on `/_next/static/*`) and `cloudflare/_redirects` (`/testimonials` → `/about`, 308). `cf-build` copies both into the assets. Keep them in step with `vercel.json`.
+- `NEXT_PUBLIC_SITE_URL` and `GOOGLE_SITE_VERIFICATION` are read when pages are prerendered, so set them in the build environment.

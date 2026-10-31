@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare Workers config for the OpenNext build (`npm run cf-build`).
+  // Vercel ignores this file.
+  "name": "south-africa",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-20",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      // Self-reference used by OpenNext for caching; must match "name".
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "south-africa"
+    }
+  ],
+  // next/image optimisation (AVIF/WebP of the Unsplash photos) through Cloudflare Images.
+  "images": {
+    "binding": "IMAGES"
+  },
+  "observability": {
+    "enabled": true
+  }
+  // NEXT_PUBLIC_SITE_URL and GOOGLE_SITE_VERIFICATION are read when pages are prerendered:
+  // set them in the build environment, not as Worker variables.
+}
