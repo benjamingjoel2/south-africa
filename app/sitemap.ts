@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     priority,
   });
-  return [
+  const pages: MetadataRoute.Sitemap = [
     page("/", 1),
     ...["/destinations", "/tours", "/experiences", "/stays", "/plan-your-trip"].map((p) => page(p, 0.9)),
     ...["/about", "/faq", "/contact", "/blog"].map((p) => page(p, 0.6)),
@@ -24,4 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...stays.map((s) => page(`/stays/${s.slug}`, 0.6)),
     ...getAllPosts().map((p) => ({ ...page(`/blog/${p.slug}`, 0.6), lastModified: new Date(p.date) })),
   ];
+  // Every page in every language (English unprefixed), each with hreflang alternates.
+  const origin = new URL(site.url).origin;
+  return pages.flatMap((entry) => {
+    const path = new URL(entry.url).pathname;
+    const at = (l: string) => `${origin}${path === "/" ? `/${l}` : `/${l}${path}`}`;
+    const languages = { en: `${origin}${path}`, fr: at("fr"), de: at("de"), es: at("es"), "x-default": `${origin}${path}` };
+    return [entry.url, at("fr"), at("de"), at("es")].map((url) => ({ ...entry, url, alternates: { languages } }));
+  });
 }

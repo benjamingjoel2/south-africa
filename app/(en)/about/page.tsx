@@ -39,7 +39,7 @@ const sections = [
     title: "Our",
     accent: "story",
     body: [
-      "Cape Compass began around a kitchen table in Tamboerskloof. Friends from abroad kept asking the same questions: Is Kruger or a private reserve better? How many nights in Cape Town? Is the Garden Route worth the drive? We kept answering, then booking, then checking in on WhatsApp while they travelled.",
+      "Cape Compass began around a kitchen table in Tamboerskloof. Friends from abroad kept asking the same questions: Is Kruger or a private reserve better? How many nights in Cape Town? Is the Garden Route worth the drive? We kept answering, then booking, then checking in on them while they travelled.",
       "Word spread. Today we are a small team of specialists, each with a region we know intimately, but the approach hasn't changed. We listen first, design around how you like to travel, and never hand you off to someone who doesn't know your trip.",
     ],
   },

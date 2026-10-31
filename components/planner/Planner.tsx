@@ -50,6 +50,8 @@ function useReducedMotionPref() {
   );
 }
 
+const arrivalLabel = (iso: string) => new Date(iso).toLocaleDateString("en-GB", { month: "short", year: "numeric" });
+
 export function Planner({ variant = "page", onClose }: { variant?: "page" | "modal"; onClose?: () => void }) {
   const { state, update, setStep, reset, hydrated } = usePlannerStore();
   const [errors, setErrors] = useState<Errors>({});
@@ -157,10 +159,10 @@ export function Planner({ variant = "page", onClose }: { variant?: "page" | "mod
                     <>
                       <Summary
                         items={[
-                          state.when.arrivalDate && `${new Date(state.when.arrivalDate).toLocaleDateString("en-GB", { month: "short", year: "numeric" })} · ${state.when.nights} nights`,
+                          state.when.arrivalDate && `${arrivalLabel(state.when.arrivalDate)} · ${state.when.nights} nights`,
                           routeTitle,
                           tierTitle,
-                          `${state.who.adults} adult${state.who.adults > 1 ? "s" : ""}${state.who.children ? `, ${state.who.children} child${state.who.children > 1 ? "ren" : ""}` : ""}`,
+                          `${state.who.adults} ${state.who.adults > 1 ? "adults" : "adult"}${state.who.children ? `, ${state.who.children} ${state.who.children > 1 ? "children" : "child"}` : ""}`,
                         ]}
                       />
                       <StepContact value={state.contact} update={(p) => update("contact", p)} errors={errors} />

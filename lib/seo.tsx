@@ -10,6 +10,13 @@ export function clampDescription(text: string, max = 158) {
   return `${cut.slice(0, Math.max(cut.lastIndexOf(" "), 80))}…`;
 }
 
+/** hreflang alternates for a path in any locale ("/fr/tours" -> en "/tours", fr "/fr/tours", ...). */
+export function languageAlternates(path: string): Record<string, string> {
+  const base = path.replace(/^\/(fr|de|es)(?=\/|$)/, "") || "/";
+  const at = (l: string) => (base === "/" ? `/${l}` : `/${l}${base}`);
+  return { en: base, fr: at("fr"), de: at("de"), es: at("es"), "x-default": base };
+}
+
 export function buildMetadata({
   title,
   description,
@@ -29,7 +36,7 @@ export function buildMetadata({
   return {
     ...(title ? { title } : {}),
     description: desc,
-    alternates: { canonical: path },
+    alternates: { canonical: path, languages: languageAlternates(path) },
     openGraph: {
       title: title ? `${title} | ${site.name}` : site.name,
       description: desc,

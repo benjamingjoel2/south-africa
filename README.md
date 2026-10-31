@@ -34,7 +34,18 @@ All prices in `/data` are stored in **USD**. The currency switcher (USD, EUR, GB
 
 `/plan-your-trip` is a 5-step form with zod validation (`lib/planner-schema.ts`). Progress is saved in `localStorage`. Links to it from inside the site open it as a modal (an intercepting route in `app/@modal`); visiting it directly shows the full page. Submissions POST to `/api/plan`, which validates and logs the payload. Add your email or CRM integration where the `TODO` is.
 
+## Languages (EN · FR · DE · ES)
+
+English is the source and keeps its URLs (`app/(en)`). `scripts/i18n-build.mjs` runs before `dev` and `build` and writes translated copies of the routes to `app/fr`, `app/de`, `app/es` and of `components`, `lib`, `data` and `config` to `.i18n/<locale>` (all git-ignored), so every page is pre-rendered in every language with no translation code in the browser.
+
+- Translations: `i18n/fr.json`, `i18n/de.json`, `i18n/es.json` (English source text to translation; a key prefixed with `path/to/file.tsx::` applies to that file only). Blog posts: `i18n/content/<locale>/blog/*.mdx`.
+- After changing copy: `npm run i18n:extract`, then `npm run i18n:missing -- --list` shows what still needs translating (brand, venue and place names are meant to stay as they are).
+- Values the API validates (contact methods, month keys) stay in English; only their labels are translated.
+- The language selector (`components/layout/LanguageSwitcher.tsx`) links to the same page in each language; there is no automatic redirect. Canonical and `hreflang` come from `buildMetadata`, and the sitemap lists every locale.
+
 ## Before launch: placeholders to replace
+
+- [ ] Have a native speaker review the French, German and Spanish copy (`i18n/*.json`, `i18n/content/`), including the legal pages.
 
 - [x] `config/site.ts`: email `capecompass@tourground.com`, business address Workshop17 Watershed (V&A Waterfront). No phone, WhatsApp, social links, testimonials, ratings, team bios or membership badges (owner decision). Set `NEXT_PUBLIC_SITE_URL`.
 - [ ] **Stays** (`data/stays.ts`): property names are fictional; replace with real partner properties and approved imagery (see `IMAGES-NEEDED.md`)

@@ -20,7 +20,8 @@ export async function generateMetadata({ params }: PageProps<"/stays/[slug]">) {
   const { slug } = await params;
   const s = getStay(slug);
   if (!s) return {};
-  return buildMetadata({ title: `${s.name}, ${s.location}`, description: `${s.summary} From US$${s.priceFromUsdPerNight.toLocaleString("en-US")} per person per night.`, path: `/stays/${s.slug}`, image: s.image });
+  const price = s.priceFromUsdPerNight.toLocaleString("en-US");
+  return buildMetadata({ title: `${s.name}, ${s.location}`, description: `${s.summary} From US$${price} per person per night.`, path: `/stays/${s.slug}`, image: s.image });
 }
 
 export default async function StayPage({ params }: PageProps<"/stays/[slug]">) {

@@ -25,7 +25,7 @@ export const faqs: Faq[] = [
     category: "Health & safety",
     question: "Is South Africa safe for travellers?",
     answer:
-      "The vast majority of visitors have a trouble-free trip. Like anywhere with high inequality, it calls for sensible precautions: don't flash valuables, don't leave anything visible in a car, use registered drivers or ride-hailing apps at night, and take local advice on hikes and neighbourhoods.\n\nThe places we send you, from boutique hotels to private reserves, are chosen for their security as well as their style. Your specialist briefs you before you travel and is on WhatsApp 24/7 while you're here.",
+      "The vast majority of visitors have a trouble-free trip. Like anywhere with high inequality, it calls for sensible precautions: don't flash valuables, don't leave anything visible in a car, use registered drivers or ride-hailing apps at night, and take local advice on hikes and neighbourhoods.\n\nThe places we send you, from boutique hotels to private reserves, are chosen for their security as well as their style. Your specialist briefs you before you travel and is on call 24/7 while you're here.",
   },
   {
     id: "malaria",

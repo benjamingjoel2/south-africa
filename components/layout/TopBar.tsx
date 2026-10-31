@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site } from "@/config/site";
 import { ArrowRight } from "@/components/ui/Button";
 import { CurrencySwitcher } from "./CurrencySwitcher";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function TopBar() {
   const { items, cta, links } = site.topBar;
@@ -26,6 +27,8 @@ export function TopBar() {
               {l.label}
             </Link>
           ))}
+          {/* Between 1024 and 1279px the header row is full, so the language links sit here. */}
+          <LanguageSwitcher tone="light" className="hidden lg:block xl:hidden" />
           <CurrencySwitcher />
         </div>
       </div>

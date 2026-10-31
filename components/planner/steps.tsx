@@ -6,6 +6,9 @@ import type { PlannerState } from "./usePlannerStore";
 import { ChoicePill, Counter, FieldError, FieldLabel, ImageChoice, Legend, TextArea, TextInput, inputClass } from "./fields";
 
 type Errors = Record<string, string>;
+
+// Display labels for the contact methods (the values themselves stay in English for the API).
+const methodLabels: Record<(typeof contactMethods)[number], string> = { Email: "Email", Telephone: "Telephone" };
 type StepProps<K extends keyof Omit<PlannerState, "step">> = {
   value: PlannerState[K];
   update: (patch: Partial<PlannerState[K]>) => void;
@@ -317,7 +320,7 @@ export function StepContact({ value, update, errors }: StepProps<"contact">) {
         <div className="grid gap-3 sm:grid-cols-3">
           {contactMethods.map((m) => (
             <ChoicePill key={m} type="checkbox" name="methods" checked={value.methods.includes(m)} onChange={() => toggleMethod(m)}>
-              {m}
+              {methodLabels[m]}
             </ChoicePill>
           ))}
         </div>
