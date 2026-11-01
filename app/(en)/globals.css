@@ -193,6 +193,22 @@
 .prose-ed li + li {
   margin-top: 0.4em;
 }
+.prose-ed .legal-table-wrap {
+  overflow-x: auto;
+}
+.prose-ed table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.prose-ed th,
+.prose-ed td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 1rem 0.6rem 0;
+  border-bottom: 1px solid var(--color-ivory-200);
+}
 .prose-ed blockquote {
   border-left: 2px solid var(--color-brass-500);
   padding-left: 1.25em;
