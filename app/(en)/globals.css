@@ -32,7 +32,7 @@
   --tracking-display: -0.015em;
 
   /* Type scale */
-  --text-display: clamp(3.25rem, 2rem + 4.8vw, 6.25rem);
+  --text-display: clamp(3.25rem, 2rem + 4.8vw, 6rem);
   --text-display--line-height: 0.95;
   --text-display--letter-spacing: -0.02em;
   --text-h1: clamp(2.75rem, 1.9rem + 3.2vw, 5rem);
